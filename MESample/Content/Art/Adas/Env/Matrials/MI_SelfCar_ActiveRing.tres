@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dprrv4qis15vx"]
+
+[ext_resource type="Shader" uid="uid://dwrdkli4flift" path="res://Content/Art/Shaders/M_ActiveRing.gdshader" id="1_uurn6"]
+
+[resource]
+render_priority = -1
+shader = ExtResource("1_uurn6")
+shader_parameter/basecolor = Color(0.235294, 0.435294, 0.945098, 1)

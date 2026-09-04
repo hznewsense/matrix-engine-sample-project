@@ -1,0 +1,479 @@
+[gd_scene format=3 uid="uid://bqtr65s4ocj5b"]
+
+[ext_resource type="Script" uid="uid://bld2sngbtanrr" path="res://Content/Script/MainCameraController3D.gd" id="1_85qb3"]
+[ext_resource type="CameraDataTable" uid="uid://bskmufmoeo8fa" path="res://Content/CameraDataTable/camera_data_table_3d_launcher.tres" id="1_drtuh"]
+[ext_resource type="PackedScene" uid="uid://yul772srqss1" path="res://Content/Art/MatrixMainCar/Maps/MatrixMainCar.tscn" id="1_mex47"]
+[ext_resource type="CameraDataTable" uid="uid://b8capa8e6vrik" path="res://Content/CameraDataTable/camera_data_table_sr.tres" id="2_b6hj7"]
+[ext_resource type="CameraDataTable" uid="uid://roxytt4u0ugh" path="res://Content/CameraDataTable/camera_data_table_vehicle_settings.tres" id="2_ggjnr"]
+[ext_resource type="CameraDataTable" uid="uid://bp6sqygnjkeic" path="res://Content/CameraDataTable/camera_data_table_interior.tres" id="3_n67yu"]
+[ext_resource type="Script" uid="uid://bdaa0jipgve7y" path="res://Content/Script/VehicleDataController.gd" id="4_vdc"]
+[ext_resource type="Material" uid="uid://de41046e4c0vx" path="res://Content/UI/Mask/MI_Mask.tres" id="5_fgup5"]
+[ext_resource type="PackedScene" uid="uid://8ur1hvitxdf0" path="res://Content/Scene/MainUI.tscn" id="5_mik5n"]
+[ext_resource type="PackedScene" uid="uid://dbrfjbk5y22gg" path="res://Content/Scene/3DLauncher.tscn" id="5_nwwjo"]
+[ext_resource type="CameraDataTable" uid="uid://7537da55yhcw" path="res://Content/CameraDataTable/camera_data_table_charging.tres" id="6_geaa5"]
+[ext_resource type="Texture2D" uid="uid://eknqpomfbg80" path="res://Content/UI/Mask/T_ScreenMask_NR.png" id="6_kgvsw"]
+[ext_resource type="PackedScene" uid="uid://b2041v0b164hm" path="res://Content/Scene/UI_SR.tscn" id="6_n6kj2"]
+[ext_resource type="CameraDataTable" uid="uid://cub8uotdy4woe" path="res://Content/CameraDataTable/camera_data_table_front.tres" id="6_xdjta"]
+[ext_resource type="PackedScene" uid="uid://bpedta6vbn1y0" path="res://Content/Scene/AdasEnv.tscn" id="7_1usqm"]
+[ext_resource type="Texture2D" uid="uid://c1bgqglpa2hx8" path="res://Content/UI/Mask/T_ScreenMask_Adas.png" id="7_kgvsw"]
+[ext_resource type="Material" uid="uid://v6nar43fk0u4" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_CarPaint_White.tres" id="7_o6nd5"]
+[ext_resource type="CameraDataTable" uid="uid://cmi1juet5t7y" path="res://Content/CameraDataTable/camera_data_table_rear.tres" id="7_yqowb"]
+[ext_resource type="Texture2D" uid="uid://cbofx43egk43y" path="res://Content/Art/Textures/MaskTest.png" id="8_1usqm"]
+[ext_resource type="CameraDataTable" uid="uid://v563gftyvev0" path="res://Content/CameraDataTable/camera_data_table_left.tres" id="8_f0bgs"]
+[ext_resource type="CameraDataTable" uid="uid://b1bg3g1u5c5i6" path="res://Content/CameraDataTable/camera_data_table_right.tres" id="9_gumus"]
+[ext_resource type="Script" uid="uid://ccrcxw63uvega" path="res://Content/Script/ClusterCameraController3D.gd" id="9_y445w"]
+[ext_resource type="Script" uid="uid://bp6nncqpepvvy" path="res://Content/Script/GearController.gd" id="9_ydxsu"]
+[ext_resource type="Texture2D" uid="uid://ba24ddje0evsb" path="res://Content/UI/SR/TUI_SR_TurnLeft.png" id="10_bwftk"]
+[ext_resource type="CameraDataTable" uid="uid://qfwwbkmnyr8o" path="res://Content/CameraDataTable/camera_data_table_top.tres" id="10_cqfie"]
+[ext_resource type="Texture2D" uid="uid://srtkvcdf68si" path="res://Content/UI/3DLauncher/T_Icon_P.png" id="10_n6kj2"]
+[ext_resource type="Texture2D" uid="uid://bq7154naagvk" path="res://Content/UI/3DLauncher/T_Icon_D.png" id="11_j3ty4"]
+[ext_resource type="Texture2D" uid="uid://ds342qa7txib8" path="res://Content/UI/3DLauncher/T_Icon_N.png" id="12_2xdhk"]
+[ext_resource type="Texture2D" uid="uid://cajesymfflirx" path="res://Content/UI/3DLauncher/T_Icon_R.png" id="13_a0wyt"]
+[ext_resource type="Texture2D" uid="uid://blif5la6tt71w" path="res://Content/UI/SR/TUI_SR_Straight.png" id="14_straight"]
+[ext_resource type="PackedScene" uid="uid://bbl0f6c58lgb2" path="res://Content/UI/UI_Charging.tscn" id="15_2lxxl"]
+[ext_resource type="Environment" uid="uid://pg30imud84c" path="res://Content/Art/WorldEnvironments/3DLauncherEnvironment.tres" id="15_r2v34"]
+[ext_resource type="PackedScene" uid="uid://pus8b3t78nkp" path="res://Content/UI/UI_Application.tscn" id="16_geaa5"]
+[ext_resource type="PackedScene" uid="uid://cavavi85e1lom" path="res://Content/UI/UI_Cluster.tscn" id="16_j3ty4"]
+[ext_resource type="Texture2D" uid="uid://c137k8475nd7g" path="res://Content/UI/SR/TUI_SR_TurnRight.png" id="16_right"]
+[ext_resource type="PackedScene" uid="uid://bt2c720sq4ey6" path="res://Content/UI/UI_Music.tscn" id="17_a5eq8"]
+[ext_resource type="Texture2D" uid="uid://cpy08hvmluq5f" path="res://Content/UI/SR/TUI_SR_TurnBack.png" id="17_uturn"]
+[ext_resource type="Texture2D" uid="uid://cesnlvb0lq8kc" path="res://Content/UI/3DUI/T_Icon_Charge_Normal.png" id="19_pn70y"]
+[ext_resource type="Texture2D" uid="uid://cprnpdpf6byu2" path="res://Content/UI/3DUI/T_Icon_Lock_Normal.png" id="20_pfi80"]
+[ext_resource type="Texture2D" uid="uid://bfq5x53fvbcxh" path="res://Content/UI/3DUI/T_Icon_Hood_Normal.png" id="21_pqlvq"]
+[ext_resource type="Texture2D" uid="uid://lpphojhuhhc0" path="res://Content/UI/3DUI/T_Icon_Trunklid_Normal.png" id="22_6ooab"]
+[ext_resource type="CameraDataTable" uid="uid://cjmmvf87vpklf" path="res://Content/CameraDataTable/camera_data_table_gear_p.tres" id="22_r6lga"]
+[ext_resource type="CameraDataTable" uid="uid://cnp1j04icmslu" path="res://Content/CameraDataTable/camera_data_table_gear_d.tres" id="23_22p2n"]
+[ext_resource type="CameraDataTable" uid="uid://ditqh7o0oqgfe" path="res://Content/CameraDataTable/camera_data_table_gear_n.tres" id="24_egncs"]
+[ext_resource type="CameraDataTable" uid="uid://ckae2byk1yrv2" path="res://Content/CameraDataTable/camera_data_table_gear_r.tres" id="25_qygge"]
+[ext_resource type="PackedScene" uid="uid://b3dw6c1cwvgsl" path="res://Content/UI/debugUI.tscn" id="28_22p2n"]
+[ext_resource type="Script" uid="uid://cipc4pso6u1dd" path="res://Content/Script/ModeUIManager.gd" id="29_modeui"]
+[ext_resource type="Script" uid="uid://diltniv7xucgn" path="res://Content/Script/DoorLidManager.gd" id="30_doorlid"]
+[ext_resource type="Material" uid="uid://budpg5apjegn7" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_DRL_A.tres" id="48_cu7b8"]
+[ext_resource type="Material" uid="uid://c2141s5wfm3l7" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_HeadLight.tres" id="49_i6lp5"]
+[ext_resource type="Material" uid="uid://d32d2gcit087u" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_FogLight.tres" id="50_fv0ry"]
+[ext_resource type="Material" uid="uid://dfmh2vnvcu16v" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_BrakeLight_I.tres" id="51_u7a6k"]
+[ext_resource type="Material" uid="uid://doqooyn85vtb7" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_Turn_L.tres" id="52_e8yna"]
+[ext_resource type="Material" uid="uid://cdtgx753a35vc" path="res://Content/Art/MatrixMainCar/Materials/MI_MainCar_Emissive_Lamp_Turn_R.tres" id="53_53pd4"]
+[ext_resource type="Script" uid="uid://qi05idlkq5wxb" path="res://Content/Script/MatrixMainCarLayers.gd" id="54_srml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chargePort"]
+size = Vector3(0.3, 0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_doorFL"]
+size = Vector3(0.3, 0.2, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_doorFR"]
+size = Vector3(0.3, 0.2, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_doorRL"]
+size = Vector3(0.3, 0.2, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_doorRR"]
+size = Vector3(0.3, 0.2, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hood"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trunk"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="World3D" id="World3D_cu7b8"]
+environment = ExtResource("15_r2v34")
+
+[node name="MainScene" type="Node3D" unique_id=565377007]
+
+[node name="MainCameraController3D" type="CameraController3D" parent="." unique_id=1335907975 node_paths=PackedStringArray("matrix_main_car", "gear_controller", "main_car_collision_shapes", "mode_ui_manager", "door_lid_manager", "door_controller")]
+debug_play = Callable()
+camera_data_tables = [ExtResource("1_drtuh"), ExtResource("2_ggjnr"), ExtResource("2_b6hj7"), ExtResource("3_n67yu"), ExtResource("6_geaa5"), ExtResource("6_xdjta"), ExtResource("7_yqowb"), ExtResource("8_f0bgs"), ExtResource("9_gumus"), ExtResource("10_cqfie")]
+script = ExtResource("1_85qb3")
+matrix_main_car = NodePath("../SR/MatrixMainCar")
+gear_controller = NodePath("../Controller/GearController")
+main_car_collision_shapes = [NodePath("../3DLauncher/MatrixMainCar/door_frontLeft_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/door_frontRight_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/door_rearLeft_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/door_rearRight_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/hood_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/trunk_ctrl/DoorInteractionArea/CollisionShape3D"), NodePath("../3DLauncher/MatrixMainCar/chargePort_ctrl/DoorInteractionArea/CollisionShape3D")]
+mode_ui_manager = NodePath("../Controller/ModeUIManager")
+car_paint_material = ExtResource("7_o6nd5")
+door_lid_manager = NodePath("../Controller/DoorLidManager")
+door_controller = NodePath("../3DLauncher/MatrixMainCar/DoorController")
+
+[node name="MainUiCanvasLayer" type="CanvasLayer" parent="." unique_id=1697080347]
+layer = 100
+
+[node name="UI_Charging" parent="MainUiCanvasLayer" unique_id=804508553 instance=ExtResource("15_2lxxl")]
+visible = false
+mouse_filter = 1
+
+[node name="UI_Application" parent="MainUiCanvasLayer" unique_id=215745625 instance=ExtResource("16_geaa5")]
+visible = false
+
+[node name="UI_Music" parent="MainUiCanvasLayer" unique_id=157723798 instance=ExtResource("17_a5eq8")]
+
+[node name="MainUi" parent="MainUiCanvasLayer" unique_id=1697080348 instance=ExtResource("5_mik5n")]
+
+[node name="DebugUi" parent="MainUiCanvasLayer" unique_id=1142302185 instance=ExtResource("28_22p2n")]
+offset_left = 143.0
+offset_top = 546.0
+offset_right = -1777.0
+offset_bottom = -654.0
+
+[node name="3DLauncher" type="Node" parent="." unique_id=1220560141]
+
+[node name="MatrixMainCar" parent="3DLauncher" unique_id=1775321893 instance=ExtResource("1_mex47")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/chargePort_ctrl" parent_id_path=PackedInt32Array(1775321893, 2079219238) index="1" unique_id=1797711940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013695657, 0.01717192, -0.13945532)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/chargePort_ctrl/DoorInteractionArea" unique_id=340162276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.052759767, 0, 0)
+shape = SubResource("BoxShape3D_chargePort")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/chargePort_ctrl/DoorInteractionArea" unique_id=1530679959]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.078814685, -0.0154649615, 0)
+visible = false
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("19_pn70y")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/door_frontLeft_ctrl" parent_id_path=PackedInt32Array(1775321893, 820520379) index="4" unique_id=517367562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0417103, 0.18744, -0.918662)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/door_frontLeft_ctrl/DoorInteractionArea" unique_id=988202796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04927677, -0.016695738, 1.8626451e-09)
+shape = SubResource("BoxShape3D_doorFL")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/door_frontLeft_ctrl/DoorInteractionArea" unique_id=1054119669]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.05200529, -0.01362288, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("20_pfi80")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/door_frontRight_ctrl" parent_id_path=PackedInt32Array(1775321893, 1106018084) index="4" unique_id=356756714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0299666, 0.16862, -0.907804)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/door_frontRight_ctrl/DoorInteractionArea" unique_id=1826813556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06130916, 0, -0.013026657)
+shape = SubResource("BoxShape3D_doorFR")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/door_frontRight_ctrl/DoorInteractionArea" unique_id=1193532054]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.09421384, 0, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("20_pfi80")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/door_rearLeft_ctrl" parent_id_path=PackedInt32Array(1775321893, 642134501) index="3" unique_id=2038398328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00905102, 0.220799, -0.708665)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/door_rearLeft_ctrl/DoorInteractionArea" unique_id=1358536021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07830906, 0, 0)
+shape = SubResource("BoxShape3D_doorRL")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/door_rearLeft_ctrl/DoorInteractionArea" unique_id=877655771]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.09399414, 0, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("20_pfi80")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/door_rearRight_ctrl" parent_id_path=PackedInt32Array(1775321893, 263697722) index="3" unique_id=291768255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000291348, 0.205388, -0.737413)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/door_rearRight_ctrl/DoorInteractionArea" unique_id=1709477027]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09251171, 0.013701081, 0.005802393)
+shape = SubResource("BoxShape3D_doorRR")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/door_rearRight_ctrl/DoorInteractionArea" unique_id=1159550085]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -0.10043687, 0.010450602, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("20_pfi80")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/hood_ctrl" parent_id_path=PackedInt32Array(1775321893, 1503212817) index="1" unique_id=1604212416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5475671e-08, 0.09454596, 1.3828154)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/hood_ctrl/DoorInteractionArea" unique_id=1929977357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009085357, -0.014224052, 0)
+shape = SubResource("BoxShape3D_hood")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/hood_ctrl/DoorInteractionArea" unique_id=1230075326]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.004788041, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("21_pqlvq")
+
+[node name="DoorInteractionArea" type="Area3D" parent="3DLauncher/MatrixMainCar/trunk_ctrl" parent_id_path=PackedInt32Array(1775321893, 482537526) index="3" unique_id=819309518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.614734e-09, 0.12155819, -0.8204031)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DLauncher/MatrixMainCar/trunk_ctrl/DoorInteractionArea" unique_id=1317697371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.656613e-10, -0.018311143, 0.012262464)
+shape = SubResource("BoxShape3D_trunk")
+
+[node name="TouchHint" type="Sprite3D" parent="3DLauncher/MatrixMainCar/trunk_ctrl/DoorInteractionArea" unique_id=760220513]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.0027763844, 0)
+layers = 4
+pixel_size = 0.002
+billboard = 1
+render_priority = 20
+texture = ExtResource("22_6ooab")
+
+[node name="DoorController" type="DoorController" parent="3DLauncher/MatrixMainCar" unique_id=1497502335]
+left_front_door_path = NodePath("../door_frontLeft_ctrl")
+left_front_door_area_path = NodePath("../door_frontLeft_ctrl/DoorInteractionArea")
+left_front_door_axis = Vector3(0, -1, 0)
+right_front_door_path = NodePath("../door_frontRight_ctrl")
+right_front_door_area_path = NodePath("../door_frontRight_ctrl/DoorInteractionArea")
+left_rear_door_path = NodePath("../door_rearLeft_ctrl")
+left_rear_door_area_path = NodePath("../door_rearLeft_ctrl/DoorInteractionArea")
+left_rear_door_axis = Vector3(0, -1, 0)
+right_rear_door_path = NodePath("../door_rearRight_ctrl")
+right_rear_door_area_path = NodePath("../door_rearRight_ctrl/DoorInteractionArea")
+hood_path = NodePath("../hood_ctrl")
+hood_area_path = NodePath("../hood_ctrl/DoorInteractionArea")
+hood_axis = Vector3(-1, 0, 0)
+hood_angle = 45.0
+trunk_path = NodePath("../trunk_ctrl")
+trunk_area_path = NodePath("../trunk_ctrl/DoorInteractionArea")
+trunk_axis = Vector3(-1, 0, 0)
+trunk_angle = -45.0
+charge_port_path = NodePath("../chargePort_ctrl")
+
+[node name="3dLauncher" parent="3DLauncher" unique_id=732387565 instance=ExtResource("5_nwwjo")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="3DLauncher" unique_id=1992127845]
+environment = ExtResource("15_r2v34")
+
+[node name="SR" type="Node" parent="." unique_id=201734583]
+
+[node name="UICanvasLayer" type="CanvasLayer" parent="SR" unique_id=2001]
+layer = 99
+
+[node name="UiSr" parent="SR/UICanvasLayer" unique_id=403944801 instance=ExtResource("6_n6kj2")]
+
+[node name="IMG_NavMap" parent="SR/UICanvasLayer/UiSr" index="3" unique_id=1721351689 node_paths=PackedStringArray("path_follow_3d")]
+path_follow_3d = NodePath("../../../MainEnv/CurveMover3D/PathFollow3D")
+
+[node name="MatrixMainCar" parent="SR" unique_id=1833066360 instance=ExtResource("1_mex47")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("54_srml")
+layers = 2
+
+[node name="MainEnv" parent="SR" unique_id=508132137 instance=ExtResource("7_1usqm")]
+
+[node name="Controller" type="Node" parent="." unique_id=602549501]
+
+[node name="VehicleDataController" type="Node" parent="Controller" unique_id=2003 node_paths=PackedStringArray("speed_label", "img_noa", "img_signal_light", "txt_signal_countdown", "txt_current_speed", "txt_limited_speed", "tbt_arrow", "tbt_miles", "tbt_road", "tbt_min", "tbt_s", "tbt_arrive_hour", "tbt_arrive_minute", "img_road1", "img_road2", "img_road3", "curve_mover_3d", "matrix_main_car", "wheel_fl", "wheel_fr", "wheel_rl", "wheel_rr", "cluster_speed_label", "cluster_min_speed_label", "cluster_max_speed_label", "cluster_signal_light", "cluster_signal_countdown")]
+script = ExtResource("4_vdc")
+random_speed_min = 20.0
+trajectory_events = {
+0: {
+"min_speed": 10,
+"nav_time": {
+"arrive_hour": 11,
+"arrive_minute": 35,
+"minutes": 3,
+"seconds": 30
+},
+"noa_status": 1,
+"road_arrows": [0, 0, 0],
+"speed_limit": 30,
+"tbt": {
+"direction": 0,
+"distance": 500,
+"road_name": "江 南 大 道"
+},
+"traffic_light": {
+"color": 0,
+"countdown": 25.0,
+"distance": 200.0
+}
+},
+2: {
+"min_speed": 20,
+"speed_limit": 40,
+"tbt": {
+"direction": 0,
+"distance": 400
+},
+"traffic_light": {
+"color": 2,
+"countdown": 20.0
+}
+},
+4: {
+"min_speed": 10,
+"nav_time": {
+"arrive_hour": 11,
+"arrive_minute": 34,
+"minutes": 2,
+"seconds": 15
+},
+"noa_status": 1,
+"road_arrows": [1, 0, 0],
+"speed_limit": 30,
+"tbt": {
+"direction": 1,
+"distance": 300,
+"road_name": "人 民 路"
+},
+"traffic_light": {
+"color": 1,
+"countdown": 3.0
+}
+},
+6: {
+"min_speed": 20,
+"speed_limit": 40,
+"tbt": {
+"direction": 0,
+"distance": 200
+},
+"traffic_light": {
+"color": 0,
+"countdown": 30.0,
+"distance": 150.0
+}
+},
+8: {
+"min_speed": 5,
+"nav_time": {
+"arrive_hour": 11,
+"arrive_minute": 33,
+"minutes": 1,
+"seconds": 0
+},
+"noa_status": 2,
+"noa_warning": "前方施工，请接管",
+"road_arrows": [0, 0, 2],
+"speed_limit": 20,
+"tbt": {
+"direction": 0,
+"distance": 150,
+"road_name": "中 山 路"
+},
+"traffic_light": {
+"color": 2,
+"countdown": 15.0
+}
+}
+}
+speed_label = NodePath("../../SR/UICanvasLayer/UiSr/TXT_CurrentSpeed")
+img_noa = NodePath("../../SR/UICanvasLayer/UiSr/IMG_NOA")
+img_signal_light = NodePath("../../SR/UICanvasLayer/UiSr/Signal/IMG_SignalLight")
+txt_signal_countdown = NodePath("../../SR/UICanvasLayer/UiSr/Signal/IMG_SignalLight/TXT_SignalLight_s")
+txt_current_speed = NodePath("../../SR/UICanvasLayer/UiSr/Signal/IMG_CurrentSpeed/TXT_CurrentSpeed")
+txt_limited_speed = NodePath("../../SR/UICanvasLayer/UiSr/Signal/IMG_LimitedSpeed/TXT_LimitedSpeed")
+tbt_arrow = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/TBT_Arrow")
+tbt_miles = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/miles")
+tbt_road = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/Road")
+tbt_min = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/min")
+tbt_s = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/s")
+tbt_arrive_hour = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/ArriveTime/hour")
+tbt_arrive_minute = NodePath("../../SR/UICanvasLayer/UiSr/TBT_Card/ArriveTime/minutes")
+img_road1 = NodePath("../../SR/UICanvasLayer/UiSr/RoadInfo/IMG_Road1")
+img_road2 = NodePath("../../SR/UICanvasLayer/UiSr/RoadInfo/IMG_Road2")
+img_road3 = NodePath("../../SR/UICanvasLayer/UiSr/RoadInfo/IMG_Road3")
+icon_straight = ExtResource("14_straight")
+icon_left = ExtResource("10_bwftk")
+icon_right = ExtResource("16_right")
+icon_uturn = ExtResource("17_uturn")
+curve_mover_3d = NodePath("../../SR/MainEnv/CurveMover3D")
+matrix_main_car = NodePath("../../SR/MatrixMainCar")
+wheel_fl = NodePath("../../SR/MatrixMainCar/wheel_frontLeft_ctrl")
+wheel_fr = NodePath("../../SR/MatrixMainCar/wheel_frontRight_ctrl")
+wheel_rl = NodePath("../../SR/MatrixMainCar/wheel_rearLeft_ctrl")
+wheel_rr = NodePath("../../SR/MatrixMainCar/wheel_rearRight_ctrl")
+cluster_speed_label = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/HBoxContainer/TXT_CurrentSpeed")
+cluster_min_speed_label = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/Signal/IMG_CurrentSpeed/TXT_CurrentSpeed")
+cluster_max_speed_label = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/Signal/IMG_LimitedSpeed/TXT_LimitedSpeed")
+cluster_signal_light = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/Signal/IMG_SignalLight")
+cluster_signal_countdown = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/Signal/IMG_SignalLight/TXT_SignalLight_s")
+
+[node name="GearController" type="Node" parent="Controller" unique_id=356762171 node_paths=PackedStringArray("vehicle_data_controller", "gear_button", "gear_label_p", "gear_label_r", "gear_label_n", "gear_label_d", "cluster_label_p", "cluster_label_r", "cluster_label_n", "cluster_label_d")]
+script = ExtResource("9_ydxsu")
+vehicle_data_controller = NodePath("../VehicleDataController")
+gear_button = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer2/HBoxContainer/P")
+icon_p = ExtResource("10_n6kj2")
+icon_d = ExtResource("11_j3ty4")
+icon_n = ExtResource("12_2xdhk")
+icon_r = ExtResource("13_a0wyt")
+highlight_color = Color(1, 1, 1, 1)
+default_color = Color(0.5, 0.5, 0.5, 1)
+gear_label_p = NodePath("../../MainUiCanvasLayer/MainUi/PNRD/P")
+gear_label_r = NodePath("../../MainUiCanvasLayer/MainUi/PNRD/R")
+gear_label_n = NodePath("../../MainUiCanvasLayer/MainUi/PNRD/N")
+gear_label_d = NodePath("../../MainUiCanvasLayer/MainUi/PNRD/D")
+cluster_label_p = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/C_PRND/TXT_P")
+cluster_label_r = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/C_PRND/TXT_R")
+cluster_label_n = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/C_PRND/TXT_N")
+cluster_label_d = NodePath("../../ClusterViewport/ClusterCanvasLayer/UiCluster/C_PRND/TXT_D")
+
+[node name="ModeUIManager" type="Node" parent="Controller" unique_id=468817351 node_paths=PackedStringArray("btn_launcher", "btn_vehicle_settings", "btn_navigate", "btn_interior", "btn_application", "btn_charging", "btn_music", "ui_launcher", "ui_navigate", "ui_application", "ui_charging", "ui_music")]
+script = ExtResource("29_modeui")
+btn_launcher = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer/NS")
+btn_vehicle_settings = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer2/HBoxContainer/VehicleSettings")
+btn_navigate = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer2/HBoxContainer/Navigate")
+btn_interior = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer4/HBoxContainer/Fan")
+btn_application = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer5/HBoxContainer/APP")
+btn_charging = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer5/HBoxContainer/Charging")
+btn_music = NodePath("../../MainUiCanvasLayer/MainUi/HBoxContainer/MarginContainer5/HBoxContainer/Music")
+mask_material = ExtResource("5_fgup5")
+mask_texture_launcher = ExtResource("6_kgvsw")
+mask_texture_vehicle_settings = ExtResource("6_kgvsw")
+mask_texture_navigate = ExtResource("7_kgvsw")
+ui_launcher = NodePath("../../MainUiCanvasLayer/MainUi/MarginContainer")
+ui_navigate = NodePath("../../SR/UICanvasLayer/UiSr")
+ui_application = NodePath("../../MainUiCanvasLayer/UI_Application")
+ui_charging = NodePath("../../MainUiCanvasLayer/UI_Charging")
+ui_music = NodePath("../../MainUiCanvasLayer/UI_Music")
+
+[node name="DoorLidManager" type="Node" parent="Controller" unique_id=130261041 node_paths=PackedStringArray("door_lid_nodes", "reflection_door_lid_nodes")]
+script = ExtResource("30_doorlid")
+main_car_root = NodePath("../../3DLauncher/MatrixMainCar")
+reflection_car_root = NodePath("../../3DLauncher/3dLauncher/MatrixMainCar")
+door_lid_nodes = [NodePath("../../3DLauncher/MatrixMainCar/door_frontLeft_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/door_frontRight_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/door_rearLeft_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/door_rearRight_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/hood_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/trunk_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/chargePort_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/wheel_frontLeft_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/wheel_frontRight_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/wheel_rearLeft_ctrl"), NodePath("../../3DLauncher/MatrixMainCar/wheel_rearRight_ctrl")]
+reflection_door_lid_nodes = [NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/door_frontLeft_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/door_frontRight_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/door_rearLeft_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/door_rearRight_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/hood_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/trunk_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/chargePort_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/wheel_frontLeft_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/wheel_frontRight_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/wheel_rearLeft_ctrl"), NodePath("../../3DLauncher/3dLauncher/MatrixMainCar/wheel_rearRight_ctrl")]
+
+[node name="LampController" type="LampController" parent="Controller" unique_id=317673870]
+drl_material = ExtResource("48_cu7b8")
+headlight_material = ExtResource("49_i6lp5")
+fog_light_material = ExtResource("50_fv0ry")
+brake_material = ExtResource("51_u7a6k")
+turn_left_material = ExtResource("52_e8yna")
+turn_right_material = ExtResource("53_53pd4")
+
+[node name="ClusterViewport" type="MultiSurfViewport" parent="." unique_id=1699618438]
+world_3d = SubResource("World3D_cu7b8")
+handle_input_locally = false
+msaa_3d = 3
+size = Vector2i(1920, 1080)
+render_target_update_mode = 0
+MaskTexture = ExtResource("8_1usqm")
+bMask = true
+
+[node name="ClusterCameraController3D" type="CameraController3D" parent="ClusterViewport" unique_id=1638781758 node_paths=PackedStringArray("gear_controller", "matrix_main_car")]
+debug_play = Callable()
+camera_data_tables = [ExtResource("22_r6lga"), ExtResource("23_22p2n"), ExtResource("24_egncs"), ExtResource("25_qygge")]
+script = ExtResource("9_y445w")
+gear_controller = NodePath("../../Controller/GearController")
+matrix_main_car = NodePath("../../SR/MatrixMainCar")
+
+[node name="ClusterCanvasLayer" type="CanvasLayer" parent="ClusterViewport" unique_id=155854768]
+
+[node name="UiCluster" parent="ClusterViewport/ClusterCanvasLayer" unique_id=403060758 instance=ExtResource("16_j3ty4")]
+
+[editable path="MainUiCanvasLayer/MainUi"]
+[editable path="3DLauncher/MatrixMainCar"]
+[editable path="3DLauncher/3dLauncher"]
+[editable path="3DLauncher/3dLauncher/MatrixMainCar"]
+[editable path="SR/UICanvasLayer/UiSr"]
+[editable path="SR/MainEnv"]
+[editable path="ClusterViewport/ClusterCanvasLayer/UiCluster"]

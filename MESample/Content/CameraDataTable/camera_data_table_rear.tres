@@ -1,0 +1,26 @@
+[gd_resource type="CameraDataTable" format=3 uid="uid://cmi1juet5t7y"]
+
+[sub_resource type="Curve" id="Curve_4n33d"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+view_name = &"rear"
+transition_duration = 1.0
+rotation = Vector3(-11, -90, 0)
+length = 6.405
+fov = 28.0
+v_offset = 0.395
+transition_curve = SubResource("Curve_4n33d")
+cull_mask = 4293918757
+can_break_transition = false
+yaw_speed = 3.0
+pitch_limit_type = 1
+pitch_speed = 3.0
+limit_pitch_down_hard = 5.0
+length_hard_min = 4.0
+length_soft_min = 5.0
+length_soft_max = 14.0
+length_hard_max = 15.0
+auto_return = false
+auto_return_time = 2.0

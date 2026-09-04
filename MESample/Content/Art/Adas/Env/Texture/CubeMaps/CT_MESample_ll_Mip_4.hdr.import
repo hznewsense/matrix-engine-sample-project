@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://bcu5feulm0taq"
+path.bptc="res://.godot/imported/CT_MESample_ll_Mip_4.hdr-2b2ade82ef528f3ac642612474042223.bptc.ccube"
+path.astc="res://.godot/imported/CT_MESample_ll_Mip_4.hdr-2b2ade82ef528f3ac642612474042223.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/Adas/Env/Texture/CubeMaps/CT_MESample_ll_Mip_4.hdr"
+dest_files=["res://.godot/imported/CT_MESample_ll_Mip_4.hdr-2b2ade82ef528f3ac642612474042223.bptc.ccube", "res://.godot/imported/CT_MESample_ll_Mip_4.hdr-2b2ade82ef528f3ac642612474042223.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/arrangement=3

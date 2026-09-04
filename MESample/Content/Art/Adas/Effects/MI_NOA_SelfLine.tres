@@ -1,0 +1,10 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://cllex507nh6s1"]
+
+
+
+[resource]
+builtin_shader = 0
+render_priority = -3
+shader_parameter/basecolor = Color(0.7, 0.175, 0.18375, 1)
+shader_parameter/hardness = 0.3
+shader_parameter/opacity = 0.0

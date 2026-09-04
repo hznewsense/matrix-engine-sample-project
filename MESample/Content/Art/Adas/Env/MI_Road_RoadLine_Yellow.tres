@@ -1,0 +1,8 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://cndw7br4q3de2"]
+
+
+
+[resource]
+builtin_shader = 3
+render_priority = -1
+shader_parameter/BaseColor = Color(0.76, 0.608, 0, 1)

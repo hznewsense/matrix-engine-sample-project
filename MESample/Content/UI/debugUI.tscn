@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://b3dw6c1cwvgsl"]
+
+[ext_resource type="Script" uid="uid://ckdoaw6j7d0s2" path="res://Content/UI/Debugui.gd" id="1_s2i85"]
+[ext_resource type="Script" uid="uid://xno1xko8vp2e" path="res://Content/Script/CloseCluster.gd" id="2_3tvdu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2i85"]
+
+[node name="DebugUi" type="Control" unique_id=1142302185]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1560.0
+offset_bottom = -786.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2i85")
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1827364581]
+visible = false
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 440.0
+
+[node name="Display" type="VBoxContainer" parent="TabContainer" unique_id=998552794]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Display" unique_id=1760155572]
+layout_mode = 2
+text = "Close the Cluster"
+script = ExtResource("2_3tvdu")
+
+[node name="DisabledButton" type="Button" parent="TabContainer/Display" unique_id=1831273917]
+layout_mode = 2
+text = "Disable"
+
+[node name="MSAA 8x" type="Button" parent="TabContainer/Display" unique_id=1117095575]
+layout_mode = 2
+text = "MSAA 8x"
+
+[node name="MSAA 4x" type="Button" parent="TabContainer/Display" unique_id=1947496152]
+layout_mode = 2
+text = "MSAA 4x"
+
+[node name="MSAA 2x" type="Button" parent="TabContainer/Display" unique_id=1282548625]
+layout_mode = 2
+text = "MSAA 2x"
+
+[node name="1920x1200" type="Button" parent="TabContainer/Display" unique_id=1686986032]
+layout_mode = 2
+text = "窗口大小：1920x1200"
+
+[node name="1600x900" type="Button" parent="TabContainer/Display" unique_id=1310738843]
+layout_mode = 2
+text = "窗口大小：1600x900"
+
+[node name="1280x720" type="Button" parent="TabContainer/Display" unique_id=979709106]
+layout_mode = 2
+text = "窗口大小：1280x720"
+
+[node name="1024x768" type="Button" parent="TabContainer/Display" unique_id=1867155909]
+layout_mode = 2
+text = "窗口大小：1024x768"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Display" unique_id=954883495]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Display/HBoxContainer" unique_id=961271214]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.5
+max_value = 2.0
+step = 0.01
+value = 1.0
+
+[node name="Label" type="Label" parent="TabContainer/Display/HBoxContainer" unique_id=768224128]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
+
+[node name="Performance" type="VBoxContainer" parent="TabContainer" unique_id=1859234712]
+layout_mode = 2
+
+[node name="BloomCheck" type="CheckButton" parent="TabContainer/Performance" unique_id=1900000001]
+layout_mode = 2
+text = "Bloom 后处理"
+button_pressed = true
+
+[node name="FogsCheck" type="CheckButton" parent="TabContainer/Performance" unique_id=1900000002]
+layout_mode = 2
+text = "雾粒子"
+button_pressed = true
+
+[node name="ReflectionCheck" type="CheckButton" parent="TabContainer/Performance" unique_id=1900000003]
+layout_mode = 2
+text = "倒影车模"
+button_pressed = true
+
+[node name="CarpaintCheck" type="CheckButton" parent="TabContainer/Performance" unique_id=1900000005]
+layout_mode = 2
+text = "车漆反射"
+button_pressed = true
+
+[node name="Click" type="Button" parent="." unique_id=619275631]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 380.0
+offset_right = 346.0
+offset_bottom = 480.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s2i85")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_s2i85")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s2i85")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s2i85")
+
+[connection signal="pressed" from="TabContainer/Display/Button" to="TabContainer/Display/Button" method="_on_pressed"]
+[connection signal="pressed" from="TabContainer/Display/DisabledButton" to="." method="_on_disabled_button_pressed"]
+[connection signal="pressed" from="TabContainer/Display/MSAA 8x" to="." method="_on_msaa_8x_button_pressed"]
+[connection signal="pressed" from="TabContainer/Display/MSAA 4x" to="." method="_on_msaa_4x_button_pressed"]
+[connection signal="pressed" from="TabContainer/Display/MSAA 2x" to="." method="_on_msaa_2x_button_pressed"]
+[connection signal="pressed" from="TabContainer/Display/1920x1200" to="." method="_on_1920x1200_pressed"]
+[connection signal="pressed" from="TabContainer/Display/1600x900" to="." method="_on_1600x900_pressed"]
+[connection signal="pressed" from="TabContainer/Display/1280x720" to="." method="_on_1280x720_pressed"]
+[connection signal="pressed" from="TabContainer/Display/1024x768" to="." method="_on_1024x768_pressed"]
+[connection signal="value_changed" from="TabContainer/Display/HBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="TabContainer/Performance/BloomCheck" to="." method="_on_bloom_check_toggled"]
+[connection signal="toggled" from="TabContainer/Performance/FogsCheck" to="." method="_on_fogs_check_toggled"]
+[connection signal="toggled" from="TabContainer/Performance/ReflectionCheck" to="." method="_on_reflection_check_toggled"]
+[connection signal="toggled" from="TabContainer/Performance/CarpaintCheck" to="." method="_on_carpaint_check_toggled"]
+[connection signal="pressed" from="Click" to="." method="_on_click_pressed"]

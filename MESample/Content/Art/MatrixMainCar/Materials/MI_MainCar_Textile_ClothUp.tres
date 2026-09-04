@@ -1,0 +1,35 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://ckft0ks85ay73"]
+
+[ext_resource type="Texture2D" uid="uid://c5ceuim2sy5ye" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Carpet_01_BC.png" id="2_a8cgc"]
+[ext_resource type="Texture2D" uid="uid://byvet47kam7xw" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Carpet_01_N.png" id="4_2kqu0"]
+
+[resource]
+builtin_shader = 2
+render_priority = 0
+shader_parameter/Irradiance_Saturation = 0.4
+shader_parameter/env_rotate = 2.24
+shader_parameter/Basecolor_Tex = ExtResource("2_a8cgc")
+shader_parameter/Basecolor_UV = 20.0
+shader_parameter/BaseColorCenter = Color(0.3137255, 0.3137255, 0.3137255, 1)
+shader_parameter/BaseColorEdge = Color(0.51718444, 0.5171845, 0.5171844, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 1.0
+shader_parameter/roughness_Max = 0.9499999787656
+shader_parameter/diffuseIntensity = 10.0
+shader_parameter/specularIntensity = 5.0
+shader_parameter/ORS_UV = 1.0
+shader_parameter/ao_Min = 1.0
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useVertexColor = true
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("4_2kqu0")
+shader_parameter/normalIntensity = 0.7999999821184
+shader_parameter/NormalUV = 20.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0

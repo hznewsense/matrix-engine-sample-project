@@ -1,0 +1,35 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://dbevriv6rbwvl"]
+
+[ext_resource type="Texture2D" uid="uid://ddod0t0gp38f7" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_MESample_ll_Mip_4.hdr" id="2_dnecx"]
+[ext_resource type="Texture2D" uid="uid://314wclr8hnl6" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/HDRI_Paul_Lobe_Haus_2.hdr" id="4_dnecx"]
+
+[resource]
+builtin_shader = 4
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("4_dnecx")
+shader_parameter/IrradianceMap = ExtResource("2_dnecx")
+shader_parameter/env_rotate = 0.0
+shader_parameter/Basecolor_UV = 3.0
+shader_parameter/BaseColorCenter = Color(0.05, 0.05, 0.05, 1)
+shader_parameter/BaseColorEdge = Color(0, 0, 0, 1)
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/opacity = 0.9
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.0
+shader_parameter/roughness_Max = 0.0
+shader_parameter/diffuseIntensity = 8.0
+shader_parameter/specularIntensity = 10.0
+shader_parameter/useN = false
+shader_parameter/normalIntensity = 0.5
+shader_parameter/NormalUV = 1.0
+shader_parameter/ao_Min = 1.0
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/slope = 0.88
+shader_parameter/toe = 0.55
+shader_parameter/shoulder = 0.26
+shader_parameter/blackclip = 0.0
+shader_parameter/whiteclip = 0.04

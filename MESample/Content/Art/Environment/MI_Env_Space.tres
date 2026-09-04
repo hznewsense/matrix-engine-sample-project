@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c0nbv5ydsfuvw"]
+
+[ext_resource type="Shader" path="res://Content/Art/MatrixMainCar/Materials/M_Emissive_White.gdshader" id="1_dkari"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dkari")
+shader_parameter/color_tint = Color(1, 1, 1, 1)
+shader_parameter/facing_intensity = 5.0
+shader_parameter/edge_intensity = 0.5
+shader_parameter/fresnel_power = 1.0
+shader_parameter/base_reflect_fraction = 0.04

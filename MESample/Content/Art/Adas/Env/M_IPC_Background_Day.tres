@@ -1,0 +1,10 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://cmby8g7upw2yi"]
+
+[ext_resource type="Texture2D" uid="uid://0kvxwnhiusmh" path="res://Content/MatrixMultiViewTemplate/UI_Shader/T_IPC_Background_Night_PNR.png" id="2_sq2n4"]
+
+
+[resource]
+builtin_shader = 4
+render_priority = 0
+shader_parameter/darkMode_P = false
+shader_parameter/bg = ExtResource("2_sq2n4")

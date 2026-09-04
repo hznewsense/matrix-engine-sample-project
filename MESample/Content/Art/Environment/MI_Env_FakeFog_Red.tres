@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cv4jbw6qs5wj4"]
+
+[ext_resource type="Shader" uid="uid://bxtwsed4fe0qy" path="res://Content/Art/Environment/M_Env_FakeFog.gdshader" id="1_kaa1x"]
+[ext_resource type="Texture2D" uid="uid://6owty56eytam" path="res://Content/Art/Environment/T_EV_FogSheet_CloudTex_02.png" id="2_r64qu"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kaa1x")
+shader_parameter/tiling_mask = ExtResource("2_r64qu")
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/contrast_mask = 1.0000000475
+shader_parameter/radius = 0.54400002584
+shader_parameter/center_position = Vector2(0.5, 0.5)
+shader_parameter/fresnel_exponent = 0.6890000320289801
+shader_parameter/fresnel_power = 0.2250000106875
+shader_parameter/emission_color = Color(1, 0.29000002, 0.29000002, 1)

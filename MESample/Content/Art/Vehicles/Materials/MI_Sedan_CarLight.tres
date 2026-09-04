@@ -1,0 +1,22 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://bgebues0kry4w"]
+
+[ext_resource type="Texture2D" uid="uid://gojxlrn5vufo" path="res://Content/Art/Vehicles/Textures/T_Vehicles_Sedan_ORS.png" id="2_bvyxj"]
+[ext_resource type="Texture2D" uid="uid://cwgbxnebl2ab7" path="res://Content/Art/Vehicles/Textures/T_Vehicle_Carlight_Mask.TGA" id="2_sicvf"]
+
+[resource]
+builtin_shader = 11
+render_priority = 0
+shader_parameter/lighttex = ExtResource("2_sicvf")
+shader_parameter/breakInt = 0.0
+shader_parameter/breakColor = Color(1, 0, 0, 1)
+shader_parameter/tColor = Color(1, 0.5, 0, 1)
+shader_parameter/leftInt = 0.0
+shader_parameter/rightInt = 0.0
+shader_parameter/speed = 1.0
+shader_parameter/tex = ExtResource("2_bvyxj")
+shader_parameter/aoInt = 0.2
+shader_parameter/usebasecolorTex = false
+shader_parameter/basecolor = Color(0.46666667, 0.47843137, 0.49019608, 1)
+shader_parameter/texInt = 0.7
+shader_parameter/LightDirection = Vector3(-15.485, 31.335, 3.99)
+shader_parameter/LightInt = 2.5

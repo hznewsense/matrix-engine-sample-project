@@ -1,0 +1,4 @@
+# GDExtension 编译链接产物：运行时只需 dll，exp/lib 及 scons 临时 dll 不提交
+bin/*.exp
+bin/*.lib
+bin/~*.dll

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://defs8mpfach3o"]
+
+[ext_resource type="Shader" uid="uid://bweeg08nkwvca" path="res://Content/Art/Shaders/M_Mirrow.gdshader" id="1_dtevv"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_dtevv")
+shader_parameter/v = 0.585
+shader_parameter/rp = 0.485
+shader_parameter/Mirrocolor = Color(0.827451, 0.85098, 0.878431, 1)

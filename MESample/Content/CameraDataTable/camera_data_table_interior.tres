@@ -1,0 +1,19 @@
+[gd_resource type="CameraDataTable" format=3 uid="uid://bp6sqygnjkeic"]
+
+[sub_resource type="Curve" id="Curve_l85su"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+view_name = &"Interior"
+transition_duration = 1.0
+position = Vector3(0, 1.02, 0)
+rotation = Vector3(-12, -90, 0)
+length = 0.525
+fov = 50.0
+transition_curve = SubResource("Curve_l85su")
+cull_mask = 4293918753
+can_touch = false
+can_break_transition = false
+yaw_speed = 0.5
+pitch_speed = 0.5

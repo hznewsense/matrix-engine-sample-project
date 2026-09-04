@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dbrfjbk5y22gg"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvbjyoedkfel6" path="res://Content/Art/Environment/SM_Env_Ground.res" id="1_8fwfr"]
+[ext_resource type="Material" uid="uid://bycjhlptwrrv6" path="res://Content/Art/Environment/FOG/MI_ParticalProcessWhite.tres" id="2_ywt45"]
+[ext_resource type="QuadMesh" uid="uid://dto2eti5mcbak" path="res://Content/Art/Environment/FOG/WhiteFogPartical.tres" id="3_1vr04"]
+[ext_resource type="Material" uid="uid://b4vox02l2uc6p" path="res://Content/Art/Environment/FOG/MI_ParticalProcessWhiteLeft.tres" id="4_1pifj"]
+[ext_resource type="QuadMesh" uid="uid://d3o7ngoxwyts4" path="res://Content/Art/Environment/FOG/WhiteFogParticalLeft.tres" id="5_fnfq8"]
+[ext_resource type="Material" uid="uid://dtuqi5umlklic" path="res://Content/Art/Environment/FOG/MI_ParticalProcessWhiteBack.tres" id="6_jd3aa"]
+[ext_resource type="QuadMesh" uid="uid://ck101o60j5kaw" path="res://Content/Art/Environment/FOG/WhiteFogParticalBack.tres" id="7_bclyt"]
+[ext_resource type="Material" uid="uid://tlq2byontc1k" path="res://Content/Art/Environment/FOG/MI_ParticalProcess_Red.tres" id="8_y3ayq"]
+[ext_resource type="QuadMesh" uid="uid://cj68faex4beog" path="res://Content/Art/Environment/FOG/RedFogParticalBack.tres" id="9_ebjlc"]
+[ext_resource type="ArrayMesh" uid="uid://bwio52287u0ha" path="res://Content/Art/Environment/SM_Env_Space.res" id="9_ecwsv"]
+[ext_resource type="ArrayMesh" uid="uid://dpby8ewu4lckc" path="res://Content/Art/Environment/SM_Env_Space_Light.res" id="10_y3ayq"]
+[ext_resource type="QuadMesh" uid="uid://c27b5gmlvb0y7" path="res://Content/Art/Environment/FOG/RedFogParticalMaxtrixBack.tres" id="11_2yge5"]
+[ext_resource type="PackedScene" uid="uid://caxyea6xm2eji" path="res://Content/Art/MatrixMainCar/Maps/MatrixMainCar_Ref.tscn" id="14_1vr04"]
+[ext_resource type="ArrayMesh" uid="uid://d1hxboxnmb6mr" path="res://Content/Art/Environment/SM_Env_MATRIXENGINE.res" id="15_1pifj"]
+[ext_resource type="ArrayMesh" uid="uid://cxpdcnhf32a2g" path="res://Content/Art/Environment/SM_Env_MATRIXENGINE_02.res" id="17_jd3aa"]
+[ext_resource type="Script" uid="uid://2en44wkidfv8" path="res://Content/Script/MatrixMainCarLayers.gd" id="18_carlayers"]
+
+[sub_resource type="Gradient" id="Gradient_5htjm"]
+offsets = PackedFloat32Array(0, 0.29677418, 0.7483871, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pao43"]
+gradient = SubResource("Gradient_5htjm")
+
+[sub_resource type="MatrixMainSceneMaterial" id="ShaderMaterial_vmtlh"]
+builtin_shader = 8
+shader_parameter/amount = 3
+shader_parameter/line_length = 12.0
+shader_parameter/jitter_amount = 0.05
+shader_parameter/rotation_angle = 0.0
+shader_parameter/center = Vector3(-5, 1, 10)
+shader_parameter/initial_speed = 0.04
+shader_parameter/emission_direction = Vector3(-1, 0.4, 0)
+shader_parameter/gradient_texture = SubResource("GradientTexture1D_pao43")
+
+[node name="3dLauncher" type="Node3D" unique_id=732387565]
+
+[node name="SmEnvGround" type="MeshInstance3D" parent="." unique_id=822898148]
+transform = Transform3D(26, 0, 0, 0, 26, 0, 0, 0, 26, -1.9470592, -0.01, 2.282896)
+layers = 32
+mesh = ExtResource("1_8fwfr")
+
+[node name="Fogs" type="Node3D" parent="." unique_id=1783863502]
+
+[node name="FogWhiteRight" type="GPUParticles3D" parent="Fogs" unique_id=548554211]
+layers = 32
+amount = 7
+lifetime = 10.0
+process_material = ExtResource("2_ywt45")
+draw_pass_1 = ExtResource("3_1vr04")
+
+[node name="FogWhiteLeft" type="GPUParticles3D" parent="Fogs" unique_id=411352159]
+layers = 32
+amount = 4
+lifetime = 10.0
+process_material = ExtResource("4_1pifj")
+draw_pass_1 = ExtResource("5_fnfq8")
+
+[node name="FogWhiteBack" type="GPUParticles3D" parent="Fogs" unique_id=1980551817]
+visible = false
+layers = 32
+amount = 3
+lifetime = 10.0
+process_material = ExtResource("6_jd3aa")
+draw_pass_1 = ExtResource("7_bclyt")
+
+[node name="FogRedBack" type="GPUParticles3D" parent="Fogs" unique_id=335692867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9675007)
+layers = 32
+amount = 3
+lifetime = 10.0
+process_material = ExtResource("8_y3ayq")
+draw_pass_1 = ExtResource("9_ebjlc")
+
+[node name="FogRedMatrixBack" type="GPUParticles3D" parent="Fogs" unique_id=1806384311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9675007)
+layers = 32
+amount = 3
+lifetime = 10.0
+process_material = SubResource("ShaderMaterial_vmtlh")
+draw_pass_1 = ExtResource("11_2yge5")
+
+[node name="EmissLine" type="Node3D" parent="." unique_id=1029602103]
+
+[node name="EmissLineBottom" type="MeshInstance3D" parent="EmissLine" unique_id=1040387073]
+transform = Transform3D(-3.2958386e-08, 0, 0.752, 0, 1, 0, -0.754, 0, -3.2870965e-08, 0.02, 0.026, -0.707)
+layers = 32
+mesh = ExtResource("9_ecwsv")
+
+[node name="EmissLineEdge" type="MeshInstance3D" parent="EmissLine" unique_id=57022494]
+transform = Transform3D(-3.2958386e-08, 0, 0.752, 0, 1, 0, -0.754, 0, -3.2870965e-08, 0.02, 0.026, -0.707)
+layers = 32
+mesh = ExtResource("10_y3ayq")
+
+[node name="MatrixMainCar" parent="." unique_id=1833066360 instance=ExtResource("14_1vr04")]
+transform = Transform3D(-4.371139e-08, 6.600236e-15, 1, -1.509958e-07, -1, 0, -1, 1.509958e-07, -4.371139e-08, 0, -0.01, 0)
+script = ExtResource("18_carlayers")
+layers = 32
+
+[node name="SmEnvMatrixengine" type="MeshInstance3D" parent="." unique_id=1927702137]
+transform = Transform3D(-4.371139e-08, 0, 1.5463989, 0, 1.2932979, 0, -1, 0, -6.7595245e-08, -3.8736396, 0, 1.9907155)
+layers = 32
+mesh = ExtResource("15_1pifj")
+
+[node name="SmEnvMatrixengine02" type="MeshInstance3D" parent="." unique_id=1719357419]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.2309555, 0, -1, 0, -4.371139e-08, -1.905, -2.3169727, 5.095636)
+visible = false
+mesh = ExtResource("17_jd3aa")

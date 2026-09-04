@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://mhrabsiq1kb6"
+path.bptc="res://.godot/imported/HDRI_DayLight_512.png-710fa97daabcbbce5cad1124059700fd.bptc.ccube"
+path.astc="res://.godot/imported/HDRI_DayLight_512.png-710fa97daabcbbce5cad1124059700fd.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/Adas/Env/Texture/HDRI_DayLight_512.png"
+dest_files=["res://.godot/imported/HDRI_DayLight_512.png-710fa97daabcbbce5cad1124059700fd.bptc.ccube", "res://.godot/imported/HDRI_DayLight_512.png-710fa97daabcbbce5cad1124059700fd.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/arrangement=3

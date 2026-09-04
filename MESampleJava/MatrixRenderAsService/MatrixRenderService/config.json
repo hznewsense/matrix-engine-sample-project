@@ -1,0 +1,11 @@
+{
+  "adbPath": "adb",
+  "packageName": "com.ns.matrix.sample.service",
+  "targetDir": "/storage/emulated/0/Android/data/com.ns.matrix.sample.service/files",
+  "outputFileName": "game.obb",
+  "pckSources": [
+    {
+      "pckPath": "D:\\workspace\\NS\\android\\Sample\\MESample\\MESampleJava\\MatrixRenderAsService\\MatrixRenderService\\src\\main\\assets\\game.pck"
+    }
+  ]
+}

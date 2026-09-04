@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cig6mpv3704r6"]
+
+[ext_resource type="Shader" uid="uid://d3h5xmiiygu6s" path="res://Content/Art/Shaders/M_HOD_SelfLine.gdshader" id="1_0db40"]
+
+[resource]
+render_priority = -6
+shader = ExtResource("1_0db40")
+shader_parameter/basecolor = Color(1, 0.317647, 0.321569, 1)
+shader_parameter/hardness = 0.4
+shader_parameter/opacity = 0.6

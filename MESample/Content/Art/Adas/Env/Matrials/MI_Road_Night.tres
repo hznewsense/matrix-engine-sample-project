@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://vnuebo35t5np"]
+
+[ext_resource type="Shader" path="res://Content/Art/Env/Shader/M_Cross.gdshader" id="1_1776j"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1776j")
+shader_parameter/z_near = 57.635
+shader_parameter/z_far = 90.83
+shader_parameter/z_center = 10.0
+shader_parameter/r_near = 26.68
+shader_parameter/r_far = 98.525
+shader_parameter/Opacity = 1.0
+shader_parameter/roadColor = Color(0.219608, 0.243137, 0.270588, 1)

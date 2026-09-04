@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dy5y11k22k8ic"]
+
+[ext_resource type="Shader" uid="uid://05yax1vtdwc4" path="res://Content/Art/ParkingSpace/M_ParkingTrajectory.gdshader" id="1_n2dkt"]
+
+[resource]
+render_priority = -2
+shader = ExtResource("1_n2dkt")
+shader_parameter/baseColor = Color(0.580392, 0.635294, 0.701961, 1)
+shader_parameter/hardness = 1.036
+shader_parameter/power = 1.6
+shader_parameter/opacity = 1.3

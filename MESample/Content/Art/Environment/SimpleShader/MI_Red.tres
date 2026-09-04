@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://du03mfbfb58g1"]
+
+[ext_resource type="Shader" uid="uid://bm1c8l6pgamvl" path="res://Content/Art/Environment/SimpleShader/M_BaseLambert.gdshader" id="1_eb0nr"]
+
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_eb0nr")
+shader_parameter/base_color = Color(0.6656343, 0, 0.0057269335, 1)
+shader_parameter/light_direction = Vector3(-1, -1, -1)
+shader_parameter/light_color = Color(1, 1, 1, 1)
+shader_parameter/light_intensity = 1.0

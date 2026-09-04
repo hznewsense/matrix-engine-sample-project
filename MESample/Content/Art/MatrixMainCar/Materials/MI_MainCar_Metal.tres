@@ -1,0 +1,44 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://c7iovwif8v1wt"]
+
+[ext_resource type="Texture2D" uid="uid://verlpu01u7os" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_WheelRim_D.png" id="2_dmcr7"]
+[ext_resource type="Texture2D" uid="uid://cj84cuw2g2wgv" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_MetalWear_Frosted_N.png" id="3_hn6xs"]
+[ext_resource type="Texture2D" uid="uid://ddod0t0gp38f7" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_MESample_ll_Mip_4.hdr" id="3_oscvb"]
+[ext_resource type="Texture2D" uid="uid://cawgw20vu2ns8" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Mat_Rim_350K_ORS.png" id="5_x7emm"]
+[ext_resource type="Texture2D" uid="uid://caa06tandmbih" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_MESample_ll_Mip_2.hdr" id="6_oscvb"]
+
+[resource]
+builtin_shader = 5
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("6_oscvb")
+shader_parameter/IrradianceMap = ExtResource("3_oscvb")
+shader_parameter/env_rotate = 5.295
+shader_parameter/Basecolor_Tex = ExtResource("2_dmcr7")
+shader_parameter/Basecolor_UV = 1.0
+shader_parameter/BaseColorCenter = Color(1, 1, 1, 1)
+shader_parameter/BaseColorEdge = Color(0.4, 0.4, 0.4, 1)
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/Metallic = 1.0
+shader_parameter/roughness_Min = 0.05999999865888
+shader_parameter/roughness_Max = 0.3499999921768
+shader_parameter/diffuseIntensity = 1.0
+shader_parameter/specularIntensity = 15.0
+shader_parameter/useVertexColor = false
+shader_parameter/ORS_Tex = ExtResource("5_x7emm")
+shader_parameter/ORS_UV = 1.0
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("3_hn6xs")
+shader_parameter/normalIntensity = 1.0
+shader_parameter/NormalUV = 50.0
+shader_parameter/ao_Min = 0.0
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 0.999999977648
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 0.5
+shader_parameter/slope = 0.88
+shader_parameter/toe = 0.55
+shader_parameter/shoulder = 0.26
+shader_parameter/blackclip = 0.0
+shader_parameter/whiteclip = 0.04

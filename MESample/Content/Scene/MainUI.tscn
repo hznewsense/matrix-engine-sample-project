@@ -1,0 +1,495 @@
+[gd_scene format=3 uid="uid://8ur1hvitxdf0"]
+
+[ext_resource type="Script" uid="uid://c375vptxc4o15" path="res://Content/Script/MainUi.gd" id="1_script"]
+[ext_resource type="Material" uid="uid://cguq0rurxc0t4" path="res://Content/Art/Effect/MI_Effect_Climate.tres" id="2_ujdl2"]
+[ext_resource type="Texture2D" uid="uid://ckdxk5hsyblxn" path="res://Content/UI/3DLauncher/T_Icon_Navigate.png" id="3_3hlmb"]
+[ext_resource type="Texture2D" uid="uid://0220cpxfkr3j" path="res://Content/UI/3DLauncher/T_Icon_Fan.png" id="4_3hlmb"]
+[ext_resource type="Texture2D" uid="uid://buscm2pj2luux" path="res://Content/UI/3DLauncher/T_UI_Dock.png" id="5_3hlmb"]
+[ext_resource type="Texture2D" uid="uid://cuaqtko1rit31" path="res://Content/UI/3DLauncher/T_Icon_Setting.png" id="5_f5x7b"]
+[ext_resource type="Texture2D" uid="uid://bdtuakurs8ubg" path="res://Content/UI/3DLauncher/T_UI_Top.png" id="5_r668y"]
+[ext_resource type="Texture2D" uid="uid://bjyl35rqnrr6m" path="res://Content/UI/3DLauncher/T_Icon_Info.png" id="6_3hlmb"]
+[ext_resource type="Texture2D" uid="uid://srtkvcdf68si" path="res://Content/UI/3DLauncher/T_Icon_P.png" id="6_kb8nv"]
+[ext_resource type="Texture2D" uid="uid://d1yttpo22soc5" path="res://Content/UI/3DLauncher/T_Icon_Arrow_L.png" id="8_sg62h"]
+[ext_resource type="Texture2D" uid="uid://dw5mtvr77r7n2" path="res://Content/UI/3DLauncher/T_Icon_Arrow_R.png" id="10_q3eib"]
+[ext_resource type="Texture2D" uid="uid://cavjpwbnc10vj" path="res://Content/UI/3DLauncher/T_Icon_Time.png" id="10_xvxi8"]
+[ext_resource type="Texture2D" uid="uid://k245q7o3brk6" path="res://Content/UI/3DLauncher/T_Icon_App.png" id="11_03tc4"]
+[ext_resource type="Texture2D" uid="uid://cdovj68yr48fh" path="res://Content/UI/3DLauncher/T_Icon_Charging.png" id="12_0cw7r"]
+[ext_resource type="FontFile" uid="uid://cp06m25x1h21i" path="res://Content/UI/Font/msyh.ttc" id="12_m13dk"]
+[ext_resource type="PackedScene" uid="uid://dv13cc7484ij5" path="res://Content/UI/UI_TechDemo.tscn" id="17_akkx5"]
+
+[sub_resource type="FontFile" id="FontFile_akkx5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/96/0/ascent = 0.0
+cache/0/96/0/descent = 0.0
+cache/0/96/0/underline_position = 0.0
+cache/0/96/0/underline_thickness = 0.0
+cache/0/96/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/110/0/ascent = 0.0
+cache/0/110/0/descent = 0.0
+cache/0/110/0/underline_position = 0.0
+cache/0/110/0/underline_thickness = 0.0
+cache/0/110/0/scale = 1.0
+cache/0/141/0/ascent = 0.0
+cache/0/141/0/descent = 0.0
+cache/0/141/0/underline_position = 0.0
+cache/0/141/0/underline_thickness = 0.0
+cache/0/141/0/scale = 1.0
+cache/0/164/0/ascent = 0.0
+cache/0/164/0/descent = 0.0
+cache/0/164/0/underline_position = 0.0
+cache/0/164/0/underline_thickness = 0.0
+cache/0/164/0/scale = 1.0
+cache/0/171/0/ascent = 0.0
+cache/0/171/0/descent = 0.0
+cache/0/171/0/underline_position = 0.0
+cache/0/171/0/underline_thickness = 0.0
+cache/0/171/0/scale = 1.0
+cache/0/170/0/ascent = 0.0
+cache/0/170/0/descent = 0.0
+cache/0/170/0/underline_position = 0.0
+cache/0/170/0/underline_thickness = 0.0
+cache/0/170/0/scale = 1.0
+cache/0/139/0/ascent = 0.0
+cache/0/139/0/descent = 0.0
+cache/0/139/0/underline_position = 0.0
+cache/0/139/0/underline_thickness = 0.0
+cache/0/139/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/59/0/ascent = 0.0
+cache/0/59/0/descent = 0.0
+cache/0/59/0/underline_position = 0.0
+cache/0/59/0/underline_thickness = 0.0
+cache/0/59/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_akkx5"]
+default_font = SubResource("FontFile_akkx5")
+default_font_size = 31
+
+[node name="MainUi" type="Control" unique_id=1697080347 node_paths=PackedStringArray("license_button", "license_info", "temp_decrease_button", "temp_increase_button", "temperature_label", "top_time_label", "main_time_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_akkx5")
+script = ExtResource("1_script")
+license_button = NodePath("HBoxContainer/License")
+license_info = NodePath("UiTechDemo")
+temp_decrease_button = NodePath("HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer/Arrow_L")
+temp_increase_button = NodePath("HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer/Arrow_R")
+temperature_label = NodePath("HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer/20°")
+top_time_label = NodePath("Label")
+main_time_label = NodePath("MarginContainer/VBoxContainer/Time")
+wind_material = ExtResource("2_ujdl2")
+
+[node name="Topstatusbar" type="TextureRect" parent="." unique_id=224918247]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 465.0
+grow_horizontal = 2
+texture = ExtResource("5_r668y")
+expand_mode = 3
+
+[node name="Dock" type="TextureRect" parent="." unique_id=886448428]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -90.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_3hlmb")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1910277518]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -75.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=21153070]
+layout_mode = 2
+theme_override_constants/margin_left = 53
+theme_override_constants/margin_right = 31
+theme_override_constants/margin_bottom = 0
+
+[node name="NS" type="Button" parent="HBoxContainer/MarginContainer" unique_id=1967224788]
+custom_minimum_size = Vector2(276.53, 48)
+clip_contents = true
+layout_mode = 2
+flat = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1421472162]
+layout_mode = 2
+theme_override_constants/margin_left = 66
+theme_override_constants/margin_right = 65
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer2" unique_id=1437144382]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="VehicleSettings" type="Button" parent="HBoxContainer/MarginContainer2/HBoxContainer" unique_id=1681870440]
+custom_minimum_size = Vector2(46, 75)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("5_f5x7b")
+flat = true
+expand_icon = true
+
+[node name="Navigate" type="Button" parent="HBoxContainer/MarginContainer2/HBoxContainer" unique_id=12657858]
+custom_minimum_size = Vector2(48, 75)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("3_3hlmb")
+flat = true
+expand_icon = true
+
+[node name="P" type="Button" parent="HBoxContainer/MarginContainer2/HBoxContainer" unique_id=2147213578]
+custom_minimum_size = Vector2(48, 75)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("6_kb8nv")
+flat = true
+expand_icon = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer" unique_id=2007915333]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_right = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer4" unique_id=331671502]
+layout_mode = 2
+theme_override_constants/separation = 52
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer4/HBoxContainer" unique_id=1536069460]
+layout_mode = 2
+theme_override_constants/separation = 39
+
+[node name="Arrow_L" type="Button" parent="HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer" unique_id=1964518862]
+custom_minimum_size = Vector2(36, 75)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("8_sg62h")
+flat = true
+expand_icon = true
+
+[node name="20°" type="Label" parent="HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer" unique_id=806069505]
+custom_minimum_size = Vector2(48, 75)
+clip_contents = true
+layout_mode = 2
+text = "20°"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arrow_R" type="Button" parent="HBoxContainer/MarginContainer4/HBoxContainer/HBoxContainer" unique_id=1108768179]
+custom_minimum_size = Vector2(36, 75)
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("10_q3eib")
+flat = true
+expand_icon = true
+
+[node name="Fan" type="Button" parent="HBoxContainer/MarginContainer4/HBoxContainer" unique_id=295562745]
+custom_minimum_size = Vector2(89.4, 45)
+layout_mode = 2
+size_flags_vertical = 4
+icon = ExtResource("4_3hlmb")
+flat = true
+expand_icon = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer" unique_id=453095485]
+layout_mode = 2
+theme_override_constants/margin_left = 55
+theme_override_constants/margin_right = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer5" unique_id=647678464]
+layout_mode = 2
+theme_override_constants/separation = 69
+
+[node name="APP" type="Button" parent="HBoxContainer/MarginContainer5/HBoxContainer" unique_id=1541385964]
+custom_minimum_size = Vector2(48, 75)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("11_03tc4")
+flat = true
+expand_icon = true
+
+[node name="Charging" type="Button" parent="HBoxContainer/MarginContainer5/HBoxContainer" unique_id=879304872]
+custom_minimum_size = Vector2(50, 75)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("12_0cw7r")
+flat = true
+expand_icon = true
+
+[node name="Music" type="Button" parent="HBoxContainer/MarginContainer5/HBoxContainer" unique_id=239160067]
+custom_minimum_size = Vector2(330, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+flat = true
+expand_icon = true
+
+[node name="License" type="Button" parent="HBoxContainer" unique_id=974519234]
+custom_minimum_size = Vector2(48, 75)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+icon = ExtResource("6_3hlmb")
+flat = true
+expand_icon = true
+
+[node name="LogoButton" type="Button" parent="." unique_id=884182679]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 656.0976
+offset_bottom = 196.12195
+scale = Vector2(0.41, 0.41)
+flat = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1039000069]
+layout_mode = 0
+offset_left = 1448.0
+offset_top = 169.0
+offset_right = 1754.0
+offset_bottom = 412.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=267421847]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=232307107]
+layout_mode = 2
+theme_override_constants/separation = 58
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=993042921]
+layout_mode = 2
+texture = ExtResource("10_xvxi8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=42838386]
+layout_mode = 2
+
+[node name="Temperature" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=717530546]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("12_m13dk")
+theme_override_font_sizes/font_size = 36
+text = "18"
+vertical_alignment = 2
+
+[node name="℃" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer" unique_id=1719408947]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "℃"
+vertical_alignment = 2
+
+[node name="Time" type="Label" parent="MarginContainer/VBoxContainer" unique_id=307633866]
+layout_mode = 2
+theme_override_font_sizes/font_size = 96
+text = "11 : 20"
+
+[node name="PNRD" type="HBoxContainer" parent="." unique_id=468427884]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -607.0
+offset_right = -400.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_constants/separation = 38
+
+[node name="P" type="Label" parent="PNRD" unique_id=773798551]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+text = "P"
+
+[node name="R" type="Label" parent="PNRD" unique_id=395970633]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+text = "R"
+
+[node name="N" type="Label" parent="PNRD" unique_id=151443840]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+text = "N"
+
+[node name="D" type="Label" parent="PNRD" unique_id=1882699762]
+layout_mode = 2
+text = "D"
+
+[node name="Label" type="Label" parent="." unique_id=523053628]
+layout_mode = 0
+offset_left = 1766.0
+offset_top = -3.0
+offset_right = 1852.0
+offset_bottom = 87.0
+text = "11 : 20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UiTechDemo" parent="." unique_id=1175346041 instance=ExtResource("17_akkx5")]
+visible = false
+layout_mode = 1
+offset_left = 1196.0
+offset_top = 80.0
+offset_right = 1920.0
+offset_bottom = 1118.0
+grow_vertical = 2

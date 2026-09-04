@@ -1,0 +1,441 @@
+[gd_scene format=3 uid="uid://b2041v0b164hm"]
+
+[ext_resource type="Material" uid="uid://de41046e4c0vx" path="res://Content/UI/Mask/MI_Mask.tres" id="1_avjsl"]
+[ext_resource type="Texture2D" uid="uid://mdh0wjyeu08m" path="res://Content/UI/SR/TUI_SR_SpeedCurrent.png" id="4_tqwfc"]
+[ext_resource type="Texture2D" uid="uid://u6c6wfjm2e31" path="res://Content/UI/SR/TUI_SR_SpeedLimited.png" id="5_coh35"]
+[ext_resource type="FontFile" uid="uid://dfj2f3csac5t3" path="res://Content/UI/Font/msyhbd.ttc" id="5_om10a"]
+[ext_resource type="Texture2D" uid="uid://tdp43tfd656p" path="res://Content/UI/SR/TUI_SR_SignalLight.png" id="6_2uo85"]
+[ext_resource type="Texture2D" uid="uid://dxx7sw1ntvm5s" path="res://Content/UI/SR/MiniMap_Background.png" id="8_avjsl"]
+[ext_resource type="Texture2D" uid="uid://cih3b7av6jgat" path="res://Content/UI/SR/TUI_SR_NOA.png" id="8_qbn3t"]
+[ext_resource type="Texture2D" uid="uid://dyaftqi6vyjwf" path="res://Content/UI/SR/MiniMap_VehicleIcon.png" id="9_c6e4i"]
+[ext_resource type="FontFile" uid="uid://cp06m25x1h21i" path="res://Content/UI/Font/msyh.ttc" id="9_om10a"]
+[ext_resource type="Texture2D" uid="uid://bbd5ru1cmrj1m" path="res://Content/UI/SR/TUI_Left.png" id="11_om10a"]
+[ext_resource type="Texture2D" uid="uid://blif5la6tt71w" path="res://Content/UI/SR/TUI_SR_Straight.png" id="11_qbn3t"]
+[ext_resource type="Script" uid="uid://cl1j7i12seb6" path="res://Content/Script/NavMapController.gd" id="12_navmap"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_om10a"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+corner_detail = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_c6e4i"]
+font = ExtResource("5_om10a")
+font_size = 54
+
+[sub_resource type="LabelSettings" id="LabelSettings_f1b0n"]
+font = ExtResource("9_om10a")
+font_size = 27
+font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1yx3"]
+font = ExtResource("9_om10a")
+font_size = 27
+font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyelr"]
+font = ExtResource("9_om10a")
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_om10a"]
+font = ExtResource("5_om10a")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_fihpi"]
+font = ExtResource("9_om10a")
+font_color = Color(0.5647059, 0.5647059, 0.5647059, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xgc1y"]
+font = ExtResource("5_om10a")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_60dhu"]
+font = ExtResource("9_om10a")
+font_color = Color(0.5647059, 0.5647059, 0.5647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbn3t"]
+bg_color = Color(1, 0.33333334, 0.33333334, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+corner_detail = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_meuw3"]
+font = ExtResource("5_om10a")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qj3be"]
+font = ExtResource("5_om10a")
+font_size = 24
+
+[sub_resource type="Curve2D" id="Curve2D_navpath"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 72.5, 257, 0, 0, 0, 0, 185, 257, 0, 0, 10, -2, 335, 257, -2, 10, 0, 0, 350, 237, 0, 0, 0, 0, 350, 155, 0, 0, -3, -25, 350, 53, 25, 3, 0, 0, 300, 15, 0, 0, 0, 0, 206.5, 15, 0, 0, -10, 1, 62.5, 15, 1, -10, 0, 0, 43, 43, 0, 0, 0, 0, 43, 144, 0, 0, 1, 10, 43, 240, -10, -1, 0, 0, 72.5, 257)
+}
+point_count = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxuin"]
+font = ExtResource("5_om10a")
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj5as"]
+font = ExtResource("9_om10a")
+font_size = 30
+font_color = Color(0.5647059, 0.5647059, 0.5647059, 1)
+
+[node name="UiSr" type="Control" unique_id=403944801]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=88937696]
+material = ExtResource("1_avjsl")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TBT_Card" type="Control" parent="." unique_id=113350610]
+anchors_preset = 0
+offset_left = 52.5
+offset_top = 109.5
+offset_right = 511.5
+offset_bottom = 310.5
+
+[node name="TBT_Background" type="Panel" parent="TBT_Card" unique_id=1573381885]
+layout_mode = 0
+offset_right = 459.0
+offset_bottom = 201.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_om10a")
+
+[node name="TBT_Arrow" type="TextureRect" parent="TBT_Card" unique_id=326801436]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 23.0
+offset_right = 111.0
+offset_bottom = 125.0
+texture = ExtResource("11_om10a")
+
+[node name="miles" type="Label" parent="TBT_Card" unique_id=636541010]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 7.0
+offset_right = 248.0
+offset_bottom = 81.0
+text = "320"
+label_settings = SubResource("LabelSettings_c6e4i")
+
+[node name="mile_text" type="Label" parent="TBT_Card" unique_id=1415387447]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 32.0
+offset_right = 295.0
+offset_bottom = 70.0
+text = "米"
+label_settings = SubResource("LabelSettings_f1b0n")
+
+[node name="enter_text" type="Label" parent="TBT_Card" unique_id=1186121100]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 32.0
+offset_right = 377.0
+offset_bottom = 69.0
+text = "进入"
+label_settings = SubResource("LabelSettings_l1yx3")
+
+[node name="Road" type="Label" parent="TBT_Card" unique_id=534201034]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 83.0
+offset_right = 341.0
+offset_bottom = 138.0
+text = "江 南 大 道"
+label_settings = SubResource("LabelSettings_jyelr")
+vertical_alignment = 1
+
+[node name="min" type="Label" parent="TBT_Card" unique_id=248478197]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 157.0
+offset_right = 62.0
+offset_bottom = 191.0
+text = "1"
+label_settings = SubResource("LabelSettings_om10a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s" type="Label" parent="TBT_Card" unique_id=755707106]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 157.0
+offset_right = 118.0
+offset_bottom = 191.0
+text = "33"
+label_settings = SubResource("LabelSettings_om10a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="min_text" type="Label" parent="TBT_Card" unique_id=1351549599]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 157.0
+offset_right = 84.0
+offset_bottom = 191.0
+text = "分"
+label_settings = SubResource("LabelSettings_fihpi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s_text" type="Label" parent="TBT_Card" unique_id=1409699800]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 157.0
+offset_right = 153.0
+offset_bottom = 191.0
+text = "秒"
+label_settings = SubResource("LabelSettings_fihpi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArriveTime" type="HBoxContainer" parent="TBT_Card" unique_id=1757254531]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 152.0
+offset_right = 391.0
+offset_bottom = 192.0
+
+[node name="hour" type="Label" parent="TBT_Card/ArriveTime" unique_id=1601314353]
+layout_mode = 2
+text = "11"
+label_settings = SubResource("LabelSettings_xgc1y")
+
+[node name="分割" type="Label" parent="TBT_Card/ArriveTime" unique_id=1803540026]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_xgc1y")
+
+[node name="minutes" type="Label" parent="TBT_Card/ArriveTime" unique_id=1737279598]
+layout_mode = 2
+text = "34"
+label_settings = SubResource("LabelSettings_xgc1y")
+
+[node name="Arrive_text" type="Label" parent="TBT_Card" unique_id=131336792]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 162.0
+offset_right = 443.0
+offset_bottom = 185.0
+text = "到达"
+label_settings = SubResource("LabelSettings_60dhu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TBTLine" type="Panel" parent="TBT_Card" unique_id=751590751]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -209.44
+offset_top = -53.0
+offset_right = 209.44
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qbn3t")
+
+[node name="Signal" type="VBoxContainer" parent="." unique_id=158439608]
+layout_mode = 0
+offset_left = 681.5
+offset_top = 109.0
+offset_right = 756.5
+offset_bottom = 385.0
+theme_override_constants/separation = 25
+
+[node name="IMG_CurrentSpeed" type="TextureRect" parent="Signal" unique_id=2077529011]
+layout_mode = 2
+texture = ExtResource("4_tqwfc")
+
+[node name="TXT_CurrentSpeed" type="Label" parent="Signal/IMG_CurrentSpeed" unique_id=1437290381]
+layout_mode = 0
+offset_right = 75.0
+offset_bottom = 75.0
+text = "72"
+label_settings = SubResource("LabelSettings_meuw3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IMG_LimitedSpeed" type="TextureRect" parent="Signal" unique_id=175436346]
+layout_mode = 2
+texture = ExtResource("5_coh35")
+
+[node name="TXT_LimitedSpeed" type="Label" parent="Signal/IMG_LimitedSpeed" unique_id=1979570028]
+layout_mode = 1
+offset_right = 75.0
+offset_bottom = 75.0
+text = "80"
+label_settings = SubResource("LabelSettings_meuw3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IMG_SignalLight" type="TextureRect" parent="Signal" unique_id=1907174699]
+self_modulate = Color(0.78361976, 0.16811228, 0.19106981, 1)
+clip_contents = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_2uo85")
+expand_mode = 1
+
+[node name="TXT_SignalLight_s" type="Label" parent="Signal/IMG_SignalLight" unique_id=1843874672]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+text = "32"
+label_settings = SubResource("LabelSettings_qj3be")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IMG_NavMap" type="Control" parent="." unique_id=1721351689 node_paths=PackedStringArray("map_background", "vehicle_icon", "path_2d", "path_follow_2d")]
+anchors_preset = 0
+offset_left = 1409.0
+offset_top = 109.0
+offset_right = 1861.5
+offset_bottom = 392.0
+script = ExtResource("12_navmap")
+map_background = NodePath("MapBackground")
+vehicle_icon = NodePath("VehicleIcon")
+path_2d = NodePath("NavPath2D")
+path_follow_2d = NodePath("NavPath2D/NavPathFollow2D")
+
+[node name="MapBackground" type="TextureRect" parent="IMG_NavMap" unique_id=33647707]
+layout_mode = 0
+offset_right = 452.5
+offset_bottom = 283.0
+texture = ExtResource("8_avjsl")
+expand_mode = 1
+
+[node name="NavPath2D" type="Path2D" parent="IMG_NavMap" unique_id=33647709]
+curve = SubResource("Curve2D_navpath")
+
+[node name="NavPathFollow2D" type="PathFollow2D" parent="IMG_NavMap/NavPath2D" unique_id=33647710]
+position = Vector2(72.5, 257)
+
+[node name="VehicleIcon" type="TextureRect" parent="IMG_NavMap" unique_id=33647708]
+layout_mode = 0
+offset_left = 77.5
+offset_top = 257.0
+offset_right = 82.5
+offset_bottom = 268.0
+rotation = 1.5707964
+texture = ExtResource("9_c6e4i")
+expand_mode = 1
+
+[node name="IMG_NOA" type="TextureRect" parent="." unique_id=1939284868]
+layout_mode = 0
+offset_left = 1164.0
+offset_top = 109.5
+offset_right = 1239.0
+offset_bottom = 184.5
+texture = ExtResource("8_qbn3t")
+expand_mode = 1
+
+[node name="TXT_CurrentSpeed" type="Label" parent="." unique_id=400700314]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51000005
+anchor_top = 0.155
+anchor_right = 0.51000005
+anchor_bottom = 0.155
+offset_left = -85.70007
+offset_top = -90.399994
+offset_right = 47.299927
+offset_bottom = 53.600006
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_cxuin")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TXT_kmh" type="Label" parent="." unique_id=693990689]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 212.0
+offset_right = 1002.0
+offset_bottom = 257.0
+text = "km/h"
+label_settings = SubResource("LabelSettings_fj5as")
+
+[node name="RoadInfo" type="Control" parent="." unique_id=136542737]
+anchors_preset = 0
+offset_left = 834.75
+offset_top = 260.25
+offset_right = 1085.25
+offset_bottom = 327.75
+
+[node name="Card" type="Panel" parent="RoadInfo" unique_id=1072693234]
+layout_mode = 0
+offset_right = 251.25
+offset_bottom = 67.75
+theme_override_styles/panel = SubResource("StyleBoxFlat_om10a")
+
+[node name="IMG_Road1" type="TextureRect" parent="RoadInfo" unique_id=673404371]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 62.0
+texture = ExtResource("11_qbn3t")
+expand_mode = 1
+
+[node name="IMG_Road2" type="TextureRect" parent="RoadInfo" unique_id=1790706663]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 4.0
+offset_right = 141.0
+offset_bottom = 62.0
+texture = ExtResource("11_qbn3t")
+expand_mode = 1
+
+[node name="IMG_Road3" type="TextureRect" parent="RoadInfo" unique_id=1308511123]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 4.0
+offset_right = 229.0
+offset_bottom = 62.0
+texture = ExtResource("11_qbn3t")
+expand_mode = 1
+
+[node name="Line1" type="Panel" parent="RoadInfo" unique_id=1139017050]
+layout_mode = 0
+offset_left = 79.25
+offset_top = 23.75
+offset_right = 81.5
+offset_bottom = 43.560013
+theme_override_styles/panel = SubResource("StyleBoxFlat_qbn3t")
+
+[node name="Line2" type="Panel" parent="RoadInfo" unique_id=128166103]
+layout_mode = 0
+offset_left = 167.25
+offset_top = 23.75
+offset_right = 169.5
+offset_bottom = 43.560013
+theme_override_styles/panel = SubResource("StyleBoxFlat_qbn3t")

@@ -1,0 +1,38 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://b0lt86gkwtljt"]
+
+[ext_resource type="Texture2D" uid="uid://ddod0t0gp38f7" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_MESample_ll_Mip_4.hdr" id="2_abm2w"]
+[ext_resource type="Texture2D" uid="uid://chwk8ublqpya0" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/HDR_SkyLight_1.hdr" id="3_abm2w"]
+
+[resource]
+builtin_shader = 5
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("3_abm2w")
+shader_parameter/IrradianceMap = ExtResource("2_abm2w")
+shader_parameter/env_rotate = 2.24
+shader_parameter/Basecolor_UV = 1.0
+shader_parameter/BaseColorCenter = Color(0.07, 0.07, 0.07, 1)
+shader_parameter/BaseColorEdge = Color(0.366595, 0.366595, 0.366595, 1)
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.05
+shader_parameter/roughness_Max = 0.70999998413008
+shader_parameter/diffuseIntensity = 6.0
+shader_parameter/specularIntensity = 8.0
+shader_parameter/useVertexColor = false
+shader_parameter/ORS_UV = 1.0
+shader_parameter/useN = false
+shader_parameter/normalIntensity = 0.0
+shader_parameter/NormalUV = 1.0
+shader_parameter/ao_Min = 0.03
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0
+shader_parameter/slope = 0.88
+shader_parameter/toe = 0.55
+shader_parameter/shoulder = 0.26
+shader_parameter/blackclip = 0.0
+shader_parameter/whiteclip = 0.04

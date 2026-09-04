@@ -1,0 +1,548 @@
+[gd_scene format=3 uid="uid://cavavi85e1lom"]
+
+[ext_resource type="Texture2D" uid="uid://beux858slm1v0" path="res://Content/UI/Cluster/T_UI_Top.png" id="2_ylh33"]
+[ext_resource type="Texture2D" uid="uid://dds4vphq3fx4y" path="res://Content/UI/Cluster/TUI_Cluster_MusicBack.png" id="4_fccov"]
+[ext_resource type="Texture2D" uid="uid://bwenkng3xd1vn" path="res://Content/UI/Cluster/TUI_Cluster_MusicRandom.png" id="8_5847o"]
+[ext_resource type="Texture2D" uid="uid://d3c7o0hhpanvv" path="res://Content/UI/Cluster/TUI_Cluster_MusicLoop.png" id="9_x3c6g"]
+[ext_resource type="Texture2D" uid="uid://dl745onj582uc" path="res://Content/UI/Cluster/TUI_Cluster_MusicPause.png" id="10_ffxim"]
+[ext_resource type="Texture2D" uid="uid://cg8wyog0ihmeb" path="res://Content/UI/Cluster/TUI_Cluster_MusicNext.png" id="11_p3r5f"]
+[ext_resource type="Texture2D" uid="uid://lfw4o48clwfo" path="res://Content/UI/Cluster/T_UI_Cluster_ECO.png" id="13_i7jq3"]
+[ext_resource type="FontFile" uid="uid://dfj2f3csac5t3" path="res://Content/UI/Font/msyhbd.ttc" id="14_jphxh"]
+[ext_resource type="Texture2D" uid="uid://f3yvgudfpxfv" path="res://Content/UI/Cluster/TUI_Cluster_ParkingBrake.png" id="15_vk8hm"]
+[ext_resource type="Texture2D" uid="uid://mdh0wjyeu08m" path="res://Content/UI/SR/TUI_SR_SpeedCurrent.png" id="15_wu1vs"]
+[ext_resource type="Texture2D" uid="uid://u6c6wfjm2e31" path="res://Content/UI/SR/TUI_SR_SpeedLimited.png" id="16_4wgmh"]
+[ext_resource type="Texture2D" uid="uid://djfbcl08vmu3s" path="res://Content/UI/Cluster/TUI_Cluster_Warning.png" id="16_70sqe"]
+[ext_resource type="Texture2D" uid="uid://djok7k08q6qv0" path="res://Content/UI/Cluster/TUI_Cluster_BrakeWarning.png" id="17_70sqe"]
+[ext_resource type="Texture2D" uid="uid://tdp43tfd656p" path="res://Content/UI/SR/TUI_SR_SignalLight.png" id="17_ga56e"]
+[ext_resource type="Texture2D" uid="uid://bqr888w7x4uah" path="res://Content/UI/Cluster/TUI_Cluster_PositionLamp.png" id="18_ce63n"]
+[ext_resource type="FontFile" uid="uid://cp06m25x1h21i" path="res://Content/UI/Font/msyh.ttc" id="18_wu1vs"]
+[ext_resource type="Texture2D" uid="uid://dqqi1mtf7fmna" path="res://Content/UI/Cluster/TUI_Cluster_Batteryblock.png" id="19_ot12r"]
+[ext_resource type="Texture2D" uid="uid://bklrd0172hvdf" path="res://Content/UI/Cluster/TUI_Cluster_Fuelpump.png" id="20_sgqnj"]
+[ext_resource type="Texture2D" uid="uid://csob6v2cvb22b" path="res://Content/UI/Cluster/TUI_Cluster_ProgressBar_01.png" id="21_24pll"]
+[ext_resource type="Texture2D" uid="uid://dx8x3h7vpxl4f" path="res://Content/UI/Cluster/TUI_Cluster_ProgressBar_02.png" id="22_y07ay"]
+[ext_resource type="Texture2D" uid="uid://cab5n2xy5ii7a" path="res://Content/UI/Cluster/TUI_Cluster_MusicCard.png" id="23_nq2h8"]
+[ext_resource type="Texture2D" uid="uid://b3uoacspv8jnp" path="res://Content/UI/Cluster/TUI_Cluster_Love.png" id="24_ra0tp"]
+
+[sub_resource type="MatrixMainSceneMaterial" id="ShaderMaterial_qkb0s"]
+builtin_shader = 17
+shader_parameter/start_color = Color(0, 0, 0, 1)
+shader_parameter/end_color = Color(0, 0, 0, 0)
+shader_parameter/angle01 = 0.0
+shader_parameter/black_range = 0.400000019
+
+[sub_resource type="MatrixMainSceneMaterial" id="ShaderMaterial_rdw4w"]
+builtin_shader = 17
+shader_parameter/start_color = Color(0, 0, 0, 1)
+shader_parameter/end_color = Color(0, 0, 0, 0)
+shader_parameter/angle01 = 0.50000002375
+shader_parameter/black_range = 0.400000019
+
+[sub_resource type="MatrixMainSceneMaterial" id="ShaderMaterial_q43ps"]
+builtin_shader = 17
+shader_parameter/start_color = Color(0, 0, 0, 1)
+shader_parameter/end_color = Color(0, 0, 0, 0)
+shader_parameter/angle01 = 0.750000035625
+shader_parameter/black_range = 0.400000019
+
+[sub_resource type="LabelSettings" id="LabelSettings_t47o3"]
+font = ExtResource("18_wu1vs")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_beap7"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_rpy64"]
+font_size = 135
+
+[sub_resource type="LabelSettings" id="LabelSettings_pe21p"]
+font = ExtResource("18_wu1vs")
+font_size = 32
+font_color = Color(0.5647059, 0.5647059, 0.5647059, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fd5qx"]
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_i7jq3"]
+default_font = ExtResource("14_jphxh")
+default_font_size = 24
+
+[sub_resource type="FontVariation" id="FontVariation_jphxh"]
+base_font = ExtResource("14_jphxh")
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nq2h8"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra0tp"]
+bg_color = Color(0.20784314, 0.94509804, 0.25490198, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UiCluster" type="Control" unique_id=403060758]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=448488052]
+material = SubResource("ShaderMaterial_qkb0s")
+layout_mode = 0
+offset_right = 556.92
+offset_bottom = 1080.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1220510123]
+material = SubResource("ShaderMaterial_rdw4w")
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -556.9198
+offset_bottom = 1080.0
+grow_horizontal = 0
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1380258314]
+material = SubResource("ShaderMaterial_q43ps")
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -226.99976
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Cluster2" type="TextureRect" parent="." unique_id=1011510733]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 22.0
+offset_right = 320.0
+offset_bottom = 71.0
+texture = ExtResource("2_ylh33")
+expand_mode = 1
+
+[node name="C_MusicControllers" type="HBoxContainer" parent="." unique_id=2010033668]
+clip_contents = true
+custom_minimum_size = Vector2(235, 52.5)
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 703.0
+offset_right = 1739.0
+offset_bottom = 764.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BTN_MusicLoop" type="Button" parent="C_MusicControllers" unique_id=357020235]
+layout_mode = 2
+icon = ExtResource("9_x3c6g")
+flat = true
+
+[node name="BTN_MusicBefore" type="Button" parent="C_MusicControllers" unique_id=1666257684]
+clip_contents = true
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+icon = ExtResource("4_fccov")
+flat = true
+expand_icon = true
+
+[node name="BTN_MusicPause" type="Button" parent="C_MusicControllers" unique_id=361987144]
+layout_mode = 2
+icon = ExtResource("10_ffxim")
+flat = true
+
+[node name="BTN_MusicNext" type="Button" parent="C_MusicControllers" unique_id=126047180]
+layout_mode = 2
+icon = ExtResource("11_p3r5f")
+flat = true
+
+[node name="BTN_MusicRandom" type="Button" parent="C_MusicControllers" unique_id=1771138139]
+layout_mode = 2
+icon = ExtResource("8_5847o")
+flat = true
+
+[node name="Signal" type="Control" parent="." unique_id=946231897]
+anchors_preset = 0
+offset_left = 420.0
+offset_top = 338.0
+offset_right = 480.0
+offset_bottom = 638.0
+
+[node name="IMG_CurrentSpeed" type="TextureRect" parent="Signal" unique_id=1683815168]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("15_wu1vs")
+expand_mode = 3
+
+[node name="TXT_CurrentSpeed" type="Label" parent="Signal/IMG_CurrentSpeed" unique_id=1910508474]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+text = "72"
+label_settings = SubResource("LabelSettings_t47o3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IMG_LimitedSpeed" type="TextureRect" parent="Signal" unique_id=1802332965]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 60.0
+offset_bottom = 148.00002
+texture = ExtResource("16_4wgmh")
+expand_mode = 3
+
+[node name="TXT_LimitedSpeed" type="Label" parent="Signal/IMG_LimitedSpeed" unique_id=972901814]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+text = "80"
+label_settings = SubResource("LabelSettings_t47o3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IMG_SignalLight" type="TextureRect" parent="Signal" unique_id=446897700]
+self_modulate = Color(0.78361976, 0.16811228, 0.19106981, 1)
+layout_mode = 0
+offset_top = 176.0
+offset_right = 60.0
+offset_bottom = 236.0
+texture = ExtResource("17_ga56e")
+expand_mode = 3
+
+[node name="TXT_SignalLight_s" type="Label" parent="Signal/IMG_SignalLight" unique_id=336376505]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+text = "32"
+label_settings = SubResource("LabelSettings_beap7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=404579032]
+clip_contents = true
+custom_minimum_size = Vector2(238, 0)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 335.0
+offset_right = 380.0
+offset_bottom = 561.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TXT_CurrentSpeed" type="Label" parent="HBoxContainer" unique_id=1080690064]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_wu1vs")
+text = "72"
+label_settings = SubResource("LabelSettings_rpy64")
+horizontal_alignment = 1
+
+[node name="TXT_kmh" type="Label" parent="HBoxContainer" unique_id=1646407597]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_wu1vs")
+text = "km/h"
+label_settings = SubResource("LabelSettings_pe21p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="C_PRND" type="HBoxContainer" parent="." unique_id=38121251]
+layout_mode = 0
+offset_left = 126.75
+offset_top = 238.0
+offset_right = 408.0
+offset_bottom = 287.0
+theme_override_constants/separation = 59
+
+[node name="TXT_P" type="Label" parent="C_PRND" unique_id=1587682790]
+self_modulate = Color(0.5132329, 0.5132329, 0.5132329, 1)
+layout_mode = 2
+text = "P"
+label_settings = SubResource("LabelSettings_fd5qx")
+
+[node name="TXT_R" type="Label" parent="C_PRND" unique_id=423769703]
+self_modulate = Color(0.5647059, 0.5647059, 0.5647059, 1)
+layout_mode = 2
+text = "R"
+label_settings = SubResource("LabelSettings_fd5qx")
+
+[node name="TXT_N" type="Label" parent="C_PRND" unique_id=1442887553]
+self_modulate = Color(0.5647059, 0.5647059, 0.5647059, 1)
+layout_mode = 2
+text = "N"
+label_settings = SubResource("LabelSettings_fd5qx")
+
+[node name="TXT_D" type="Label" parent="C_PRND" unique_id=1147309217]
+layout_mode = 2
+text = "D"
+label_settings = SubResource("LabelSettings_fd5qx")
+
+[node name="Label" type="Label" parent="." unique_id=1371220950]
+layout_mode = 0
+offset_left = 1766.0
+offset_top = -3.0
+offset_right = 1852.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("18_wu1vs")
+theme_override_font_sizes/font_size = 27
+text = "11 : 20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=1671477063]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme = SubResource("Theme_i7jq3")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1398638215]
+layout_mode = 0
+offset_left = -865.0
+offset_top = 141.0
+offset_right = -790.0
+offset_bottom = 186.0
+texture = ExtResource("13_i7jq3")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="Control" unique_id=867305669]
+layout_mode = 0
+offset_left = -865.0
+offset_top = 981.0
+offset_right = -808.0
+offset_bottom = 1014.0
+text = "ODO"
+
+[node name="Label3" type="Label" parent="Control" unique_id=575213977]
+layout_mode = 0
+offset_left = -788.0
+offset_top = 980.0
+offset_right = -706.0
+offset_bottom = 1013.0
+theme_override_fonts/font = SubResource("FontVariation_jphxh")
+text = "15828"
+
+[node name="Label4" type="Label" parent="Control" unique_id=1533452711]
+layout_mode = 0
+offset_left = -698.0
+offset_top = 979.0
+offset_right = -628.0
+offset_bottom = 1012.0
+text = "km"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1160122309]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.0
+offset_top = 983.0
+offset_right = 123.0
+offset_bottom = 1009.0
+grow_horizontal = 2
+theme_override_constants/separation = 56
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer" unique_id=308461359]
+layout_mode = 2
+texture = ExtResource("18_ce63n")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer" unique_id=743519193]
+layout_mode = 2
+texture = ExtResource("16_70sqe")
+expand_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer" unique_id=1420989647]
+layout_mode = 2
+texture = ExtResource("15_vk8hm")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer" unique_id=1243613990]
+layout_mode = 2
+texture = ExtResource("17_70sqe")
+expand_mode = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control" unique_id=565565098]
+layout_mode = 0
+offset_left = 506.72
+offset_top = 975.0
+offset_right = 870.72076
+offset_bottom = 1009.0
+theme_override_constants/separation = 31
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/HBoxContainer4" unique_id=368123313]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer4/HBoxContainer2" unique_id=208984267]
+layout_mode = 2
+texture = ExtResource("20_sgqnj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer4/HBoxContainer2" unique_id=531992320]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer4/HBoxContainer2/VBoxContainer" unique_id=1607761980]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/HBoxContainer4/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2035884577]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "625 | 800"
+
+[node name="km" type="Label" parent="Control/HBoxContainer4/HBoxContainer2/VBoxContainer/HBoxContainer" unique_id=2066664584]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "km"
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer4/HBoxContainer2/VBoxContainer" unique_id=2044492849]
+custom_minimum_size = Vector2(135, 7.5)
+layout_mode = 2
+texture = ExtResource("21_24pll")
+expand_mode = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/HBoxContainer4" unique_id=435078933]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer4/HBoxContainer3" unique_id=1162065675]
+custom_minimum_size = Vector2(33, 29.25)
+layout_mode = 2
+texture = ExtResource("19_ot12r")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer4/HBoxContainer3" unique_id=1766556964]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer4/HBoxContainer3/VBoxContainer" unique_id=1550357914]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer4/HBoxContainer3/VBoxContainer/HBoxContainer" unique_id=693725970]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "160 | 300"
+
+[node name="km" type="Label" parent="Control/HBoxContainer4/HBoxContainer3/VBoxContainer/HBoxContainer" unique_id=1385532929]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "km"
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer4/HBoxContainer3/VBoxContainer" unique_id=146891373]
+custom_minimum_size = Vector2(135, 7.5)
+layout_mode = 2
+texture = ExtResource("22_y07ay")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=731158547]
+layout_mode = 0
+offset_left = -797.0
+offset_top = 669.0
+offset_right = -548.0
+offset_bottom = 753.0
+theme_override_constants/separation = 45
+
+[node name="TextureRect5" type="TextureRect" parent="Control/VBoxContainer" unique_id=1145010368]
+custom_minimum_size = Vector2(250, 7.5)
+layout_mode = 2
+texture = ExtResource("22_y07ay")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=2043932737]
+layout_mode = 2
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=1075370876]
+layout_mode = 2
+text = "Trip 37"
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/HBoxContainer" unique_id=345798386]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+theme_override_fonts/font = ExtResource("18_wu1vs")
+theme_override_font_sizes/font_size = 19
+text = "km"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=719940217]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 238.0
+offset_right = 878.0
+offset_bottom = 674.0
+theme_override_constants/separation = 40
+
+[node name="TextureRect2" type="TextureRect" parent="Control/VBoxContainer2" unique_id=229926951]
+custom_minimum_size = Vector2(301.88, 320.63)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("23_nq2h8")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer2" unique_id=729373033]
+layout_mode = 2
+theme_override_constants/separation = 11
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=1231713941]
+layout_mode = 2
+theme_override_constants/separation = 271
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=1046224998]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "See You Again"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=1916334560]
+custom_minimum_size = Vector2(22.5, 22.5)
+layout_mode = 2
+texture = ExtResource("24_ra0tp")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer2/VBoxContainer" unique_id=1186780661]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_wu1vs")
+theme_override_font_sizes/font_size = 12
+text = "Wiz Khalifa - Furious 7: Original Motion Picture Soundtrack (Deluxe)"
+
+[node name="VBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=604241197]
+layout_mode = 2
+alignment = 1
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=964906544]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_wu1vs")
+theme_override_font_sizes/font_size = 12
+text = "0:00"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=1316592227]
+custom_minimum_size = Vector2(332, 4.5)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_nq2h8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ra0tp")
+value = 80.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=1704972781]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_wu1vs")
+theme_override_font_sizes/font_size = 12
+text = "3:48"

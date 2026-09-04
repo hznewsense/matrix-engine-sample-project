@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://clgltds27ww1f"]
+
+[ext_resource type="Shader" uid="uid://drmrm6smmyg5k" path="res://Content/Art/Shaders/M_JSGB_Arrow.gdshader" id="1_574yy"]
+[ext_resource type="Texture2D" uid="uid://dm5vgww8y2gyy" path="res://Content/Art/Shaders/T_Planninglane_Arrow.TGA" id="2_8430v"]
+
+[resource]
+render_priority = -3
+shader = ExtResource("1_574yy")
+shader_parameter/Tex = ExtResource("2_8430v")
+shader_parameter/arrowScale = 2.0
+shader_parameter/basecolor = Color(0.235294, 0.435294, 0.945098, 1)
+shader_parameter/Texcolor = Color(1, 1, 1, 1)
+shader_parameter/x = 0.0
+shader_parameter/Length = 16.0
+shader_parameter/reverse = false

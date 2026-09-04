@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://yul772srqss1"]
+
+[ext_resource type="ArrayMesh" uid="uid://dacltomejlo3" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Z_Carpaint_Graffiti_Charge.res" id="1_1da1k"]
+[ext_resource type="ArrayMesh" uid="uid://csrykpbilps1f" path="res://Content/Art/MatrixMainCar/Meshes/DoorFL/SM_MainCar_Ext_Glass_Front_DoorFL.res" id="8_rmp0j"]
+[ext_resource type="ArrayMesh" uid="uid://ddcncwruew36e" path="res://Content/Art/MatrixMainCar/Meshes/DoorFR/SM_MainCar_Z_Carpaint_Graffiti_MirrorR.res" id="13_jqr87"]
+[ext_resource type="ArrayMesh" uid="uid://cys1ixhqh0qm" path="res://Content/Art/MatrixMainCar/Meshes/DoorFL/SM_MainCar_Ext_Body_Black_DoorFL.res" id="20_qft8o"]
+[ext_resource type="ArrayMesh" uid="uid://by52xysaikbjh" path="res://Content/Art/MatrixMainCar/Meshes/DoorFL/SM_MainCar_Z_Carpaint_Graffiti_DoorFL.res" id="23_yp7x4"]
+[ext_resource type="ArrayMesh" uid="uid://lqet0rx31pox" path="res://Content/Art/MatrixMainCar/Meshes/DoorFL/SM_MainCar_Z_Carpaint_Graffiti_MirrorL.res" id="24_5h1xt"]
+[ext_resource type="ArrayMesh" uid="uid://cpi0gxbg80xoi" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Lamp_Brake_Lights_I.res" id="25_1w3sj"]
+[ext_resource type="ArrayMesh" uid="uid://dqtdi711rfh3l" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Lamp_Brake_Lights_I_01.res" id="26_1w3sj"]
+[ext_resource type="ArrayMesh" uid="uid://dfppkpohqqi3q" path="res://Content/Art/MatrixMainCar/Meshes/DoorFR/SM_MainCar_Int_DoorFR.res" id="28_cldt8"]
+[ext_resource type="ArrayMesh" uid="uid://b1wrremfxybbj" path="res://Content/Art/MatrixMainCar/Meshes/DoorFR/SM_MainCar_Ext_Glass_Front_Door_FR.res" id="31_bgqyx"]
+[ext_resource type="ArrayMesh" uid="uid://c5qp7m88nx2lu" path="res://Content/Art/MatrixMainCar/Meshes/DoorRL/SM_MainCar_Ext_DoorRL.res" id="32_lxs6b"]
+[ext_resource type="ArrayMesh" uid="uid://jeeolg3tgf7" path="res://Content/Art/MatrixMainCar/Meshes/DoorRR/SM_MainCar_Ext_DoorRR.res" id="32_rrah5"]
+[ext_resource type="ArrayMesh" uid="uid://cvf4hr8r44qik" path="res://Content/Art/MatrixMainCar/Meshes/DoorFR/SM_MainCar_Z_Carpaint_Graffiti_DoorFR.res" id="46_digeb"]
+[ext_resource type="ArrayMesh" uid="uid://dpspcenndof7r" path="res://Content/Art/MatrixMainCar/Meshes/DoorRL/SM_MainCar_Ext_Glass_Rear_DoorRL.res" id="48_3ecfn"]
+[ext_resource type="ArrayMesh" uid="uid://4umgsp6yuug3" path="res://Content/Art/MatrixMainCar/Meshes/DoorRL/SM_MainCar_Z_Carpaint_Graffiti_DoorRL.res" id="50_bmm72"]
+[ext_resource type="ArrayMesh" uid="uid://nmijuxnnwgw1" path="res://Content/Art/MatrixMainCar/Meshes/DoorRR/SM_MainCar_Ext_Glass_Rear_DoorRR.res" id="57_kthoa"]
+[ext_resource type="ArrayMesh" uid="uid://b22p68lwlsw6s" path="res://Content/Art/MatrixMainCar/Meshes/DoorRR/SM_MainCar_Z_Carpaint_Graffiti_DoorRR.res" id="69_2pw4s"]
+[ext_resource type="ArrayMesh" uid="uid://bcnoswidv76x3" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Ext_Body_Black.res" id="70_umhun"]
+[ext_resource type="ArrayMesh" uid="uid://co0jhi5jkg70n" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Ext_Body_Carpaint.res" id="71_q03l0"]
+[ext_resource type="ArrayMesh" uid="uid://g0ee8ahycqpo" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Ext_Glass_Rear.res" id="72_3crh5"]
+[ext_resource type="ArrayMesh" uid="uid://ctes1quirdc2a" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Lamp.res" id="73_6h41l"]
+[ext_resource type="ArrayMesh" uid="uid://drjysc8p168im" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Lamp_Glass.res" id="74_fjavj"]
+[ext_resource type="ArrayMesh" uid="uid://bwuicwfxpomm1" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Lamp_Red_Glass.res" id="75_yfwcw"]
+[ext_resource type="ArrayMesh" uid="uid://djhvw86a2v4k2" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Plate.res" id="76_fbpka"]
+[ext_resource type="ArrayMesh" uid="uid://tanurn3g6yo4" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Shadow.res" id="77_e0nok"]
+[ext_resource type="ArrayMesh" uid="uid://de6sxljtx0ejt" path="res://Content/Art/MatrixMainCar/Meshes/BodyExt/SM_MainCar_Z_Carpaint_Graffiti.res" id="78_qrsua"]
+[ext_resource type="ArrayMesh" uid="uid://cesu0yb63ly4k" path="res://Content/Art/MatrixMainCar/Meshes/Hood/SM_MainCar_Z_Carpaint_Graffiti_Hood.res" id="84_j6bgt"]
+[ext_resource type="ArrayMesh" uid="uid://d3dvxlsgfexjw" path="res://Content/Art/MatrixMainCar/Meshes/Hood/SM_MainCar_Ext_Body_Plastic_Gloss_Hood.res" id="85_ebvg2"]
+[ext_resource type="ArrayMesh" uid="uid://kmhg7erfpix" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_Seat.res" id="86_no7lu"]
+[ext_resource type="ArrayMesh" uid="uid://c28t50j3330dn" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_ClothDow.res" id="87_ej0vj"]
+[ext_resource type="ArrayMesh" uid="uid://c4kvg65s30ih3" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_Chrome_Texture_Drop.res" id="89_onx3o"]
+[ext_resource type="ArrayMesh" uid="uid://r74857sl81xl" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_LeatherWhite.res" id="90_c0q3x"]
+[ext_resource type="ArrayMesh" uid="uid://diytndbnlbq7e" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_LED_Light_Seat.res" id="91_1hlw2"]
+[ext_resource type="ArrayMesh" uid="uid://dq18bcn6bqf7g" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_Plastic_Body.res" id="92_jgmub"]
+[ext_resource type="ArrayMesh" uid="uid://dxh20hdalapdp" path="res://Content/Art/MatrixMainCar/Meshes/BodyInt/SM_MainCar_Int_StitchBlack.res" id="93_i75qf"]
+[ext_resource type="ArrayMesh" uid="uid://djas2soem1q8d" path="res://Content/Art/MatrixMainCar/Meshes/Trunk/SM_MainCar_Ext_Body_Black_Trunk.res" id="95_tm8sy"]
+[ext_resource type="ArrayMesh" uid="uid://mth1lamtjfan" path="res://Content/Art/Effect/SM_Effect_Climate_L.res" id="96_vpkyn"]
+[ext_resource type="ArrayMesh" uid="uid://caocxmhtecxtc" path="res://Content/Art/Effect/SM_Effect_Climate_M.res" id="98_qft8o"]
+[ext_resource type="ArrayMesh" uid="uid://buk814p8k14cp" path="res://Content/Art/Effect/SM_Effect_Climate_R.res" id="98_yxojb"]
+[ext_resource type="ArrayMesh" uid="uid://co2bhadnh43px" path="res://Content/Art/MatrixMainCar/Meshes/Trunk/SM_MainCar_Lamp_Lights_Trunk.res" id="101_q3dwx"]
+[ext_resource type="ArrayMesh" uid="uid://2g3phl2wjrj0" path="res://Content/Art/MatrixMainCar/Meshes/Trunk/SM_MainCar_Z_Carpaint_Graffiti_Trunk.res" id="103_unumq"]
+[ext_resource type="ArrayMesh" uid="uid://cqmh4oxspo2qm" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelRim_FL.res" id="104_2tji2"]
+[ext_resource type="ArrayMesh" uid="uid://bqvv0mlfj7uyf" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelTire_FL.res" id="105_jadnn"]
+[ext_resource type="ArrayMesh" uid="uid://6rqsvc8k4r0i" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelRim_FR.res" id="106_lje5u"]
+[ext_resource type="ArrayMesh" uid="uid://bxxgwl6y1nnck" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelTire_FR.res" id="107_1xgbl"]
+[ext_resource type="ArrayMesh" uid="uid://b7b12t7mx1m04" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelTire_RL.tres" id="108_1da1k"]
+[ext_resource type="ArrayMesh" uid="uid://b5dbf1810c2dt" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelRim_RL.res" id="108_2wa5a"]
+[ext_resource type="ArrayMesh" uid="uid://b7m1qd4ayqowb" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelRim_RR.res" id="110_0rpqe"]
+[ext_resource type="ArrayMesh" uid="uid://bewukrfx2ldun" path="res://Content/Art/MatrixMainCar/Meshes/Wheel/SM_MainCar_WheelTire_RR.res" id="111_dvb16"]
+
+[node name="MatrixMainCar" type="Node3D" unique_id=1833066360]
+
+[node name="chargePort_ctrl" type="Node3D" parent="." unique_id=2079219238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.873636, 0.994394, -1.26557)
+
+[node name="SmMainCarZCarpaintGraffitiCharge" type="MeshInstance3D" parent="chargePort_ctrl" unique_id=248555270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.873636, -0.994394, 1.26557)
+mesh = ExtResource("1_1da1k")
+
+[node name="door_frontLeft_ctrl" type="Node3D" parent="." unique_id=820520379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.902377, 0.687264, 0.924304)
+
+[node name="SmMainCarExtGlassFrontDoorFl" type="MeshInstance3D" parent="door_frontLeft_ctrl" unique_id=359022773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902377, -0.687264, -0.924304)
+mesh = ExtResource("8_rmp0j")
+
+[node name="SmMainCarZCarpaintGraffitiDoorFl" type="MeshInstance3D" parent="door_frontLeft_ctrl" unique_id=167479238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902377, -0.687264, -0.924304)
+mesh = ExtResource("23_yp7x4")
+
+[node name="SmMainCarIntDoorFl" type="MeshInstance3D" parent="door_frontLeft_ctrl" unique_id=1451370365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902377, -0.687264, -0.924304)
+mesh = ExtResource("20_qft8o")
+
+[node name="SmMainCarZCarpaintGraffitiMirrorL" type="MeshInstance3D" parent="door_frontLeft_ctrl" unique_id=563909569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902377, -0.687264, -0.924304)
+mesh = ExtResource("24_5h1xt")
+
+[node name="door_frontRight_ctrl" type="Node3D" parent="." unique_id=1106018084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.902377, 0.687264, 0.924304)
+
+[node name="SmMainCarExtGlassFrontDoorFr" type="MeshInstance3D" parent="door_frontRight_ctrl" unique_id=554877560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.902377, -0.687264, -0.924304)
+mesh = ExtResource("31_bgqyx")
+
+[node name="SmMainCarZCarpaintGraffitiDoorFr" type="MeshInstance3D" parent="door_frontRight_ctrl" unique_id=1000259813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.902377, -0.687264, -0.924304)
+mesh = ExtResource("46_digeb")
+
+[node name="SmMainCarIntDoorFr" type="MeshInstance3D" parent="door_frontRight_ctrl" unique_id=541731255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.902377, -0.687264, -0.924304)
+mesh = ExtResource("28_cldt8")
+
+[node name="SmMainCarZCarpaintGraffitiMirrorR" type="MeshInstance3D" parent="door_frontRight_ctrl" unique_id=1250129409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.902377, -0.687264, -0.924304)
+mesh = ExtResource("13_jqr87")
+
+[node name="door_rearLeft_ctrl" type="Node3D" parent="." unique_id=642134501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905129, 0.67018, -0.166259)
+
+[node name="SmMainCarExtGlassRearDoorRl" type="MeshInstance3D" parent="door_rearLeft_ctrl" unique_id=675713521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905129, -0.67018, 0.166259)
+mesh = ExtResource("48_3ecfn")
+
+[node name="SmMainCarZCarpaintGraffitiDoorRl" type="MeshInstance3D" parent="door_rearLeft_ctrl" unique_id=869037203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905129, -0.67018, 0.166259)
+mesh = ExtResource("50_bmm72")
+
+[node name="SmMainCarExtDoorRl" type="MeshInstance3D" parent="door_rearLeft_ctrl" unique_id=662095401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905129, -0.67018, 0.166259)
+mesh = ExtResource("32_lxs6b")
+
+[node name="door_rearRight_ctrl" type="Node3D" parent="." unique_id=263697722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905129, 0.67018, -0.166259)
+
+[node name="SmMainCarExtGlassRearDoorRr" type="MeshInstance3D" parent="door_rearRight_ctrl" unique_id=866047338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905129, -0.67018, 0.166259)
+mesh = ExtResource("57_kthoa")
+
+[node name="SmMainCarZCarpaintGraffitiDoorRr" type="MeshInstance3D" parent="door_rearRight_ctrl" unique_id=1011874676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905129, -0.67018, 0.166259)
+mesh = ExtResource("69_2pw4s")
+
+[node name="SmMainCarExtDoorRr" type="MeshInstance3D" parent="door_rearRight_ctrl" unique_id=674983403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.905129, -0.67018, 0.166259)
+mesh = ExtResource("32_rrah5")
+
+[node name="exterior_ctrl" type="Node3D" parent="." unique_id=1464613598]
+
+[node name="SmMainCarExtBodyBlack" type="MeshInstance3D" parent="exterior_ctrl" unique_id=426019819]
+mesh = ExtResource("70_umhun")
+
+[node name="SmMainCarExtBodyCarpaint" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1938097827]
+mesh = ExtResource("71_q03l0")
+
+[node name="SmMainCarExtGlassRear" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1092272595]
+mesh = ExtResource("72_3crh5")
+
+[node name="SmMainCarLamp" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1548434363]
+mesh = ExtResource("73_6h41l")
+
+[node name="SmMainCarLampGlass" type="MeshInstance3D" parent="exterior_ctrl" unique_id=353503978]
+mesh = ExtResource("74_fjavj")
+
+[node name="SmMainCarLampRedGlass" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1596511304]
+mesh = ExtResource("75_yfwcw")
+
+[node name="SmMainCarPlate" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1251179197]
+mesh = ExtResource("76_fbpka")
+
+[node name="SmMainCarShadow" type="MeshInstance3D" parent="exterior_ctrl" unique_id=492867822]
+mesh = ExtResource("77_e0nok")
+
+[node name="SmMainCarZCarpaintGraffiti" type="MeshInstance3D" parent="exterior_ctrl" unique_id=1477230010]
+mesh = ExtResource("78_qrsua")
+
+[node name="SmMainCarLampBrakeLightsI01" type="MeshInstance3D" parent="exterior_ctrl" unique_id=642644859]
+mesh = ExtResource("26_1w3sj")
+skeleton = NodePath("../../trunk_ctrl")
+
+[node name="hood_ctrl" type="Node3D" parent="." unique_id=1503212817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.978742, 1.04305)
+
+[node name="SmMainCarZCarpaintGraffitiHood" type="MeshInstance3D" parent="hood_ctrl" unique_id=1590605078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.978742, -1.04305)
+mesh = ExtResource("84_j6bgt")
+
+[node name="hoodgas_ctrl" type="Node3D" parent="." unique_id=325525035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9407e-08, 0.919017, 1.27019)
+
+[node name="SmMainCarExtBodyPlasticGlossHood" type="MeshInstance3D" parent="hoodgas_ctrl" unique_id=423424580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9407e-08, 0.0597253, -0.227139)
+mesh = ExtResource("85_ebvg2")
+
+[node name="interior_ctrl" type="Node3D" parent="." unique_id=1156165331]
+
+[node name="seat_ctrl" type="Node3D" parent="interior_ctrl" unique_id=287916367]
+
+[node name="SmMainCarIntSeat" type="MeshInstance3D" parent="interior_ctrl/seat_ctrl" unique_id=555197557]
+mesh = ExtResource("86_no7lu")
+
+[node name="streelwheel_ctrl" type="Node3D" parent="interior_ctrl" unique_id=702642183]
+
+[node name="SmMainCarIntClothDow" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=1021099036]
+mesh = ExtResource("87_ej0vj")
+
+[node name="SmMainCarIntChromeTextureDrop" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=1884708951]
+mesh = ExtResource("89_onx3o")
+
+[node name="SmMainCarIntLeatherWhite" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=2094113813]
+mesh = ExtResource("90_c0q3x")
+
+[node name="SmMainCarIntLedLightSeat" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=710663712]
+mesh = ExtResource("91_1hlw2")
+
+[node name="SmMainCarIntPlasticBody" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=1682648258]
+mesh = ExtResource("92_jgmub")
+
+[node name="SmMainCarIntStitchBlack" type="MeshInstance3D" parent="interior_ctrl/streelwheel_ctrl" unique_id=1919457431]
+mesh = ExtResource("93_i75qf")
+
+[node name="trunk_ctrl" type="Node3D" parent="." unique_id=482537526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00258117, 1.3164, -1.28755)
+
+[node name="SmMainCarExtBodyBlackTrunk" type="MeshInstance3D" parent="trunk_ctrl" unique_id=174908241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00258117, -1.3164, 1.28755)
+mesh = ExtResource("95_tm8sy")
+
+[node name="SmMainCarLampLightsTrunk" type="MeshInstance3D" parent="trunk_ctrl" unique_id=875970836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00258117, -1.3164, 1.28755)
+mesh = ExtResource("101_q3dwx")
+
+[node name="SmMainCarZCarpaintGraffitiTrunk2" type="MeshInstance3D" parent="trunk_ctrl" unique_id=330848121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00258117, -1.3164, 1.28755)
+mesh = ExtResource("103_unumq")
+
+[node name="SmMainCarLampBrakeLightsI" type="MeshInstance3D" parent="trunk_ctrl" unique_id=1959949539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00258117, -1.3164, 1.28755)
+mesh = ExtResource("25_1w3sj")
+skeleton = NodePath("../..")
+
+[node name="trunkgas_ctrl" type="Node3D" parent="." unique_id=1372552703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.17532, -1.44557)
+
+[node name="SmPanameraIntPlasticTrunk" type="MeshInstance3D" parent="trunkgas_ctrl" unique_id=2121815676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.17532, 1.44557)
+
+[node name="wheel_frontLeft_ctrl" type="Node3D" parent="." unique_id=528522227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952166, 0.372171, 1.60297)
+
+[node name="SmMainCarWheelTireFl" type="MeshInstance3D" parent="wheel_frontLeft_ctrl" unique_id=621759986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952166, -0.372171, -1.60297)
+mesh = ExtResource("105_jadnn")
+
+[node name="SmMainCarWheelRimFl" type="MeshInstance3D" parent="wheel_frontLeft_ctrl" unique_id=793305148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952166, -0.372171, -1.60297)
+mesh = ExtResource("104_2tji2")
+
+[node name="wheel_frontRight_ctrl" type="Node3D" parent="." unique_id=1068266184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952165, 0.372172, 1.60297)
+
+[node name="SmMainCarWheelTireFr" type="MeshInstance3D" parent="wheel_frontRight_ctrl" unique_id=2099998529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952165, -0.372172, -1.60297)
+mesh = ExtResource("107_1xgbl")
+
+[node name="SmMainCarWheelRimFr" type="MeshInstance3D" parent="wheel_frontRight_ctrl" unique_id=1394765390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952165, -0.372172, -1.60297)
+mesh = ExtResource("106_lje5u")
+
+[node name="wheel_rearLeft_ctrl" type="Node3D" parent="." unique_id=1369577940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952166, 0.372172, -1.34702)
+
+[node name="SmMainCarWheelTireRl" type="MeshInstance3D" parent="wheel_rearLeft_ctrl" unique_id=1504151136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952166, -0.372172, 1.34702)
+mesh = ExtResource("108_1da1k")
+
+[node name="SmMainCarWheelRimRl" type="MeshInstance3D" parent="wheel_rearLeft_ctrl" unique_id=28554920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952166, -0.372172, 1.34702)
+mesh = ExtResource("108_2wa5a")
+
+[node name="wheel_rearRight_ctrl" type="Node3D" parent="." unique_id=1881350944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.952165, 0.372173, -1.34702)
+
+[node name="SmMainCarWheelTireRr" type="MeshInstance3D" parent="wheel_rearRight_ctrl" unique_id=1636098176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952165, -0.372173, 1.34702)
+mesh = ExtResource("111_dvb16")
+
+[node name="SmMainCarWheelRimRr" type="MeshInstance3D" parent="wheel_rearRight_ctrl" unique_id=1852209260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.952165, -0.372173, 1.34702)
+mesh = ExtResource("110_0rpqe")
+
+[node name="Effects" type="Node3D" parent="." unique_id=1363146969]
+
+[node name="SmClimateR" type="MeshInstance3D" parent="Effects" unique_id=2068323263]
+transform = Transform3D(0.98033106, -0.0037990399, -0.19732356, 0.02103939, 0.996129, 0.085348345, 0.19623539, -0.0878212, 0.97661597, -0.651, 0.841, 0.636)
+mesh = ExtResource("98_yxojb")
+skeleton = NodePath("../..")
+
+[node name="SmClimateM" type="MeshInstance3D" parent="Effects" unique_id=1827340851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064, 0.794, 0.55)
+mesh = ExtResource("98_qft8o")
+skeleton = NodePath("../..")
+
+[node name="SmClimateL" type="MeshInstance3D" parent="Effects" unique_id=1770158428]
+transform = Transform3D(0.9945366, -0.008916639, 0.104008056, -5.6983893e-09, 0.9963452, 0.08541693, -0.1043896, -0.08495022, 0.9909018, 0.631, 0.841, 0.636)
+mesh = ExtResource("96_vpkyn")
+skeleton = NodePath("../..")

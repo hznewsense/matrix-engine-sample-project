@@ -1,0 +1,27 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://doqooyn85vtb7"]
+
+[ext_resource type="Texture2D" uid="uid://dij2essmp14jh" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Lamp_D.png" id="2_dd1ok"]
+[ext_resource type="Texture2D" uid="uid://bvsug5fjnngco" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Lamp_ORS.PNG" id="3_lmkj1"]
+
+[resource]
+builtin_shader = 3
+render_priority = 0
+shader_parameter/default_intensity = 0.6
+shader_parameter/albedo_tex = ExtResource("2_dd1ok")
+shader_parameter/ao_tex = ExtResource("3_lmkj1")
+shader_parameter/drl = false
+shader_parameter/drl_intensity = 5.0
+shader_parameter/low_beam = false
+shader_parameter/low_beam_intensity = 1.5
+shader_parameter/high_beam = false
+shader_parameter/high_beam_intensity = 5.0
+shader_parameter/hazardlight = false
+shader_parameter/hazardlight_color = Color(1, 0.68235296, 0, 1)
+shader_parameter/hazardlight_intensity = 5.0
+shader_parameter/brake_light = false
+shader_parameter/color_tint = Color(1, 1, 1, 1)
+shader_parameter/brake_light_on_intensity = 5.0
+shader_parameter/rear_fog_light = false
+shader_parameter/rear_fog_light_intensity = 5.0
+shader_parameter/emission_intensity = 1.0
+shader_parameter/ao_strength = 1.0

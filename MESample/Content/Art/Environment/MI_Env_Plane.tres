@@ -1,0 +1,44 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://betb0vq6yjjk8"]
+
+[ext_resource type="Texture2D" uid="uid://ca0fbq4ktarv0" path="res://Content/Art/Environment/T_Asphalt_Road_B.png" id="2_g4d2e"]
+[ext_resource type="Texture2D" uid="uid://bdli2wy3to2my" path="res://Content/Art/Environment/T_Asphalt_Road_N.png" id="2_wmc8y"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_f5ndu"]
+noise_type = 0
+frequency = 0.0594
+metadata/_preview_in_3d_space_ = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vk31g"]
+noise = SubResource("FastNoiseLite_f5ndu")
+
+[resource]
+builtin_shader = 9
+render_priority = 1
+shader_parameter/PointLight1_Pos = Vector3(0, 6.795, 0)
+shader_parameter/PointLight1_Color = Color(0.3362, 0.35957, 0.41, 1)
+shader_parameter/PointLight1_Intensity = 200.0
+shader_parameter/BaseColor_Tex = ExtResource("2_g4d2e")
+shader_parameter/BaseColor_UV = 35.0
+shader_parameter/BaseRough = 0.5999999865888
+shader_parameter/Porosity = 0.80000001192096
+shader_parameter/Ground_Fresnel_Intensity = 0.15
+shader_parameter/Ground_Fresnel_Color = Color(0.03, 0.05, 0.07, 1)
+shader_parameter/Normal_Tex = ExtResource("2_wmc8y")
+shader_parameter/NormalIntensity = 0.999999977648
+shader_parameter/NormalUV = 45.0
+shader_parameter/DirectX_Normal_Format = true
+shader_parameter/Flip_Binormal = true
+shader_parameter/Mask_Tex = SubResource("NoiseTexture2D_vk31g")
+shader_parameter/Mask_UV = 1.155
+shader_parameter/Water_Level = 0.35999999195328
+shader_parameter/Water_Softness = 0.6410000304475
+shader_parameter/Water_Int = 0.46999998949456
+shader_parameter/Global_Mask_Color = Color(0, 0, 0, 1)
+shader_parameter/Global_Mask_Radius = 0.11600000551
+shader_parameter/Global_Mask_Softness = 0.08800000418000001
+shader_parameter/AIchange = false
+shader_parameter/AI_BaseColor = Color(0.5772, 0.74, 0.63418007, 1)
+shader_parameter/AI_GlobalMaskColor = Color(0.39760002, 0.53293335, 0.56, 1)
+shader_parameter/AI_GlobalMask_Radius = 0.1110000052725
+shader_parameter/AI_GlobalMask_Softness = 0.08800000418000001
+shader_parameter/AI_BaseAlpha = 0.8999999798832

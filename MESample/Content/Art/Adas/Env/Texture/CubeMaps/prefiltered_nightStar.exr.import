@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://2oykydapxojm"
+path.bptc="res://.godot/imported/prefiltered_nightStar.exr-350a54468546c4e9eb16f89670d0a2d4.bptc.ccube"
+path.astc="res://.godot/imported/prefiltered_nightStar.exr-350a54468546c4e9eb16f89670d0a2d4.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/Adas/Env/Texture/CubeMaps/prefiltered_nightStar.exr"
+dest_files=["res://.godot/imported/prefiltered_nightStar.exr-350a54468546c4e9eb16f89670d0a2d4.bptc.ccube", "res://.godot/imported/prefiltered_nightStar.exr-350a54468546c4e9eb16f89670d0a2d4.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/arrangement=3

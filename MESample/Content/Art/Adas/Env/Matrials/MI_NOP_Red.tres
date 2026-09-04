@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dra6n4c7ltpwp"]
+
+[ext_resource type="Shader" uid="uid://dwr0sk61c7dud" path="res://Content/Art/Shaders/M_NOP.gdshader" id="1_8bjct"]
+
+[resource]
+render_priority = -4
+shader = ExtResource("1_8bjct")
+shader_parameter/meshScale = Vector2(2, 1)
+shader_parameter/width = 0.05
+shader_parameter/inScale = Vector2(1, 1)
+shader_parameter/inRange = Vector2(1, 1)
+shader_parameter/incolor = Color(1, 0.2, 0.213333, 1)
+shader_parameter/edgecolor = Color(0.878431, 0.247059, 0.176471, 1)
+shader_parameter/radius = 0.2

@@ -1,0 +1,35 @@
+# IDE files
+*.iml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+build/
+/build/
+/app/build/
+
+# Local configs
+local.properties
+/local.properties
+*.keystore
+*.jks
+
+# Native / tooling outputs
+.externalNativeBuild/
+.cxx/
+/captures/
+
+# Logs & misc
+*.log
+*.hprof
+MESampleJava/MatrixRenderService/.idea/
+/.idea/

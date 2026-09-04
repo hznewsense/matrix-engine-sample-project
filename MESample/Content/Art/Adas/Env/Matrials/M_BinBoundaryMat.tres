@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://o4rt04tylev1"]
+
+[ext_resource type="Shader" uid="uid://drhh46p3n82rp" path="res://Content/Art/Shaders/M_Empty.gdshader" id="1_piqpt"]
+
+[resource]
+render_priority = -5
+shader = ExtResource("1_piqpt")

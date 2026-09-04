@@ -1,0 +1,132 @@
+#!/usr/bin/env python
+import os
+import sys
+
+
+def log_env(env, key):
+    print(f"{key}:{env[key]}")
+
+godot_cpp_path = ARGUMENTS.get('godot_cpp', 'godot-cpp')
+
+print(f'Using godot-cpp path: "{godot_cpp_path}"')
+
+env = SConscript(f"{godot_cpp_path}/SConstruct")
+
+project_name = "MESample"
+project_dir = ".."
+lib_name = "libMESample"
+project_env = env.Clone()
+
+# For reference:
+# - CCFLAGS are compilation flags shared between C and C++
+# - CFLAGS are for C-specific compilation flags
+# - CXXFLAGS are for C++-specific compilation flags
+# - CPPFLAGS are for pre-processor flags
+# - CPPDEFINES are for pre-processor defines
+# - LINKFLAGS are for linking flags
+
+# tweak this if you want to use different folders, or more folders, to store your source code in.
+project_env.VariantDir("build", "MESample", duplicate=0)
+project_env.Append(CPPPATH=["build/"])
+sources = Glob("build/*.cpp") + Glob("build/**/*.cpp") + Glob("build/**/**/*.cpp")
+if project_env["platform"] == "macos":
+    library = project_env.SharedLibrary(
+        "{}/bin/{}.{}.{}.framework/{}.{}.{}".format(
+            project_dir,
+            lib_name,
+            project_env["platform"],
+            project_env["target"],
+            lib_name,
+            project_env["platform"],
+            project_env["target"],
+        ),
+        source=sources,
+    )
+elif project_env["platform"] == "windows":
+    project_env["CXXFLAGS"].remove("/std:c++17")
+    project_env["CCFLAGS"].remove("/O2")
+    project_env.Append(
+        CXXFLAGS=[
+            "/std:c++20",
+            "/EHsc",            # 艹：启用C++异常处理（try-catch）
+            "/W4",
+            "/WX",
+            "/wd4189",
+            "/wd4244",
+            "/wd4267",
+            "/wd4305",
+            "/wd4996",
+            "/wd28020",
+            "/Zi",
+            "/FS",
+            "/Od",
+            "/analyze",
+            "/MP",
+            "/RTC1",
+            "/bigobj",
+            "/analyze:external-",
+            "/external:W0",
+            "/external:I",
+            godot_cpp_path,
+            "/external:I",
+            '"src/Thirdparty"',
+        ]
+    )
+    # project_env.Append(LIBS=["libzmq"])
+    project_env.Append(CPPDEFINES=["ZMQ_STATIC"])
+    project_env.Append(LIBPATH=["./lib/windows"])
+    library = project_env.SharedLibrary(
+        "{}/bin/{}{}{}".format(
+            project_dir, lib_name, project_env["suffix"], project_env["SHLIBSUFFIX"]
+        ),
+        source=sources,
+    )
+elif project_env["platform"] == "android":
+    project_env["CXXFLAGS"].remove("-std=c++17")
+    project_env["CXXFLAGS"].remove("-fno-exceptions")
+    #   project_env["CXX"] = project_env["CXX"].replace("23.2.8568313","27.0.12077973")
+    project_env.Append(
+        CXXFLAGS=[
+            "-std=c++20",
+            "-fexceptions",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-Wno-unused-parameter",
+            "-Wno-unused-variable",
+        ]
+    )
+    # project_env.Append(LIBS=["libzmq", "GLESv3"])
+    project_env.Append(LIBS=["log"])
+    project_env.Append(CPPDEFINES=["ZMQ_STATIC", "NS_ANDROID"])
+    project_env.Append(LIBPATH=["./lib/android"])
+    library = project_env.SharedLibrary(
+        "{}/bin/{}{}{}".format(
+            project_dir, lib_name, project_env["suffix"], project_env["SHLIBSUFFIX"]
+        ),
+        source=sources,
+    )
+else:
+    project_env["CXXFLAGS"].remove("-std=c++17")
+    project_env["CXXFLAGS"].remove("-fno-exceptions")
+    project_env.Append(
+        CXXFLAGS=[
+            "-std=c++20",
+            "-fexceptions",
+            "-Wall",
+            "-Wextra",
+            "-Wno-unused-parameter",
+            "-Wno-changes-meaning",
+        ]
+    )
+    project_env.Append(LIBS=["libzmq"])
+    project_env.Append(CPPDEFINES=["ZMQ_STATIC"])
+    project_env.Append(LIBPATH=["./lib/linux"])
+    library = project_env.SharedLibrary(
+        "{}/bin/{}{}{}".format(
+            project_dir, lib_name, project_env["suffix"], project_env["SHLIBSUFFIX"]
+        ),
+        source=sources,
+    )
+
+Default(library)

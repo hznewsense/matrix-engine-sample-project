@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://xcocpn4vh8g3"]
+
+[ext_resource type="Shader" uid="uid://cmtqdxlcxg6hs" path="res://Content/Art/Env/Matrials/M_Sky.gdshader" id="1_62vfm"]
+[ext_resource type="CompressedCubemap" uid="uid://2oykydapxojm" path="res://Content/Art/Env/Texture/CubeMaps/prefiltered_nightStar.exr" id="2_62vfm"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_62vfm")
+shader_parameter/Env = ExtResource("2_62vfm")
+shader_parameter/saturate = 4.75e-08
+shader_parameter/Intensity = 1.750000083125
+shader_parameter/blur = 0.0
+shader_parameter/rotate = 2.2
+shader_parameter/sky_fov_y = 68.0000031825

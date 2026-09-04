@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dvbcv886t4uol"]
+
+[ext_resource type="Shader" uid="uid://b5cin1e0vdkn0" path="res://Content/Art/Shaders/M_HOD_GuideLine.gdshader" id="1_y0br1"]
+
+[resource]
+render_priority = 2
+shader = ExtResource("1_y0br1")
+shader_parameter/basecolor = Color(0, 0.427451, 0.905882, 1)
+shader_parameter/Opacity = 0.795
+shader_parameter/falloff = 0.1
+shader_parameter/gra1 = 1.0
+shader_parameter/power = 0.84

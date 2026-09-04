@@ -1,0 +1,54 @@
+# Build artifacts
+*.apk
+*.ap_
+*.aab
+
+# Generated binaries
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# Gradle / Android
+.gradle/
+build/
+**/build/
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Local configuration
+local.properties
+/local.properties
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Keystores (never commit)
+*.jks
+*.keystore
+
+# Google services config (per-app)
+google-services.json
+
+# Native build outputs
+obj/
+*.o
+*.so

@@ -1,0 +1,31 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://c2gll2ecio45g"]
+
+[ext_resource type="CompressedCubemap" uid="uid://ug712gan1a76" path="res://Content/Art/MatrixMainCar/Texture/CHDRI_Paul_Lobe_Haus.hdr" id="2_qitcy"]
+[ext_resource type="CompressedCubemap" uid="uid://bwwqfm3anvir0" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance.hdr" id="2_wum0b"]
+
+[resource]
+builtin_shader = 1
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("2_qitcy")
+shader_parameter/IrradianceMap = ExtResource("2_wum0b")
+shader_parameter/env_rotate = 0.0
+shader_parameter/Basecolor_UV = 3.0
+shader_parameter/BaseColorCenter = Color(0, 0, 0, 1)
+shader_parameter/BaseColorEdge = Color(1, 1, 1, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/opacity = 0.3
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.0
+shader_parameter/roughness_Max = 0.0
+shader_parameter/diffuseIntensity = 20.0
+shader_parameter/specularIntensity = 4.0
+shader_parameter/useN = false
+shader_parameter/normalIntensity = 0.5
+shader_parameter/NormalUV = 1.0
+shader_parameter/ao_Min = 0.999999977648
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0

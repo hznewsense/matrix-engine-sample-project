@@ -1,0 +1,48 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://0wggverqvf1c"]
+
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o6nd5"]
+frequency = 0.0023
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h06kv"]
+noise = SubResource("FastNoiseLite_o6nd5")
+seamless = true
+seamless_blend_skirt = 0.42
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r4nrg"]
+frequency = 0.0039
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1v7aj"]
+noise = SubResource("FastNoiseLite_r4nrg")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_efgsd"]
+frequency = 0.0037
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s8hlm"]
+noise = SubResource("FastNoiseLite_efgsd")
+seamless = true
+seamless_blend_skirt = 0.36
+
+[resource]
+builtin_shader = 7
+render_priority = 1
+shader_parameter/base_color = Color(1, 0.21960784, 0.18039216, 1)
+shader_parameter/base_alpha = 0.15
+shader_parameter/color_brightness = 1.0000000475
+shader_parameter/density_multiplier = 4.0
+shader_parameter/main_texture = SubResource("NoiseTexture2D_h06kv")
+shader_parameter/scroll_speed = 0.06
+shader_parameter/scroll_direction = Vector2(-1, 1)
+shader_parameter/uv_edge_softness = 0.425
+shader_parameter/noise1_texture = SubResource("NoiseTexture2D_1v7aj")
+shader_parameter/noise1_scroll_direction = Vector2(1, 0.5)
+shader_parameter/noise1_scroll_speed = 0.05
+shader_parameter/noise2_texture = SubResource("NoiseTexture2D_s8hlm")
+shader_parameter/noise2_scroll_direction = Vector2(-1, 0.2)
+shader_parameter/noise2_scroll_speed = 0.03
+shader_parameter/fade_start_y = 0.91
+shader_parameter/fade_transition_distance = 0.15000000642648
+shader_parameter/target_view_direction = Vector3(-0.773, 0.003, 0.635)
+shader_parameter/max_visible_angle = 61.54000287565
+shader_parameter/view_angle_falloff = 1.0

@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://b0glgb33nptyq"
+path.bptc="res://.godot/imported/CHDR_Final_Irradiance_1.hdr-4c39195cacf1be9868fb3a2f23bf1b33.bptc.ccube"
+path.astc="res://.godot/imported/CHDR_Final_Irradiance_1.hdr-4c39195cacf1be9868fb3a2f23bf1b33.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/MatrixMainCar/Texture/CHDR_Final_Irradiance_1.hdr"
+dest_files=["res://.godot/imported/CHDR_Final_Irradiance_1.hdr-4c39195cacf1be9868fb3a2f23bf1b33.bptc.ccube", "res://.godot/imported/CHDR_Final_Irradiance_1.hdr-4c39195cacf1be9868fb3a2f23bf1b33.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/arrangement=3

@@ -1,0 +1,11 @@
+[gd_resource type="MatrixMainSceneMaterial" load_steps=2 format=3 uid="uid://b2hn0bbiq5vue"]
+
+[ext_resource type="Texture2D" uid="uid://gojxlrn5vufo" path="res://Content/Art/Vehicles/Textures/T_Vehicles_Sedan_ORS.png" id="2_vmow1"]
+
+[resource]
+builtin_shader = 13
+render_priority = 0
+shader_parameter/shadow = ExtResource("2_vmow1")
+shader_parameter/uvscale = Vector2(1, 1)
+shader_parameter/uvoffset = Vector2(0, 0)
+shader_parameter/alpha = Vector2(-0.417, 1.3)

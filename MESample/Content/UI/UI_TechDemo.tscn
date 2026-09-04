@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dv13cc7484ij5"]
+
+[ext_resource type="Texture2D" uid="uid://bad1ve45cdfwl" path="res://Content/UI/License/T_License_Words.png" id="7_bym01"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h36t3"]
+bg_color = Color(0, 0, 0, 0.8)
+corner_radius_top_left = 36
+corner_radius_bottom_left = 36
+
+[node name="UiTechDemo" type="Control" unique_id=1175346041]
+layout_mode = 3
+anchor_bottom = 0.0
+offset_right = 724.0
+offset_top = 0.0
+offset_bottom = 1038.0
+size_flags_horizontal = 8
+
+[node name="Panel" type="Panel" parent="." unique_id=536277529]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_right = 724.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h36t3")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1179499341]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_bym01")
+expand_mode = 1
+stretch_mode = 5

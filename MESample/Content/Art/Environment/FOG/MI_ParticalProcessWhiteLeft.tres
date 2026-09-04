@@ -1,0 +1,20 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://b4vox02l2uc6p"]
+
+
+[sub_resource type="Gradient" id="Gradient_koqtv"]
+offsets = PackedFloat32Array(0, 0.37785017, 0.6319218, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_um5cm"]
+gradient = SubResource("Gradient_koqtv")
+
+[resource]
+builtin_shader = 8
+shader_parameter/amount = 4
+shader_parameter/line_length = 3.0
+shader_parameter/jitter_amount = 0.05
+shader_parameter/rotation_angle = 0.0
+shader_parameter/center = Vector3(-2, 0.5, -1.5)
+shader_parameter/initial_speed = 0.02
+shader_parameter/emission_direction = Vector3(-1, 0, 0)
+shader_parameter/gradient_texture = SubResource("GradientTexture1D_um5cm")

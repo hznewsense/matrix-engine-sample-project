@@ -1,0 +1,11 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://1dqkryvwtlt4"]
+
+[ext_resource type="Texture2D" uid="uid://b3i42dssdfjr5" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Shadow_350K_AO.png" id="2_5sb4g"]
+
+[resource]
+builtin_shader = 6
+render_priority = 8
+shader_parameter/tex = ExtResource("2_5sb4g")
+shader_parameter/alpha = Vector2(0, 1.1)
+shader_parameter/uvscale = Vector2(1, 1)
+shader_parameter/uvoffest = Vector2(0.5, 0.5)

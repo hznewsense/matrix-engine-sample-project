@@ -1,0 +1,6 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://doyege0xgkc0w"]
+
+
+[resource]
+builtin_shader = 2
+render_priority = -5

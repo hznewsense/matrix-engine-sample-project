@@ -1,0 +1,39 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://dcgtlx2ddof81"]
+
+[ext_resource type="CompressedCubemap" uid="uid://bwwqfm3anvir0" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance.hdr" id="2_8kevd"]
+[ext_resource type="Texture2D" uid="uid://yvrc7xir06ml" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Noise_01_N.png" id="3_vompp"]
+[ext_resource type="Texture2D" uid="uid://d0sxwfmb0jg55" path="res://Content/Art/MatrixMainCar/Texture/T_Panamera_Int_Plastic_Body_AO.png" id="4_6rbs8"]
+[ext_resource type="CompressedCubemap" uid="uid://bcu5feulm0tap" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CT_MESample_ll_Mip_4.hdr" id="5_vtykp"]
+
+[resource]
+builtin_shader = 2
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("5_vtykp")
+shader_parameter/IrradianceMap = ExtResource("2_8kevd")
+shader_parameter/Irradiance_Saturation = 0.4
+shader_parameter/env_rotate = -1.425
+shader_parameter/Basecolor_UV = 1.0
+shader_parameter/BaseColorCenter = Color(0.09998604, 0.09998598, 0.09998601, 1)
+shader_parameter/BaseColorEdge = Color(0.16565639, 0.16565642, 0.16565639, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 4.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.36999999172976
+shader_parameter/roughness_Max = 0.76999998278896
+shader_parameter/diffuseIntensity = 4.5
+shader_parameter/specularIntensity = 2.0
+shader_parameter/ORS_Tex = ExtResource("4_6rbs8")
+shader_parameter/ORS_UV = 1.0
+shader_parameter/ao_Min = 0.7999999821184
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useVertexColor = false
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("3_vompp")
+shader_parameter/normalIntensity = 0.999999977648
+shader_parameter/NormalUV = 25.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0

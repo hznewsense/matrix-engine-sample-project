@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dhxhavxsysh4q"]
+
+[ext_resource type="Shader" uid="uid://g364ibh7luf2" path="res://Content/Art/Environment/SimpleShader/M_CarPaintSimple.gdshader" id="1_dt42c"]
+
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_dt42c")
+shader_parameter/BaseColorCenter = Color(0.71, 0.5869333, 0.14199999, 1)

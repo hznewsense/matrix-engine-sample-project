@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cv8hetrnmrcnn"]
+
+[ext_resource type="Shader" path="res://Content/Art/Adas/Effects/M_NOA_EgoLine.gdshader" id="1_xbsga"]
+
+
+[resource]
+render_priority = -2
+shader = ExtResource("1_xbsga")
+shader_parameter/baseColor = Color(0.235294, 0.435294, 0.945098, 1)
+shader_parameter/hardness = 1.036
+shader_parameter/power = 1.6
+shader_parameter/opacity = 1.0

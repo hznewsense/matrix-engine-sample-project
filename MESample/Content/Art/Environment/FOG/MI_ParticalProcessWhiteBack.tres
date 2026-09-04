@@ -1,0 +1,20 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://dtuqi5umlklic"]
+
+
+[sub_resource type="Gradient" id="Gradient_a5eq8"]
+offsets = PackedFloat32Array(0, 0.38120106, 0.618799, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r2v34"]
+gradient = SubResource("Gradient_a5eq8")
+
+[resource]
+builtin_shader = 8
+shader_parameter/amount = 3
+shader_parameter/line_length = 2.5
+shader_parameter/jitter_amount = 0.05
+shader_parameter/rotation_angle = 60.0
+shader_parameter/center = Vector3(-4, 1, 2)
+shader_parameter/initial_speed = 0.002
+shader_parameter/emission_direction = Vector3(-1, 0.2, -1)
+shader_parameter/gradient_texture = SubResource("GradientTexture1D_r2v34")

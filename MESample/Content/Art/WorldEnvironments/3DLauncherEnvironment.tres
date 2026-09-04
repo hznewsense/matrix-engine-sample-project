@@ -1,0 +1,7 @@
+[gd_resource type="Environment" format=3 uid="uid://pg30imud84c"]
+
+[resource]
+background_mode = 1
+background_energy_multiplier = 0.0
+ambient_light_energy = 0.0
+glow_enabled = true

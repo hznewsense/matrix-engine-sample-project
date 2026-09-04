@@ -1,0 +1,26 @@
+[gd_resource type="CameraDataTable" format=3 uid="uid://qfwwbkmnyr8o"]
+
+[sub_resource type="Curve" id="Curve_ntf10"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+view_name = &"top"
+transition_duration = 1.0
+rotation = Vector3(-90, -90, 0)
+length = 11.48
+fov = 30.0
+transition_curve = SubResource("Curve_ntf10")
+cull_mask = 4293918757
+can_break_transition = false
+yaw_speed = 3.0
+pitch_limit_type = 1
+pitch_speed = 3.0
+limit_pitch_up_hard = 91.0
+limit_pitch_down_hard = 10.0
+length_hard_min = 4.0
+length_soft_min = 5.0
+length_soft_max = 14.0
+length_hard_max = 15.0
+auto_return = false
+auto_return_time = 2.0

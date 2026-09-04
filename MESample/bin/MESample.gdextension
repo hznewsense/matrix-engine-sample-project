@@ -1,0 +1,18 @@
+[configuration]
+
+entry_symbol = "MESample_library_init"
+compatibility_minimum = "4.1"
+reloadable = false
+
+[libraries]
+
+windows.debug.x86_64 = "res://bin/libMESample.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://bin/libMESample.windows.template_release.x86_64.dll"
+windows.editor.x86_64 = "res://bin/libMESample.windows.editor.x86_64.dll"
+android.debug.arm64 = "res://bin/libMESample.android.template_release.arm64.so"
+android.arm64 = "res://bin/libMESample.android.template_release.arm64.so"
+
+[dependencies]
+
+
+[icons]

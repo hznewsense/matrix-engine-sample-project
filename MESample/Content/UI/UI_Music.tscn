@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://bt2c720sq4ey6"]
+
+[ext_resource type="Texture2D" uid="uid://cab5n2xy5ii7a" path="res://Content/UI/Cluster/TUI_Cluster_MusicCard.png" id="2_ne8jo"]
+[ext_resource type="Texture2D" uid="uid://b3uoacspv8jnp" path="res://Content/UI/Cluster/TUI_Cluster_Love.png" id="3_4coel"]
+[ext_resource type="FontFile" uid="uid://dfj2f3csac5t3" path="res://Content/UI/Font/msyhbd.ttc" id="3_tvwdg"]
+[ext_resource type="FontFile" uid="uid://cp06m25x1h21i" path="res://Content/UI/Font/msyh.ttc" id="4_tvwdg"]
+[ext_resource type="Texture2D" uid="uid://d3c7o0hhpanvv" path="res://Content/UI/Cluster/TUI_Cluster_MusicLoop.png" id="6_1s2nm"]
+[ext_resource type="Texture2D" uid="uid://dds4vphq3fx4y" path="res://Content/UI/Cluster/TUI_Cluster_MusicBack.png" id="7_ptcng"]
+[ext_resource type="Texture2D" uid="uid://dl745onj582uc" path="res://Content/UI/Cluster/TUI_Cluster_MusicPause.png" id="8_xgug7"]
+[ext_resource type="Texture2D" uid="uid://cg8wyog0ihmeb" path="res://Content/UI/Cluster/TUI_Cluster_MusicNext.png" id="9_07km8"]
+[ext_resource type="Texture2D" uid="uid://bwenkng3xd1vn" path="res://Content/UI/Cluster/TUI_Cluster_MusicRandom.png" id="10_s2npw"]
+
+[sub_resource type="Theme" id="Theme_1s2nm"]
+default_font = ExtResource("4_tvwdg")
+default_font_size = 24
+
+[sub_resource type="Theme" id="Theme_7e0id"]
+default_font = ExtResource("3_tvwdg")
+default_font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e0id"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q0tl"]
+bg_color = Color(0.20784314, 0.94509804, 0.25490198, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UI_Music" type="Control" unique_id=804508553]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1464419354]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1200.0
+color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=183139755]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 263.0
+offset_right = 717.0
+offset_bottom = 688.0
+texture = ExtResource("2_ne8jo")
+
+[node name="Control" type="Control" parent="." unique_id=1826251129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1920.0
+offset_bottom = -1200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1s2nm")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=499506723]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 261.0
+offset_right = 783.595
+offset_bottom = 955.0
+theme = SubResource("Theme_7e0id")
+theme_override_constants/separation = 49
+
+[node name="TextureRect2" type="TextureRect" parent="Control/VBoxContainer2" unique_id=1134850217]
+custom_minimum_size = Vector2(402.5, 427.5)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_ne8jo")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer2" unique_id=340659543]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=2091875421]
+layout_mode = 2
+theme_override_constants/separation = 271
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=431573599]
+layout_mode = 2
+text = "See You Again"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer2/VBoxContainer/HBoxContainer" unique_id=228384355]
+custom_minimum_size = Vector2(22.5, 22.5)
+layout_mode = 2
+texture = ExtResource("3_4coel")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer2/VBoxContainer" unique_id=64906745]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_tvwdg")
+theme_override_font_sizes/font_size = 16
+text = "Wiz Khalifa - Furious 7: Original Motion Picture Soundtrack (Deluxe)"
+
+[node name="VBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer2/VBoxContainer" unique_id=1925775606]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=842606268]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_tvwdg")
+theme_override_font_sizes/font_size = 16
+text = "0:00"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=1082017983]
+custom_minimum_size = Vector2(444, 6)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_7e0id")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2q0tl")
+value = 80.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2/VBoxContainer/VBoxContainer3" unique_id=892970021]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_tvwdg")
+theme_override_font_sizes/font_size = 16
+text = "3:48"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer2" unique_id=1594977542]
+layout_mode = 2
+theme_override_constants/margin_top = -26
+
+[node name="C_MusicControllers" type="HBoxContainer" parent="Control/VBoxContainer2/MarginContainer" unique_id=228460892]
+clip_contents = true
+custom_minimum_size = Vector2(235, 52.5)
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BTN_MusicLoop" type="Button" parent="Control/VBoxContainer2/MarginContainer/C_MusicControllers" unique_id=1487049509]
+layout_mode = 2
+icon = ExtResource("6_1s2nm")
+flat = true
+
+[node name="BTN_MusicBefore" type="Button" parent="Control/VBoxContainer2/MarginContainer/C_MusicControllers" unique_id=792547932]
+clip_contents = true
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+icon = ExtResource("7_ptcng")
+flat = true
+expand_icon = true
+
+[node name="BTN_MusicPause" type="Button" parent="Control/VBoxContainer2/MarginContainer/C_MusicControllers" unique_id=292105898]
+layout_mode = 2
+icon = ExtResource("8_xgug7")
+flat = true
+
+[node name="BTN_MusicNext" type="Button" parent="Control/VBoxContainer2/MarginContainer/C_MusicControllers" unique_id=467913548]
+layout_mode = 2
+icon = ExtResource("9_07km8")
+flat = true
+
+[node name="BTN_MusicRandom" type="Button" parent="Control/VBoxContainer2/MarginContainer/C_MusicControllers" unique_id=1605220513]
+layout_mode = 2
+icon = ExtResource("10_s2npw")
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=2141518367]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 205.0
+offset_right = 1168.0
+offset_bottom = 228.0
+theme_override_constants/separation = 9
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=1177396776]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tvwdg")
+theme_override_font_sizes/font_size = 32
+text = "How Long, How Low?"
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer" unique_id=1630973472]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+theme_override_font_sizes/font_size = 20
+text = "歌手：Chance Peña/Hayd"
+
+[node name="Control" type="Control" parent="Control/VBoxContainer" unique_id=442818165]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer" unique_id=1040180870]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/VBoxContainer" unique_id=70231953]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+theme_override_constants/line_spacing = 39
+text = "制作人: Chance Peña
+编曲: Chance Peña"
+
+[node name="Control2" type="Control" parent="Control/VBoxContainer" unique_id=384588114]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/VBoxContainer" unique_id=8433083]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=1038766423]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+text = "Help me tell me, I’ll be okay
+帮我 告诉我 我终会安然无恙"
+
+[node name="Label4" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=2113164586]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+text = "I’ve been thinking about what I believe in
+我一直思索着 到底我所信仰的是什么"
+
+[node name="Label5" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=748832601]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+text = "Drowning trying to swim but the ship is sinking
+驾驭人生的帆船挣扎前行 却仍被海浪无情吞噬 船只也随之淹没"
+
+[node name="Label6" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=603249274]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+text = "Oh please pull me out of the waves
+哦 请你将我从波涛中救起"
+
+[node name="Label7" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=2103130793]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+text = "I’ve been looking for something to stop the bleeding
+我也一直在寻觅着 能否有什么能填补内心的伤口"
+
+[node name="Label8" type="Label" parent="Control/VBoxContainer/VBoxContainer2" unique_id=240079094]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+text = "Nothing can fill the void I’m still missing pieces
+但无论如何我作何努力 也无法填补心中那缺失的部分"

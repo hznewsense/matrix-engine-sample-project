@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://b1j7w3hbsmo6v"
+path.bptc="res://.godot/imported/irradiance_nightStar.exr-a72f679aad53e04fcfe036dffa22c62d.bptc.ccube"
+path.astc="res://.godot/imported/irradiance_nightStar.exr-a72f679aad53e04fcfe036dffa22c62d.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/Adas/Env/Texture/CubeMaps/irradiance_nightStar.exr"
+dest_files=["res://.godot/imported/irradiance_nightStar.exr-a72f679aad53e04fcfe036dffa22c62d.bptc.ccube", "res://.godot/imported/irradiance_nightStar.exr-a72f679aad53e04fcfe036dffa22c62d.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/arrangement=3

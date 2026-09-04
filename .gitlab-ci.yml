@@ -1,0 +1,53 @@
+stages:
+  - build
+
+variables:
+  GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
+  ANDROID_SDK_ROOT: "/opt/android-sdk"
+  ANDROID_HOME: "/opt/android-sdk"
+
+cache:
+  key: "${CI_PROJECT_PATH_SLUG}"
+  paths:
+    - .gradle/wrapper
+    - .gradle/caches
+
+# 两个独立 Gradle 工程共用 SDK 准备逻辑
+.build_base: &build_base
+  image: ghcr.io/cirruslabs/android-sdk:latest
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "web"'
+  before_script:
+    - sdkmanager --version
+    - yes | sdkmanager --licenses || true
+    - sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0"
+
+# Render as Service：MatrixRenderService / MatrixHMI / MatrixSR
+build_service_apks:
+  <<: *build_base
+  stage: build
+  script:
+    - cd MESampleJava/MatrixRenderAsService
+    - chmod +x ./gradlew
+    - ./gradlew --no-daemon --stacktrace assembleDebug
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - MESampleJava/MatrixRenderAsService/MatrixHMI/build/outputs/apk/debug/*.apk
+      - MESampleJava/MatrixRenderAsService/MatrixSR/build/outputs/apk/debug/*.apk
+      - MESampleJava/MatrixRenderAsService/MatrixRenderService/build/outputs/apk/debug/*.apk
+
+# Used as Library：MatrixRenderAsAAR（app）
+build_aar_apk:
+  <<: *build_base
+  stage: build
+  script:
+    - cd MESampleJava/MatrixRenderAsAAR
+    - chmod +x ./gradlew
+    - ./gradlew --no-daemon --stacktrace :app:assembleDebug
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - MESampleJava/MatrixRenderAsAAR/app/build/outputs/apk/debug/*.apk

@@ -1,0 +1,14 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://bgxg6l4km2b7w"]
+
+[ext_resource type="Texture2D" uid="uid://brotoe2p76yp2" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Plate_D.png" id="2_ghxk1"]
+
+[resource]
+builtin_shader = 12
+render_priority = 0
+shader_parameter/tex = ExtResource("2_ghxk1")
+shader_parameter/aoInt = 0.1
+shader_parameter/usebasecolorTex = false
+shader_parameter/basecolor = Color(0.6116688, 0.6381751, 0.66092676, 1)
+shader_parameter/texInt = 0.7
+shader_parameter/LightDirection = Vector3(0.95, 31.335, 3.99)
+shader_parameter/LightInt = 5.0

@@ -1,0 +1,163 @@
+Matrix Engine Demo Public License (MEDPL) v1.0
+Matrix Engine演示项目公共许可协议 v1.0
+
+Copyright (c) 2026 Hangzhou Xinzhi IOT Technology Co., Ltd.
+All rights reserved.
+
+1. Definitions
+第一条 定义
+
+“Software”
+Refers to the Matrix Engine Demo Project source code, assets, configuration files, documentation, and any associated materials distributed under this License.
+
+“软件”
+指在本许可协议下发布的 Matrix Engine 演示项目源代码、资源文件、配置文件、文档及相关材料。
+
+“Matrix Runtime”
+Refers to the proprietary and closed-source runtime software provided separately by Hangzhou Xinzhi IOT Technology Co., Ltd.
+
+“Matrix Runtime”
+指由杭州新知物联科技有限公司单独提供的专有且闭源的运行时软件。
+
+“Production Use”
+Means deployment in any commercial vehicle, embedded automotive system, or any product delivered to end users for commercial purposes.
+
+“量产使用”
+指部署于任何商业销售车辆、车载嵌入式系统，或任何面向终端用户交付的商业产品。
+
+“Commercial Distribution”
+Means distributing, sublicensing, selling, leasing, or otherwise making the Software available as part of a commercial product or service.
+
+“商业分发”
+指将本软件作为商业产品或服务的一部分进行分发、再许可、销售、租赁或以其他方式提供。
+
+2. Grant of Rights
+第二条 授权范围
+
+Subject to compliance with this License, Hangzhou Xinzhi IOT Technology Co., Ltd. grants you a non-exclusive, non-transferable, worldwide, royalty-free license to:
+
+在遵守本协议条款的前提下，杭州新知物联科技有限公司授予您一项非独占、不可转让、全球范围、免版税的许可，用于：
+
+Use the Software for evaluation, research, and internal development.
+用于评估、研究及内部开发。
+
+Modify the Software for internal testing and technical validation.
+为内部测试和技术验证目的对软件进行修改。
+
+Share the unmodified Software for educational or non-commercial evaluation purposes.
+在教育或非商业评估目的下分享未修改版本的软件。
+
+Create derivative works strictly for internal, non-production purposes.
+在严格的非量产前提下创建衍生作品。
+
+3. Restrictions
+第三条 使用限制
+
+You MAY NOT:
+您不得：
+
+Use the Software for Production Use.
+将本软件用于量产使用。
+
+Deploy the Software in any vehicle intended for commercial sale or public distribution.
+将本软件部署于任何用于商业销售或公开交付的车辆。
+
+Commercially distribute the Software or derivative works.
+对本软件或其衍生作品进行商业分发。
+
+Remove, disable, bypass, or attempt to circumvent:
+删除、禁用、绕过或试图规避以下内容：
+
+Matrix Runtime authorization mechanisms
+
+Matrix Runtime 授权机制
+
+License validation systems
+
+授权验证系统
+
+Watermarks, attribution notices, or branding
+
+水印、署名或品牌标识
+
+Reverse engineer, decompile, disassemble, or modify the proprietary Matrix Runtime.
+对 Matrix Runtime 进行反向工程、反编译、反汇编或修改。
+
+Represent the Software as production-ready without an official commercial license agreement.
+在未签署正式商业授权协议前，将本软件宣称为可量产版本。
+
+Any unauthorized Production Use automatically terminates this License.
+
+任何未经授权的量产使用将自动导致本许可失效。
+
+4. Runtime Dependency
+第四条 运行时依赖
+
+The Software depends on the proprietary Matrix Runtime.
+
+本软件依赖专有的 Matrix Runtime 运行。
+
+Matrix Runtime is NOT licensed under this agreement and requires a separate commercial agreement for any Production Use.
+
+Matrix Runtime 不在本协议授权范围内。任何量产使用均需另行签署商业授权协议。
+
+No rights to Matrix Runtime are granted under this License.
+
+本协议不授予任何 Matrix Runtime 相关权利。
+
+5. Attribution
+第五条 署名义务
+
+You must retain all copyright notices, license texts, and Matrix branding attribution contained within the Software.
+
+您必须保留软件中的所有版权声明、许可文本及 Matrix 品牌署名信息。
+
+Removal or alteration of attribution is prohibited.
+
+禁止删除或修改署名信息。
+
+6. No Warranty
+第六条 无担保声明
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND.
+
+本软件按“现状”提供，不附带任何形式的担保。
+
+Hangzhou Xinzhi IOT Technology Co., Ltd. disclaims all liability arising from the use of the Software.
+
+杭州新知物联科技有限公司对因使用本软件产生的任何损失不承担责任。
+
+7. Termination
+第七条 终止
+
+This License automatically terminates if you violate any provision of this License.
+
+若您违反本协议任何条款，本许可将自动终止。
+
+Upon termination, you must immediately:
+许可终止后，您必须立即：
+
+Cease all use of the Software
+停止使用本软件
+
+Delete all copies in your possession
+删除所有副本
+
+8. Commercial Licensing
+第八条 商业授权
+
+For Production Use, a separate commercial license agreement must be obtained from Hangzhou Xinzhi IOT Technology Co., Ltd..
+
+如需量产使用，必须与杭州新知物联科技有限公司签署单独的商业授权协议。
+
+Commercial inquiries:
+商务联系：
+
+hello@ns-iot.com
+
+9. Governing Law
+第九条 适用法律
+
+This License shall be governed by and construed in accordance with the laws of People's Republic of China.
+
+本协议受中华人民共和国法律管辖并依其解释。

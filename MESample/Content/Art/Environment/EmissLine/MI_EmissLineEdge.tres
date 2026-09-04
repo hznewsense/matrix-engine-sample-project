@@ -1,0 +1,9 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://c50ekuegtv84y"]
+
+[resource]
+builtin_shader = 6
+render_priority = 10
+shader_parameter/emission_color = Color(1, 1, 1, 1)
+shader_parameter/emission_intensity = 2.0
+shader_parameter/fade_position = 1.2190000816525
+shader_parameter/fade_softness = 0.7110000337725

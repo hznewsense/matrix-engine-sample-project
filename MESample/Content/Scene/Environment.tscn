@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dvw1mdkwk6f6m"]
+
+[ext_resource type="Material" path="res://Content/Art/Adas/Env/M_IPC_Background_Day.tres" id="3_pgi8b"]
+[ext_resource type="ArrayMesh" path="res://Content/Art/Adas/Env/SM_RoadLine.res" id="5_h6mfg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_h6mfg"]
+material = ExtResource("3_pgi8b")
+
+[node name="Environment" type="Node3D" unique_id=1172491138]
+
+[node name="Sky_PNR" type="MeshInstance3D" parent="." unique_id=452380195]
+transform = Transform3D(1400, 0, 0, 0, 1400, 0, 0, 0, 1400, -7.10384, 0, 0)
+layers = 16
+mesh = SubResource("SphereMesh_h6mfg")
+
+[node name="SmRoadLine" type="MeshInstance3D" parent="." unique_id=75915050]
+layers = 64
+mesh = ExtResource("5_h6mfg")

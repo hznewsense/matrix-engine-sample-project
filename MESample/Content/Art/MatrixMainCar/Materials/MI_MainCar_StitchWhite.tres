@@ -1,0 +1,9 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://dvxv6656kx67r"]
+
+[ext_resource type="Texture2D" uid="uid://dcoxs7ymx17wc" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Int_StitchBlack_A.png" id="2_26xb1"]
+
+[resource]
+builtin_shader = 7
+render_priority = 0
+shader_parameter/main_tex = ExtResource("2_26xb1")
+shader_parameter/tint_color = Color(1, 1, 1, 1)

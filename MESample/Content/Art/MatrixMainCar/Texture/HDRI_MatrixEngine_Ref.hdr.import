@@ -1,0 +1,29 @@
+[remap]
+
+importer="cubemap_texture"
+type="CompressedCubemap"
+uid="uid://cb4ph7ydjt157"
+path.bptc="res://.godot/imported/HDRI_MatrixEngine_Ref.hdr-4a8f2ae00ac13cfc5b90f223d4f852e7.bptc.ccube"
+path.astc="res://.godot/imported/HDRI_MatrixEngine_Ref.hdr-4a8f2ae00ac13cfc5b90f223d4f852e7.astc.ccube"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/Art/MatrixMainCar/Texture/HDRI_MatrixEngine_Ref.hdr"
+dest_files=["res://.godot/imported/HDRI_MatrixEngine_Ref.hdr-4a8f2ae00ac13cfc5b90f223d4f852e7.bptc.ccube", "res://.godot/imported/HDRI_MatrixEngine_Ref.hdr-4a8f2ae00ac13cfc5b90f223d4f852e7.astc.ccube"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/arrangement=3

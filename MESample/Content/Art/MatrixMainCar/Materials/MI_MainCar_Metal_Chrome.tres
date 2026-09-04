@@ -1,0 +1,37 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://bxi7gf0t6vg73"]
+
+[ext_resource type="CompressedCubemap" uid="uid://b0glgb33nptyq" path="res://Content/Art/MatrixMainCar/Texture/CHDR_Final_Irradiance_1.hdr" id="2_lgpn6"]
+[ext_resource type="Texture2D" uid="uid://yvrc7xir06ml" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Noise_01_N.png" id="3_lgpn6"]
+[ext_resource type="CompressedCubemap" uid="uid://ug712gan1a76" path="res://Content/Art/MatrixMainCar/Texture/CHDRI_Paul_Lobe_Haus.hdr" id="4_ic3nx"]
+
+[resource]
+builtin_shader = 2
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("4_ic3nx")
+shader_parameter/IrradianceMap = ExtResource("2_lgpn6")
+shader_parameter/Irradiance_Saturation = 0.4
+shader_parameter/env_rotate = -0.625
+shader_parameter/Basecolor_UV = 1.0
+shader_parameter/BaseColorCenter = Color(0.36282945, 0.36282948, 0.36282936, 1)
+shader_parameter/BaseColorEdge = Color(1, 1, 1, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/Metallic = 0.7999999821184
+shader_parameter/roughness_Min = 0.7999999821184
+shader_parameter/roughness_Max = 0.7999999821184
+shader_parameter/diffuseIntensity = 5.0
+shader_parameter/specularIntensity = 3.0
+shader_parameter/ORS_UV = 1.0
+shader_parameter/ao_Min = 0.0
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useVertexColor = false
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("3_lgpn6")
+shader_parameter/normalIntensity = 0.5
+shader_parameter/NormalUV = 30.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0

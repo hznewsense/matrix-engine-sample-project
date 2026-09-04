@@ -1,0 +1,57 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://v6nar43fk0u4"]
+
+[ext_resource type="Texture2D" uid="uid://c0s81x3a2nh6u" path="res://Content/Art/MatrixMainCar/Texture/T_Flakes_D2_Data.png" id="2_d5sxq"]
+[ext_resource type="CompressedCubemap" uid="uid://cb4ph7ydjt157" path="res://Content/Art/MatrixMainCar/Texture/HDRI_MatrixEngine_Ref.hdr" id="2_rci0g"]
+[ext_resource type="CompressedCubemap" uid="uid://bcu5feulm0tap" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CT_MESample_ll_Mip_4.hdr" id="2_wfkxa"]
+[ext_resource type="Texture2D" uid="uid://dyfrq7duualhb" path="res://Content/Art/MatrixMainCar/Texture/T_FlakeMask_N.PNG" id="4_d5sxq"]
+[ext_resource type="CompressedCubemap" uid="uid://dg6ljv0b5uyc" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance_2.hdr" id="4_ilife"]
+[ext_resource type="Texture2D" uid="uid://blhqpudbd0fg7" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Z_Carpaint_Graffiti_350K_ORS.png" id="4_n65dv"]
+
+[resource]
+builtin_shader = 0
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("4_ilife")
+shader_parameter/IrradianceMap = ExtResource("2_wfkxa")
+shader_parameter/env_rotate = 2.27
+shader_parameter/env_saturate = -2.2352000028647012e-08
+shader_parameter/ExtraSpecularMap = ExtResource("2_rci0g")
+shader_parameter/extra_env_rotate = 0.845
+shader_parameter/flip_extra_x = true
+shader_parameter/ExtraSpecularColor = Color(1, 0.32999998, 0.32999998, 1)
+shader_parameter/ExtraSpecularIntensity = 1.1999999731776
+shader_parameter/cluster_cam_mark_layer = 16
+shader_parameter/use_basecolor_tex = false
+shader_parameter/base_tex_preserve = 0.6999999843536
+shader_parameter/spec_restore_strength = 0.3999999910592
+shader_parameter/tex_light_affect = 0.1999999955296
+shader_parameter/base_tex_brightness = 0.81999998167136
+shader_parameter/Basecolor_UV = 1.0
+shader_parameter/BaseColorCenter = Color(1, 0.972, 0.88, 1)
+shader_parameter/BaseColorEdge = Color(0.66, 0.64416003, 0.5808, 1)
+shader_parameter/BaseColor_Fresnel_Power = 1.98
+shader_parameter/Exposure = 0.7
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.0
+shader_parameter/roughness_Max = 0.31999999284736
+shader_parameter/diffuseIntensity = 8.0
+shader_parameter/specularIntensity = 10.0
+shader_parameter/ORS_Tex = ExtResource("4_n65dv")
+shader_parameter/Use_Flake_Tex = true
+shader_parameter/Flake_Tex = ExtResource("2_d5sxq")
+shader_parameter/Invert_Flake_Tex = true
+shader_parameter/Flake_UV_Scale = 100.0
+shader_parameter/Flake_Intensity = 0.8999999798832
+shader_parameter/Flake_Roughness = 0.1
+shader_parameter/Flake_Color = Color(1, 1, 1, 1)
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("4_d5sxq")
+shader_parameter/NormalUV = 50.0
+shader_parameter/invert_normal_y = false
+shader_parameter/normalIntensity = 0.0499999988824
+shader_parameter/clearcoat_Intensity = 1.0
+shader_parameter/C_Roughness = 0.0
+shader_parameter/ao_Min = 0.0
+shader_parameter/ao_Max = 0.999999977648
+shader_parameter/shadow_Min = 0.999999977648
+shader_parameter/shadow_Max = 1.0
+shader_parameter/clearcoat_edge_preserve = 0.7999999821184

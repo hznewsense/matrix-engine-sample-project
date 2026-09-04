@@ -1,0 +1,7 @@
+[gd_resource type="MatrixMainSceneMaterial" format=3 uid="uid://dyl0kbpk5mynj"]
+
+[resource]
+builtin_shader = 5
+render_priority = 0
+shader_parameter/emission_color = Color(1, 1, 1, 1)
+shader_parameter/emission_intensity = 2.0

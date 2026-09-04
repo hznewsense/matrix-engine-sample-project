@@ -1,0 +1,110 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+def buildTimestamp() {
+    return new Date().format("yyyyMMddHHmmss")
+}
+
+def findMatrixSdkSimpleServiceVersionFromLibs() {
+    def libsDir = file("libs")
+    if (!libsDir.exists()) {
+        return null
+    }
+
+    def candidates = (libsDir.listFiles() ?: []).findAll { it.isFile() && (it.name.toLowerCase().endsWith(".aar") || it.name.toLowerCase().endsWith(".jar")) }
+    def patterns = [
+            ~/MatrixSdk[_-]?SimpleService[-_]?([0-9][0-9A-Za-z.\-_]*)\.(aar|jar)/,
+            ~/matrixsdk[_-]?simpleservice[-_]?([0-9][0-9A-Za-z.\-_]*)\.(aar|jar)/,
+            ~/matrix[_-]?sdk[_-]?simple[_-]?service[-_]?([0-9][0-9A-Za-z.\-_]*)\.(aar|jar)/,
+            ~/MatrixSdk[_-]?Integrated[-_]?([0-9][0-9A-Za-z.\-_]*)\.(aar|jar)/,
+    ]
+
+    for (def file : candidates) {
+        for (def pattern : patterns) {
+            def matcher = (file.name =~ pattern)
+            if (matcher.matches()) {
+                return matcher[0][1]
+            }
+        }
+    }
+
+    return null
+}
+
+def matrixSdkSimpleServiceVersion() {
+    def v = project.findProperty("matrixSdkSimpleServiceVersion")
+    if (v != null && v.toString().trim()) {
+        return v.toString().trim()
+    }
+    v = findMatrixSdkSimpleServiceVersionFromLibs()
+    if (v != null && v.toString().trim()) {
+        return v.toString().trim()
+    }
+    return android.defaultConfig.versionName
+}
+
+android {
+    namespace 'com.ns.matrix.sample.aar'
+    compileSdk {
+        version = release(36)
+    }
+
+    defaultConfig {
+        applicationId "com.ns.matrix.sample.aar"
+        minSdk 28
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        // 只保留实际用到的语言，砍掉 appcompat 等带进的多语言 arsc 字符串
+        resConfigs "en", "zh"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['jniLibs']
+        }
+    }
+
+    signingConfigs {
+        release {
+            // 用 debug keystore 给 release 签名，仅供体积/功能验证；上线换正式签名
+            storeFile file("${System.getProperty('user.home')}/.android/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+androidComponents {
+    onVariants(selector().withBuildType("debug")) { variant ->
+        variant.outputs.forEach { output ->
+            output.outputFileName.set("matrix-service-${matrixSdkSimpleServiceVersion()}_${buildTimestamp()}.apk")
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    // 添加本地libs目录下的JAR和AAR文件作为依赖
+    implementation(fileTree("libs") {
+        include("*.aar")
+    })
+}

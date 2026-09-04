@@ -1,0 +1,45 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://lra73nrt4t6d"]
+
+[ext_resource type="Shader" path="res://Content/Art/MatrixMainCar/Materials/M_Opaque_Master.gdshader" id="1_0elnq"]
+[ext_resource type="Texture2D" uid="uid://bi7k0sama1dl2" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Leather_06_BC.png" id="2_wdkr4"]
+[ext_resource type="Texture2D" uid="uid://b1b0fft84ov2e" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/HDR_Final_Irradiance_1.hdr" id="3_xfm38"]
+[ext_resource type="Texture2D" uid="uid://clsdbe4fmymgv" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Leather_06_N.png" id="4_wdkr4"]
+[ext_resource type="Texture2D" uid="uid://cs474fkx54ea3" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Int_LeatherBlack_350K_ORS.png" id="5_etghn"]
+[ext_resource type="Texture2D" uid="uid://caqgrnl62mnie" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/HDRI_Paul_Lobe_Haus.hdr" id="6_xfm38"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0elnq")
+shader_parameter/SkyLihgt = ExtResource("6_xfm38")
+shader_parameter/IrradianceMap = ExtResource("3_xfm38")
+shader_parameter/env_rotate = 2.24
+shader_parameter/Basecolor_Tex = ExtResource("2_wdkr4")
+shader_parameter/Basecolor_UV = 20.0
+shader_parameter/BaseColorCenter = Color(0.047557652, 0.047557652, 0.04755763, 1)
+shader_parameter/BaseColorEdge = Color(0.072842635, 0.072842635, 0.072842635, 1)
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 3.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.999999977648
+shader_parameter/roughness_Max = 0.999999977648
+shader_parameter/diffuseIntensity = 20.0
+shader_parameter/specularIntensity = 0.05
+shader_parameter/useVertexColor = false
+shader_parameter/ORS_Tex = ExtResource("5_etghn")
+shader_parameter/ORS_UV = 1.0
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("4_wdkr4")
+shader_parameter/normalIntensity = 0.5999999865888
+shader_parameter/NormalUV = 20.0
+shader_parameter/ao_Min = 0.0
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 0.999999977648
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0
+shader_parameter/slope = 0.88
+shader_parameter/toe = 0.55
+shader_parameter/shoulder = 0.26
+shader_parameter/blackclip = 0.0
+shader_parameter/whiteclip = 0.04

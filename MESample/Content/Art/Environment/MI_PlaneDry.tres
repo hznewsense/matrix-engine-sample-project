@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dq184y2jsjf0v"]
+
+[ext_resource type="Shader" path="res://Content/Art/Environment/M_PlaneDry.gdshader" id="1_3ge81"]
+[ext_resource type="Texture2D" uid="uid://ca0fbq4ktarv0" path="res://Content/Art/Environment/T_Asphalt_Road_B.png" id="2_q03vv"]
+[ext_resource type="Texture2D" uid="uid://bdli2wy3to2my" path="res://Content/Art/Environment/T_Asphalt_Road_N.png" id="3_lc87j"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 1
+shader = ExtResource("1_3ge81")
+shader_parameter/PointLight1_WorldPos = Vector3(0, 10, 0)
+shader_parameter/PointLight1_Color = Color(0.12911743, 0.15373084, 0.19613671, 1)
+shader_parameter/PointLight1_Intensity = 1000.0
+shader_parameter/BaseColor_Tex = ExtResource("2_q03vv")
+shader_parameter/BaseColor_UV = 25.0
+shader_parameter/BaseRough = 0.7999999821184
+shader_parameter/Normal_Tex = ExtResource("3_lc87j")
+shader_parameter/NormalIntensity = 0.999999977648
+shader_parameter/NormalUV = 25.0
+shader_parameter/Invert_Normal_Y = true
+shader_parameter/Flip_Binormal = false
+shader_parameter/Global_Mask_Color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+shader_parameter/Global_Mask_Radius = 0.12400000589
+shader_parameter/Global_Mask_Softness = 0.08800000418000001

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c5u6380vps0kj"]
+
+[ext_resource type="Shader" uid="uid://p53pfpyd23xe" path="res://Content/Art/Shaders/M_HOD_PlanningLane.gdshader" id="1_24u0i"]
+[ext_resource type="Texture2D" uid="uid://dm5vgww8y2gyy" path="res://Content/Art/Shaders/T_Planninglane_Arrow.TGA" id="2_l8wru"]
+
+[resource]
+render_priority = -2
+shader = ExtResource("1_24u0i")
+shader_parameter/Tex = ExtResource("2_l8wru")
+shader_parameter/arrowScale = 2.0
+shader_parameter/basecolor = Color(0.235294, 0.435294, 0.945098, 1)
+shader_parameter/Texcolor = Color(0.955963, 0.955963, 0.955963, 1)
+shader_parameter/x = 0.0
+shader_parameter/Length = 25.0
+shader_parameter/reverse = true

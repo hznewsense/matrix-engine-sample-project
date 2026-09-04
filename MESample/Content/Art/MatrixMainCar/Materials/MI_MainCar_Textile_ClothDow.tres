@@ -1,0 +1,41 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://baeofripi366q"]
+
+[ext_resource type="Texture2D" uid="uid://c5ceuim2sy5ye" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Carpet_01_BC.png" id="2_vam5a"]
+[ext_resource type="CompressedCubemap" uid="uid://bwwqfm3anvir0" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance.hdr" id="3_0ck6v"]
+[ext_resource type="Texture2D" uid="uid://byvet47kam7xw" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Carpet_01_N.png" id="4_vam5a"]
+[ext_resource type="Texture2D" uid="uid://b7smvkym7y4b6" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Int_ClothDow_350K_ORS.png" id="5_vam5a"]
+[ext_resource type="CompressedCubemap" uid="uid://bcu5feulm0tap" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CT_MESample_ll_Mip_4.hdr" id="6_rvgyj"]
+
+[resource]
+builtin_shader = 2
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("6_rvgyj")
+shader_parameter/IrradianceMap = ExtResource("3_0ck6v")
+shader_parameter/Irradiance_Saturation = 0.6999999843536
+shader_parameter/env_rotate = 1.26
+shader_parameter/Basecolor_Tex = ExtResource("2_vam5a")
+shader_parameter/Basecolor_UV = 10.0
+shader_parameter/BaseColorCenter = Color(1, 1, 1, 1)
+shader_parameter/BaseColorEdge = Color(1, 1, 1, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 1.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 1.0
+shader_parameter/roughness_Max = 1.0
+shader_parameter/diffuseIntensity = 9.0
+shader_parameter/specularIntensity = 10.0
+shader_parameter/ORS_Tex = ExtResource("5_vam5a")
+shader_parameter/ORS_UV = 1.0
+shader_parameter/ao_Min = 0.2999999932944
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 1.0
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useVertexColor = false
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("4_vam5a")
+shader_parameter/normalIntensity = 0.499999988824
+shader_parameter/NormalUV = 10.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0

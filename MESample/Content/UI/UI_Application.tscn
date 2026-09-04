@@ -1,0 +1,519 @@
+[gd_scene format=3 uid="uid://pus8b3t78nkp"]
+
+[ext_resource type="FontFile" uid="uid://fvk0aldin78h" path="res://Content/UI/Font/msyhl.ttc" id="2_jkgdt"]
+[ext_resource type="Texture2D" uid="uid://ojrniruwu61k" path="res://Content/UI/Application/T_UI_Application_Dot.png" id="22_xhdrf"]
+[ext_resource type="Texture2D" uid="uid://cx2c8jarbvdba" path="res://Content/UI/Application/T_UI_Application.png" id="22_y2ylk"]
+
+[sub_resource type="Theme" id="Theme_0mbp6"]
+default_font = ExtResource("2_jkgdt")
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_4eap2"]
+default_font = ExtResource("2_jkgdt")
+default_font_size = 22
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf0qu"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(0, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0iok"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(64, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1p8s"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(128, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_in38m"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(192, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rr5s"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(256, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0i0t"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(320, 0, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8mvv"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(0, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilar2"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(64, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eap2"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(128, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7utg"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(192, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aroul"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(256, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0m8c"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(320, 64, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq2oe"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(0, 128, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsbia"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(64, 128, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0i2v"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(128, 128, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d16cx"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(192, 128, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaj88"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(256, 128, 64, 64)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubc5k"]
+atlas = ExtResource("22_y2ylk")
+region = Rect2(320, 128, 64, 64)
+filter_clip = true
+
+[node name="UI_Application" type="Control" unique_id=804508553]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=917275124]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1200.0
+color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="Label" type="Label" parent="." unique_id=623961830]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 158.0
+offset_right = 80.0
+offset_bottom = 213.0
+grow_horizontal = 2
+theme = SubResource("Theme_0mbp6")
+text = "全部应用"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1575654720]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -770.0
+offset_top = 302.0
+offset_right = 770.0
+offset_bottom = 434.0
+grow_horizontal = 2
+theme = SubResource("Theme_4eap2")
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 99
+columns = 6
+
+[node name="AppItem" type="VBoxContainer" parent="GridContainer" unique_id=1615219877]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem" unique_id=1698514723]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hf0qu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem" unique_id=367991384]
+layout_mode = 2
+text = "应用中心"
+horizontal_alignment = 1
+
+[node name="AppItem2" type="VBoxContainer" parent="GridContainer" unique_id=801101390]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem2" unique_id=1734383390]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_r0iok")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem2" unique_id=91013828]
+layout_mode = 2
+text = "电话"
+horizontal_alignment = 1
+
+[node name="AppItem3" type="VBoxContainer" parent="GridContainer" unique_id=852142522]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem3" unique_id=315050282]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_r1p8s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem3" unique_id=1860521852]
+layout_mode = 2
+text = "设置"
+horizontal_alignment = 1
+
+[node name="AppItem4" type="VBoxContainer" parent="GridContainer" unique_id=565414524]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem4" unique_id=467372077]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_in38m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem4" unique_id=1901610324]
+layout_mode = 2
+text = "浏览器"
+horizontal_alignment = 1
+
+[node name="AppItem5" type="VBoxContainer" parent="GridContainer" unique_id=798169431]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem5" unique_id=1984990692]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_3rr5s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem5" unique_id=1612350915]
+layout_mode = 2
+text = "腾讯视频"
+horizontal_alignment = 1
+
+[node name="AppItem6" type="VBoxContainer" parent="GridContainer" unique_id=1887129053]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem6" unique_id=909113161]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_u0i0t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem6" unique_id=1514996835]
+layout_mode = 2
+text = "闲鱼"
+horizontal_alignment = 1
+
+[node name="AppItem7" type="VBoxContainer" parent="GridContainer" unique_id=1721180539]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem7" unique_id=712050854]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_g8mvv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem7" unique_id=1651958836]
+layout_mode = 2
+text = "QQ音乐"
+horizontal_alignment = 1
+
+[node name="AppItem8" type="VBoxContainer" parent="GridContainer" unique_id=859604351]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem8" unique_id=1870097598]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ilar2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem8" unique_id=1490694172]
+layout_mode = 2
+text = "录音"
+horizontal_alignment = 1
+
+[node name="AppItem9" type="VBoxContainer" parent="GridContainer" unique_id=583571795]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem9" unique_id=1797071904]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_4eap2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem9" unique_id=115540119]
+layout_mode = 2
+text = "淘宝"
+horizontal_alignment = 1
+
+[node name="AppItem10" type="VBoxContainer" parent="GridContainer" unique_id=252312030]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem10" unique_id=540682615]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_x7utg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem10" unique_id=667076556]
+layout_mode = 2
+text = "图库"
+horizontal_alignment = 1
+
+[node name="AppItem11" type="VBoxContainer" parent="GridContainer" unique_id=618983842]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem11" unique_id=1267953524]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_aroul")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem11" unique_id=490832286]
+layout_mode = 2
+text = "文件"
+horizontal_alignment = 1
+
+[node name="AppItem12" type="VBoxContainer" parent="GridContainer" unique_id=1145895456]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem12" unique_id=1684102597]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_y0m8c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem12" unique_id=1759879767]
+layout_mode = 2
+text = "Youtube"
+horizontal_alignment = 1
+
+[node name="AppItem13" type="VBoxContainer" parent="GridContainer" unique_id=1063237628]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem13" unique_id=599985383]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_oq2oe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem13" unique_id=589567295]
+layout_mode = 2
+text = "视频"
+horizontal_alignment = 1
+
+[node name="AppItem14" type="VBoxContainer" parent="GridContainer" unique_id=531175595]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem14" unique_id=642851964]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hsbia")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem14" unique_id=1357745984]
+layout_mode = 2
+text = "通讯录"
+horizontal_alignment = 1
+
+[node name="AppItem15" type="VBoxContainer" parent="GridContainer" unique_id=1274427235]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem15" unique_id=944718660]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_w0i2v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem15" unique_id=1073777065]
+layout_mode = 2
+text = "IQIYI"
+horizontal_alignment = 1
+
+[node name="AppItem16" type="VBoxContainer" parent="GridContainer" unique_id=1097200799]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem16" unique_id=446014503]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_d16cx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem16" unique_id=1792102266]
+layout_mode = 2
+text = "bilibili"
+horizontal_alignment = 1
+
+[node name="AppItem17" type="VBoxContainer" parent="GridContainer" unique_id=423041960]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem17" unique_id=934576730]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_jaj88")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem17" unique_id=698350747]
+layout_mode = 2
+text = "相机"
+horizontal_alignment = 1
+
+[node name="AppItem18" type="VBoxContainer" parent="GridContainer" unique_id=375895563]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/AppItem18" unique_id=164386360]
+clip_contents = true
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ubc5k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/AppItem18" unique_id=720593683]
+layout_mode = 2
+text = "音乐"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=26608413]
+custom_minimum_size = Vector2(32, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.0
+offset_top = 997.0
+offset_right = 16.0
+offset_bottom = 1007.0002
+grow_horizontal = 2
+texture = ExtResource("22_xhdrf")

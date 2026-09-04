@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cg8clkljht4r5"]
+
+[ext_resource type="Shader" uid="uid://ciqt8gtrsxf85" path="res://Content/Art/ParkingSpace/M_GuideArrow.gdshader" id="1_2posf"]
+[ext_resource type="Texture2D" uid="uid://tr1p5t7eyoqh" path="res://Content/Art/ParkingSpace/T_BCXJ.TGA" id="2_nokdq"]
+
+[resource]
+render_priority = -1
+shader = ExtResource("1_2posf")
+shader_parameter/tex_arrow = ExtResource("2_nokdq")
+shader_parameter/arrow_scale = Vector2(1, 1)
+shader_parameter/baseColor = Color(1, 1, 1, 1)
+shader_parameter/flip = true
+shader_parameter/yOffset = 3.755

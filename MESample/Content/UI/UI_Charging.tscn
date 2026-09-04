@@ -1,0 +1,268 @@
+[gd_scene format=3 uid="uid://bbl0f6c58lgb2"]
+
+[ext_resource type="FontFile" uid="uid://fvk0aldin78h" path="res://Content/UI/Font/msyhl.ttc" id="2_1j6w3"]
+[ext_resource type="Texture2D" uid="uid://cgpwnb7trc1i5" path="res://Content/UI/Charging/T_UI_Charging_Circle.png" id="2_a80sl"]
+[ext_resource type="Texture2D" uid="uid://bkjdrd6ore7ul" path="res://Content/UI/Charging/T_UI_Charging_Battery.png" id="3_sbxv8"]
+[ext_resource type="Texture2D" uid="uid://byfnxj1v11g5a" path="res://Content/UI/Charging/T_UI_Charging_Fuelpump.png" id="4_bg8dh"]
+[ext_resource type="FontFile" uid="uid://dfj2f3csac5t3" path="res://Content/UI/Font/msyhbd.ttc" id="4_c5ev6"]
+[ext_resource type="Texture2D" uid="uid://bc4fjicqg3noa" path="res://Content/UI/Charging/T_UI_Charging_Cable.png" id="7_22ecn"]
+[ext_resource type="FontFile" uid="uid://cp06m25x1h21i" path="res://Content/UI/Font/msyh.ttc" id="8_uoal3"]
+[ext_resource type="Texture2D" uid="uid://bgirra04ehrdk" path="res://Content/UI/Charging/T_UI_Charging_Frame.png" id="9_da2mk"]
+
+[sub_resource type="Gradient" id="Gradient_papj1"]
+offsets = PackedFloat32Array(0.20131771, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a80sl"]
+gradient = SubResource("Gradient_papj1")
+
+[sub_resource type="Theme" id="Theme_22ecn"]
+default_font = ExtResource("2_1j6w3")
+default_font_size = 20
+
+[sub_resource type="Theme" id="Theme_bg8dh"]
+default_font = ExtResource("4_c5ev6")
+default_font_size = 96
+
+[sub_resource type="Theme" id="Theme_1j6w3"]
+default_font = ExtResource("4_c5ev6")
+default_font_size = 46
+
+[sub_resource type="Theme" id="Theme_uoal3"]
+default_font = ExtResource("2_1j6w3")
+default_font_size = 16
+
+[node name="UI_Charging" type="Control" unique_id=804508553]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Gradient" type="TextureRect" parent="." unique_id=181977977]
+layout_mode = 0
+offset_right = 915.0
+offset_bottom = 1200.0
+texture = SubResource("GradientTexture2D_a80sl")
+
+[node name="Control" type="Control" parent="." unique_id=1155768644]
+custom_minimum_size = Vector2(445, 445)
+anchors_preset = 0
+offset_left = 148.0
+offset_top = 216.0
+offset_right = 593.0
+offset_bottom = 984.0
+theme = SubResource("Theme_22ecn")
+
+[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=713567751]
+custom_minimum_size = Vector2(445, 445)
+layout_mode = 0
+offset_left = -0.5
+offset_right = 444.5
+offset_bottom = 445.0
+texture = ExtResource("2_a80sl")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=936869272]
+layout_mode = 0
+offset_right = 445.0
+offset_bottom = 503.0
+theme_override_constants/margin_top = 55
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=115094131]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect2" type="TextureRect" parent="Control/MarginContainer/VBoxContainer" unique_id=1156373883]
+custom_minimum_size = Vector2(50.58, 73.05)
+layout_mode = 2
+texture = ExtResource("3_sbxv8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer" unique_id=425331011]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=208796155]
+layout_mode = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=621876587]
+layout_mode = 2
+theme = SubResource("Theme_bg8dh")
+text = "22"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1354279334]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=2114508119]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1389636940]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 7
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=316202707]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_bg8dh")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1370547453]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_22ecn")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=14299894]
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_1j6w3")
+text = "%"
+
+[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1838329687]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "充电中..."
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Control/MarginContainer" unique_id=1547936679]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "充电剩余1小时10分钟"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control" unique_id=117770676]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -2.7050018
+offset_top = 185.22998
+offset_right = 442.29498
+offset_bottom = 259.22998
+grow_vertical = 2
+theme = SubResource("Theme_uoal3")
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2" unique_id=1471309666]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 81
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=397015484]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer" unique_id=1564491527]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=2063202408]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_uoal3")
+theme_override_font_sizes/font_size = 32
+text = "31"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=2091649957]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "kw"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer" unique_id=2039584959]
+layout_mode = 2
+text = "充电功率"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=294321044]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer2" unique_id=1817015914]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=320242426]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_uoal3")
+theme_override_font_sizes/font_size = 32
+text = "724"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=526723971]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "v"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer2" unique_id=117232137]
+layout_mode = 2
+text = "充电电压"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=2028784413]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer3" unique_id=300109745]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer3/HBoxContainer" unique_id=1732526396]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_uoal3")
+theme_override_font_sizes/font_size = 32
+text = "229"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer3/HBoxContainer" unique_id=1104640708]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "km/hr"
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/VBoxContainer3" unique_id=35625430]
+layout_mode = 2
+text = "充电速度"
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=588518673]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -222.5
+offset_top = -80.0
+offset_right = 222.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("9_da2mk")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Control/TextureRect" unique_id=612065865]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -14.0
+offset_right = 40.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "停止充电"

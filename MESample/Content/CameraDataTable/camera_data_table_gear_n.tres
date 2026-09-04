@@ -1,0 +1,22 @@
+[gd_resource type="CameraDataTable" format=3 uid="uid://ditqh7o0oqgfe"]
+
+[sub_resource type="Curve" id="Curve_xbl1m"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+view_name = &"N档"
+transition_duration = 0.8
+position = Vector3(0, 0.8, 0)
+rotation = Vector3(-5, 180, 0)
+length = 18.0
+fov = 22.0
+transition_curve = SubResource("Curve_xbl1m")
+cull_mask = 4293918745
+can_touch = false
+can_break_transition = false
+yaw_speed = 0.5
+pitch_speed = 0.5
+can_zoom = false
+zoom_speed = 2.0
+auto_return_time = 4.0

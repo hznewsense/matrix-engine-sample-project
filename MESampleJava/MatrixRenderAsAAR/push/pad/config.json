@@ -1,0 +1,11 @@
+{
+  "adbPath": "adb",
+  "packageName": "com.ns.matrix.sample.aar",
+  "targetDir": "/storage/emulated/0/Android/data/com.ns.matrix.sample.aar/files",
+  "outputFileName": "game.obb",
+  "pckSources": [
+    {
+            "pckPath": "D:\\workspace\\NS\\android\\Sample\\MESample\\MESampleJava\\MatrixRenderAsAAR\\app\\src\\main\\assets\\game.pck"
+    }
+  ]
+}

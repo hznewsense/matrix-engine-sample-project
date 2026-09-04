@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://do3s50yvflyjz"]
+
+[ext_resource type="Shader" uid="uid://d3h5xmiiygu6s" path="res://Content/Art/Shaders/M_HOD_SelfLine.gdshader" id="1_lvpir"]
+
+[resource]
+render_priority = -6
+shader = ExtResource("1_lvpir")
+shader_parameter/basecolor = Color(0.235294, 0.435294, 0.945098, 1)
+shader_parameter/hardness = 0.4
+shader_parameter/opacity = 0.6

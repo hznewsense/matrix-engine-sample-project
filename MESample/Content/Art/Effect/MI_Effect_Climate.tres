@@ -1,0 +1,10 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://cguq0rurxc0t4"]
+
+[ext_resource type="Texture2D" uid="uid://dsa52rv7s72ow" path="res://Content/Art/Effect/T_Effects_WindNoise.png" id="2_r2541"]
+
+[resource]
+builtin_shader = 8
+render_priority = 0
+shader_parameter/noise = ExtResource("2_r2541")
+shader_parameter/visable = true
+shader_parameter/color = Color(0.6901961, 0.9372549, 1, 1)

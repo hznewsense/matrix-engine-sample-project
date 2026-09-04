@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dgv25tyclnoys"]
+
+[ext_resource type="Shader" uid="uid://bm1c8l6pgamvl" path="res://Content/Art/Environment/SimpleShader/M_BaseLambert.gdshader" id="1_3cois"]
+
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3cois")
+shader_parameter/base_color = Color(0.35531357, 0.35531357, 0.3553135, 1)

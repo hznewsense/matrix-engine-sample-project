@@ -1,0 +1,41 @@
+[gd_resource type="MatrixVehicleMaterial3D" format=3 uid="uid://ndijylufrdj4"]
+
+[ext_resource type="Texture2D" uid="uid://bi7k0sama1dl2" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Leather_06_BC.png" id="2_8meci"]
+[ext_resource type="CompressedCubemap" uid="uid://bwwqfm3anvir0" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance.hdr" id="3_8nory"]
+[ext_resource type="Texture2D" uid="uid://cbbpbyalx713b" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Int_LeatherBlack_350K_ORS1.png" id="4_k18o4"]
+[ext_resource type="Texture2D" uid="uid://clsdbe4fmymgv" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Leather_06_N.png" id="4_pury0"]
+[ext_resource type="CompressedCubemap" uid="uid://bcu5feulm0tap" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CT_MESample_ll_Mip_4.hdr" id="6_8nory"]
+
+[resource]
+builtin_shader = 2
+render_priority = 0
+shader_parameter/SkyLihgt = ExtResource("6_8nory")
+shader_parameter/IrradianceMap = ExtResource("3_8nory")
+shader_parameter/Irradiance_Saturation = 0.3999999910592
+shader_parameter/env_rotate = 1.22
+shader_parameter/Basecolor_Tex = ExtResource("2_8meci")
+shader_parameter/Basecolor_UV = 15.0
+shader_parameter/BaseColorCenter = Color(0.07, 0.07, 0.07, 1)
+shader_parameter/BaseColorEdge = Color(0.15487608, 0.15487596, 0.15487596, 1)
+shader_parameter/Exposure = 0.7
+shader_parameter/BaseColor_Fresnel_Exponent = 2.0
+shader_parameter/BaseColor_Fresnel_Falloff = 0.04
+shader_parameter/BaseColor_Fresnel_Power = 3.0
+shader_parameter/Metallic = 0.0
+shader_parameter/roughness_Min = 0.61999998614176
+shader_parameter/roughness_Max = 0.499999988824
+shader_parameter/diffuseIntensity = 6.0
+shader_parameter/specularIntensity = 10.0
+shader_parameter/ORS_Tex = ExtResource("4_k18o4")
+shader_parameter/ORS_UV = 1.0
+shader_parameter/ao_Min = 0.499999988824
+shader_parameter/ao_Max = 1.0
+shader_parameter/shadow_Min = 0.999999977648
+shader_parameter/shadow_Max = 1.0
+shader_parameter/useVertexColor = false
+shader_parameter/useN = true
+shader_parameter/Normal_Tex = ExtResource("4_pury0")
+shader_parameter/normalIntensity = 0.5999999865888
+shader_parameter/NormalUV = 15.0
+shader_parameter/useClearcoat = false
+shader_parameter/clearcoat_Intensity = 1.0

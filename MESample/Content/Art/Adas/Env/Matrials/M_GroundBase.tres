@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://5b0f4ey8q5ce"]
+
+[ext_resource type="Shader" path="res://Content/Art/Env/Shader/S_GroundBase.gdshader" id="1_41swi"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_41swi")
+shader_parameter/emission_color = Color(0.810901, 0.824049, 0.835257, 1)
+shader_parameter/alpha_pow = 3.58
