@@ -8,6 +8,10 @@
 
 MESample 是 Matrix 引擎官方提供的 **3D Launcher + SR Sample Project**。项目基于 **Matrix Engine 1.3.0** 开发，面向智能座舱 3D HMI 场景，演示 3D 车控、SR 可视化、多屏渲染、Render as Service、Used as Library 等核心能力，可作为引擎学习、功能演示、性能验证和二次开发的 Starter Kit。
 
+<div align="center">
+  <img alt="MESample 3D Launcher 主界面" src="./Docs/Images/3dlauncher.png" width="80%">
+</div>
+
 > Matrix Engine 是面向智能座舱场景的 3D HMI 引擎，覆盖编辑开发、运行调试、集成打包和量产部署全流程。
 
 ---
@@ -61,11 +65,17 @@ Matrix Engine 是专为汽车智能座舱打造的全栈式 3D HMI 引擎方案�
 - **高质量 3D 车模展示**  
   支持车身、内饰、轮毂、灯光、车漆等细节展示；基于 PBR 材质实现车漆金属感、清漆层和环境反射效果。
 
+  ![车内外饰细节](./Docs/Images/interior-view.png)
+
 - **3D Launcher 交互样例**  
   包含车内外细节查看、镜头切换、车辆状态展示等基础 Launcher 功能。
 
+  ![3D Launcher 门/舱盖开合交互](./Docs/Images/door-open.png)
+
 - **SR 可视化样例**  
   提供 SR 显示窗口，可用于展示智能驾驶可视化、环境感知或车辆周边信息的渲染能力。
+
+  ![SR 可视化画面](./Docs/Images/sr-overview.png)
 
 - **Render as Service**  
   Matrix 引擎运行在独立 Android Service 中，HMI / SR App 通过连接 Service 并传入 Surface 获取渲染画面，实现渲染逻辑与客户端 App 解耦。
