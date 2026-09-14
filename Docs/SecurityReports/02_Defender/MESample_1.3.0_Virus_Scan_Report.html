@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MESample 1.3.0 Virus Scan Report</title>
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif; color: #1a1a1a; font-size: 11pt; line-height: 1.55; }
+  h1 { font-size: 20pt; color: #0f3d63; margin-bottom: 2mm; }
+  h2 { font-size: 14pt; color: #0f3d63; border-bottom: 2px solid #0f3d63; padding-bottom: 1.5mm; margin-top: 8mm; }
+  table { border-collapse: collapse; width: 100%; margin: 4mm 0; font-size: 10pt; }
+  th { background: #0f3d63; color: #fff; padding: 2.2mm 3mm; text-align: left; }
+  td { border: 1px solid #ccd; padding: 2mm 3mm; }
+  tr:nth-child(even) td { background: #f4f7fa; }
+  .pass { color: #1e7d32; font-weight: 700; }
+  .meta td { border: none; padding: 1.5mm 2mm; }
+  .meta td:first-child { width: 35%; font-weight: 600; color: #0f3d63; }
+  .footer { margin-top: 12mm; font-size: 9pt; color: #888; border-top: 1px solid #ddd; padding-top: 2mm; }
+</style>
+</head>
+<body>
+
+<h1>Virus Scan Report</h1>
+<p style="color:#555">MESample v1.3.0 &mdash; Microsoft Defender Antimalware</p>
+
+<table class="meta">
+  <tr><td>Software</td><td>MESample 1.3.0</td></tr>
+  <tr><td>Tool</td><td>Microsoft Defender Antimalware (MpCmdRun.exe)</td></tr>
+  <tr><td>Scan Type</td><td>Full file scan of all delivered APK artifacts</td></tr>
+  <tr><td>Scope</td><td>4 delivered APK, 149.94 MB total</td></tr>
+  <tr><td>Date</td><td>2026-09-09</td></tr>
+</table>
+
+<h2>1. Scan Results</h2>
+<table>
+  <tr><th>#</th><th>Artifact</th><th>Size (MB)</th><th>Result</th></tr>
+  <tr><td>1</td><td>MESample_HMI_1.3.0_..._1920X1200_30fps.apk</td><td>9.18</td><td class="pass">No threats found</td></tr>
+  <tr><td>2</td><td>MESample_SR_1.3.0_..._1920X1080_30fps.apk</td><td>9.18</td><td class="pass">No threats found</td></tr>
+  <tr><td>3</td><td>MESample_RenderService_1.3.0_..._release.apk</td><td>69.50</td><td class="pass">No threats found</td></tr>
+  <tr><td>4</td><td>MESample_UsedAsLib_1.3.0_..._1920X1200_30fps.apk</td><td>62.07</td><td class="pass">No threats found</td></tr>
+</table>
+
+<h2>2. Conclusion</h2>
+<table>
+  <tr><th style="width:40%">Item</th><th>Status</th></tr>
+  <tr><td>Malware / virus threats</td><td class="pass">PASS &mdash; 4/4 APK clean</td></tr>
+</table>
+<p>All 4 delivered APK artifacts passed the malware scan with no threats detected.</p>
+
+<div class="footer">
+  Report generated: 2026-09-09 &nbsp;|&nbsp; Tool: Microsoft Defender Antimalware &nbsp;|&nbsp; MESample v1.3.0
+</div>
+</body>
+</html>

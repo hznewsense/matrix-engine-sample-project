@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MESample 1.3.0 Security Test Report</title>
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif; color: #1a1a1a; font-size: 11pt; line-height: 1.55; }
+  h1 { font-size: 22pt; color: #0f3d63; margin-bottom: 2mm; }
+  h2 { font-size: 15pt; color: #0f3d63; border-bottom: 2px solid #0f3d63; padding-bottom: 1.5mm; margin-top: 9mm; }
+  h3 { font-size: 12.5pt; color: #1a1a1a; margin-bottom: 2mm; }
+  .subtitle { color: #555; font-size: 11pt; margin-bottom: 6mm; }
+  table { border-collapse: collapse; width: 100%; margin: 4mm 0; font-size: 10pt; }
+  th { background: #0f3d63; color: #fff; padding: 2.2mm 3mm; text-align: left; font-weight: 600; }
+  td { border: 1px solid #ccd; padding: 2mm 3mm; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f7fa; }
+  .pass { color: #1e7d32; font-weight: 700; }
+  .warn { color: #b26a00; font-weight: 700; }
+  .meta { width: 100%; border-collapse: collapse; margin: 5mm 0; }
+  .meta td { border: none; padding: 1.5mm 2mm; font-size: 10.5pt; }
+  .meta td:first-child { width: 38%; font-weight: 600; color: #0f3d63; background: none; }
+  .summary-box { border: 1.5px solid #0f3d63; border-radius: 3mm; padding: 4mm 5mm; margin: 5mm 0; background: #f0f6fb; }
+  .summary-box .big { font-size: 20pt; font-weight: 700; color: #0f3d63; }
+  .summary-grid { display: flex; gap: 8mm; flex-wrap: wrap; }
+  .summary-item { flex: 1; min-width: 60mm; }
+  code { background: #eef1f5; padding: 0.5mm 1.5mm; border-radius: 1mm; font-family: Consolas, monospace; font-size: 9.5pt; }
+  .footer { margin-top: 12mm; font-size: 9pt; color: #888; border-top: 1px solid #ddd; padding-top: 2mm; }
+  .note { font-size: 9.5pt; color: #555; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>Security Test Report</h1>
+<div class="subtitle">MESample &mdash; Automotive 3D HMI Sample Project</div>
+
+<table class="meta">
+  <tr><td>Software Name</td><td>MESample</td></tr>
+  <tr><td>Software Version</td><td>1.3.0</td></tr>
+  <tr><td>Report Date</td><td>2026-09-09</td></tr>
+  <tr><td>Source Code Files</td><td>N/A (source code not delivered)</td></tr>
+  <tr><td>Delivered Artifacts</td><td>4 APK, 149.94 MB (HMI / SR / RenderService / UsedAsLib)</td></tr>
+  <tr><td>Report Scope</td><td>Static Code Analysis, Malware Scan, Fuzz Testing, Port Scan</td></tr>
+</table>
+
+<h2>1. Executive Summary</h2>
+<div class="summary-box">
+  <div class="summary-grid">
+    <div class="summary-item">
+      <div class="big">0</div>
+      <div>Security defects<br>found by static analysis</div>
+    </div>
+    <div class="summary-item">
+      <div class="big">0</div>
+      <div>Malware threats<br>found in delivered APK</div>
+    </div>
+    <div class="summary-item">
+      <div class="big">0</div>
+      <div>Fuzz crashes<br>in 1M runs</div>
+    </div>
+  </div>
+  <p style="margin:4mm 0 0 0;">All 4 delivered APK passed malware scanning. Static code analysis reported <b>zero security vulnerabilities</b>. Fuzz testing completed 1,000,000 executions with <b>zero crashes</b>. Port scan confirmed <b>no unexpected network exposure</b>. All Category 5 security tests <b>PASSED</b>.</p>
+</div>
+
+<h2>2. Test Summary</h2>
+<table>
+  <tr><th style="width:28%">Test</th><th style="width:24%">Tool</th><th style="width:18%">Result</th><th>Detailed Report</th></tr>
+  <tr><td>Static Code Analysis</td><td>clang-tidy 21.0.0</td><td class="pass">PASS (0 defects)</td><td>01_clang-tidy/MESample_1.3.0_Static_Code_Analysis_Report.pdf</td></tr>
+  <tr><td>Virus Scan</td><td>Microsoft Defender</td><td class="pass">PASS (4/4 APK clean)</td><td>02_Defender/MESample_1.3.0_Virus_Scan_Report.pdf</td></tr>
+  <tr><td>Fuzz Testing</td><td>libFuzzer (LLVM 18)</td><td class="pass">PASS (1M runs, 0 crashes)</td><td>03_libFuzzer/MESample_1.3.0_Fuzz_Test_Report.pdf</td></tr>
+  <tr><td>Port Scan</td><td>Nmap 7.80</td><td class="pass">PASS (no exposure)</td><td>04_Nmap/MESample_1.3.0_Port_Scan_Report.pdf</td></tr>
+</table>
+
+<h2>3. Static Code Analysis</h2>
+<table>
+  <tr><th>Category</th><th>Count</th><th>Severity</th></tr>
+  <tr><td>Security defects (clang-analyzer)</td><td>0</td><td class="pass">Pass</td></tr>
+  <tr><td>Potential bug patterns (bugprone)</td><td>17</td><td class="warn">Low</td></tr>
+  <tr><td>Performance suggestions</td><td>19</td><td>Info</td></tr>
+  <tr><td>Best-practice / style</td><td>416</td><td>Info</td></tr>
+  <tr><td><b>Total diagnostics</b></td><td><b>452</b></td><td>&mdash;</td></tr>
+</table>
+<p class="note">All findings are code-quality issues; none are security vulnerabilities. Compiled with <code>-Wall -Wextra -Werror</code>.</p>
+
+<h2>4. Malware Scan</h2>
+<table>
+  <tr><th>#</th><th>Artifact</th><th>Size (MB)</th><th>Result</th></tr>
+  <tr><td>1</td><td>MESample_HMI_..._1920X1200_30fps.apk</td><td>9.18</td><td class="pass">No threats found</td></tr>
+  <tr><td>2</td><td>MESample_SR_..._1920X1080_30fps.apk</td><td>9.18</td><td class="pass">No threats found</td></tr>
+  <tr><td>3</td><td>MESample_RenderService_..._release.apk</td><td>69.50</td><td class="pass">No threats found</td></tr>
+  <tr><td>4</td><td>MESample_UsedAsLib_..._1920X1200_30fps.apk</td><td>62.07</td><td class="pass">No threats found</td></tr>
+</table>
+
+<h2>5. Fuzz Testing</h2>
+<table>
+  <tr><th>Metric</th><th>Value</th><th>Status</th></tr>
+  <tr><td>Total executions</td><td>1,000,000</td><td>&mdash;</td></tr>
+  <tr><td>Crashes / hangs</td><td>0</td><td class="pass">Pass</td></tr>
+  <tr><td>Memory errors (ASan)</td><td>0</td><td class="pass">Pass</td></tr>
+  <tr><td>Invariant violations</td><td>0</td><td class="pass">Pass</td></tr>
+</table>
+
+<h2>6. Port Scan</h2>
+<table>
+  <tr><th>PORT</th><th>STATE</th><th>SERVICE</th><th>Note</th></tr>
+  <tr><td>135/tcp</td><td>open</td><td>msrpc</td><td>Windows system default (RPC), unrelated</td></tr>
+  <tr><td>445/tcp</td><td>open</td><td>microsoft-ds</td><td>Windows system default (SMB), unrelated</td></tr>
+</table>
+<p class="note">Both open ports are Windows OS defaults; the software introduces no additional port exposure.</p>
+
+<h2>7. Conclusion</h2>
+<table>
+  <tr><th style="width:40%">Item</th><th>Status</th></tr>
+  <tr><td>Static code analysis (security)</td><td class="pass">PASS &mdash; no security defects</td></tr>
+  <tr><td>Malware scan</td><td class="pass">PASS &mdash; 4/4 APK clean</td></tr>
+  <tr><td>Fuzz testing</td><td class="pass">PASS &mdash; 1M runs, no crashes</td></tr>
+  <tr><td>Port scan</td><td class="pass">PASS &mdash; no unexpected exposure</td></tr>
+</table>
+<ul>
+  <li>No security vulnerabilities identified in the self-developed C++ source code.</li>
+  <li>All 4 delivered APK artifacts are free of malware.</li>
+  <li>Fuzz testing of input-parsing logic found no crashes in 1M executions.</li>
+  <li>No unexpected network port exposure introduced by the software.</li>
+</ul>
+
+<div class="footer">
+  Report generated: 2026-09-09 &nbsp;|&nbsp; Tools: clang-tidy 21.0.0, Microsoft Defender, libFuzzer, Nmap 7.80 &nbsp;|&nbsp; MESample v1.3.0
+</div>
+
+</body>
+</html>

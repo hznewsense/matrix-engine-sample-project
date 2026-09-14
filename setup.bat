@@ -27,6 +27,13 @@ set "GRADLE_DIST_URL=https://mirrors.aliyun.com/macports/distfiles/gradle/gradle
 set "LOCAL_GRADLE_DIR=%~dp0.tools\gradle\gradle-8.13"
 set "LOCAL_GRADLE_CMD=%LOCAL_GRADLE_DIR%\bin\gradle.bat"
 set "USER_ENV_FILE=%~dp0.setup-user-env.cmd"
+set "EDITOR_VERSION=1.3.0"
+set "EDITOR_DIR=%~dp0MatrixEngine"
+set "EDITOR_EXE=%EDITOR_DIR%\Matrix1.3.0.exe"
+set "EDITOR_DOWNLOAD_TMP=%EDITOR_DIR%\Matrix1.3.0.exe.download"
+set "EDITOR_DOWNLOAD_URL=https://github.com/hznewsense/matrix-engine-sample-project/releases/download/v1.3.0/Matrix1.3.0.exe"
+set "EDITOR_MIN_SIZE=150000000"
+set "EDITOR_SHA256=25c873047bcb36504932b5612403cb868a9448821f777c8796091d95fff9bdb7"
 
 set "SKIP_JDK=0"
 set "SKIP_WINGET=0"
@@ -59,6 +66,9 @@ call :check_python
 if errorlevel 1 goto failed
 
 call :check_scons
+if errorlevel 1 goto failed
+
+call :ensure_editor
 if errorlevel 1 goto failed
 
 if "%SKIP_JDK%"=="0" (
@@ -124,6 +134,7 @@ echo ============================================================
 echo Repository Root : %~dp0
 echo Target NDK      : %NDK_VERSION%
 echo Target Gradle   : %GRADLE_VERSION%
+echo Target Editor   : %EDITOR_VERSION%
 echo Compile SDK     : %ANDROID_COMPILE_SDK%
 echo Build Tools     : %ANDROID_BUILD_TOOLS%
 echo ============================================================
@@ -1048,6 +1059,121 @@ if errorlevel 1 (
 )
 
 call :log_ok "Persisted %ENV_NAME%"
+exit /b 0
+
+:ensure_editor
+call :log_info "Checking Matrix Engine editor %EDITOR_VERSION%..."
+
+if exist "%EDITOR_EXE%" (
+    call :check_editor_exe "%EDITOR_EXE%"
+    if "!EDITOR_FILE_OK!"=="1" (
+        call :log_ok "Matrix Engine editor ready: %EDITOR_EXE%"
+        exit /b 0
+    )
+    call :log_warn "Editor file failed validation: %EDITOR_EXE%"
+    call :log_warn "  actual: !EDITOR_FILE_SIZE! bytes, sha256 !EDITOR_FILE_SHA256!"
+    call :log_warn "  expect: at least %EDITOR_MIN_SIZE% bytes, sha256 %EDITOR_SHA256%"
+    call :log_warn "A 134 byte file means a Git LFS pointer; a short file means a truncated download."
+    del /f /q "%EDITOR_EXE%" >nul 2>nul
+)
+
+if not exist "%EDITOR_DIR%" mkdir "%EDITOR_DIR%"
+
+call :log_warn "Downloading Matrix Engine editor %EDITOR_VERSION%..."
+call :log_info "URL: %EDITOR_DOWNLOAD_URL%"
+call :log_info "The file is about 160 MB. This may take several minutes."
+call :log_info "The download is retried automatically if the connection drops."
+
+call :download_editor_file
+if errorlevel 1 (
+    call :log_error "Failed to download the Matrix Engine editor."
+    if exist "%EDITOR_DOWNLOAD_TMP%" del /f /q "%EDITOR_DOWNLOAD_TMP%" >nul 2>nul
+    call :editor_manual_hint
+    exit /b 1
+)
+
+call :check_editor_exe "%EDITOR_DOWNLOAD_TMP%"
+if not "!EDITOR_FILE_OK!"=="1" (
+    call :log_error "Downloaded editor failed validation: %EDITOR_DOWNLOAD_TMP%"
+    call :log_error "  actual: !EDITOR_FILE_SIZE! bytes, sha256 !EDITOR_FILE_SHA256!"
+    call :log_error "  expect: at least %EDITOR_MIN_SIZE% bytes, sha256 %EDITOR_SHA256%"
+    if exist "%EDITOR_DOWNLOAD_TMP%" del /f /q "%EDITOR_DOWNLOAD_TMP%" >nul 2>nul
+    call :editor_manual_hint
+    exit /b 1
+)
+
+move /y "%EDITOR_DOWNLOAD_TMP%" "%EDITOR_EXE%" >nul
+if errorlevel 1 (
+    call :log_error "Failed to move the downloaded editor to: %EDITOR_EXE%"
+    call :log_error "The download itself succeeded and is kept at:"
+    call :log_error "  %EDITOR_DOWNLOAD_TMP%"
+    call :log_error "Move it to the path above manually, then run setup.bat again."
+    exit /b 1
+)
+
+REM move can succeed while leaving the file elsewhere (e.g. it moves a file
+REM INTO a directory of the same name), so verify before claiming success.
+call :check_editor_exe "%EDITOR_EXE%"
+if not "!EDITOR_FILE_OK!"=="1" (
+    call :log_error "Editor is not in place after moving: %EDITOR_EXE%"
+    call :log_error "If a directory with that name exists, remove it and run setup.bat again."
+    exit /b 1
+)
+
+call :log_ok "Matrix Engine editor ready: %EDITOR_EXE%"
+exit /b 0
+
+:check_editor_exe
+set "EDITOR_FILE_OK="
+set "EDITOR_FILE_SIZE=0"
+set "EDITOR_FILE_SHA256="
+if not exist "%~1" exit /b 0
+set "EDITOR_FILE_SIZE=%~z1"
+if !EDITOR_FILE_SIZE! LSS %EDITOR_MIN_SIZE% exit /b 0
+call :compute_sha256 "%~1"
+if /I not "!EDITOR_FILE_SHA256!"=="%EDITOR_SHA256%" exit /b 0
+set "EDITOR_FILE_OK=1"
+exit /b 0
+
+:compute_sha256
+set "EDITOR_FILE_SHA256="
+for /f "delims=" %%H in ('certutil -hashfile "%~1" SHA256 2^>nul ^| findstr /r /c:"^[0-9a-fA-F][0-9a-fA-F]*$"') do (
+    if not defined EDITOR_FILE_SHA256 set "EDITOR_FILE_SHA256=%%H"
+)
+exit /b 0
+
+:download_editor_file
+if exist "%EDITOR_DOWNLOAD_TMP%" del /f /q "%EDITOR_DOWNLOAD_TMP%" >nul 2>nul
+
+call :resolve_curl_proxy "%EDITOR_DOWNLOAD_URL%"
+
+where curl >nul 2>nul
+if errorlevel 1 goto download_editor_file_ps
+
+curl -L --fail --retry 5 --retry-delay 3 --retry-all-errors --connect-timeout 30 !CURL_PROXY_ARG! --output "%EDITOR_DOWNLOAD_TMP%" "%EDITOR_DOWNLOAD_URL%"
+exit /b %ERRORLEVEL%
+
+:resolve_curl_proxy
+set "CURL_PROXY="
+set "CURL_PROXY_ARG="
+for /f "delims=" %%P in ('git config --get-urlmatch http.proxy "%~1" 2^>nul') do set "CURL_PROXY=%%P"
+if not defined CURL_PROXY exit /b 0
+set CURL_PROXY_ARG=--proxy "!CURL_PROXY!"
+call :log_info "Using proxy from git config: !CURL_PROXY!"
+exit /b 0
+
+:download_editor_file_ps
+call :log_info "curl.exe not found. Falling back to PowerShell."
+powershell -NoProfile -Command "$ErrorActionPreference='Stop'; $ProgressPreference='SilentlyContinue'; (New-Object System.Net.WebClient).DownloadFile('%EDITOR_DOWNLOAD_URL%','%EDITOR_DOWNLOAD_TMP%')"
+exit /b %ERRORLEVEL%
+
+:editor_manual_hint
+echo.
+call :log_error "Matrix Engine editor %EDITOR_VERSION% could not be obtained automatically."
+call :log_error "Download it manually, place it at the path below, then run setup.bat again."
+call :log_error "  URL  : %EDITOR_DOWNLOAD_URL%"
+call :log_error "  Save : %EDITOR_EXE%"
+call :log_error "Expected size is about 160 MB. Do not use the GitHub Download ZIP button."
 exit /b 0
 
 :log_info

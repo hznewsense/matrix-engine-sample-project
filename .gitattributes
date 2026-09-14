@@ -1,3 +1,2 @@
 *.bat text eol=crlf
 *.cmd text eol=crlf
-MatrixEngine/Matrix1.3.0.exe filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,2118 @@
+[1/2] Processing file D:/Matrix_Engine/project/MESample/MESample/Source/MESample/register_types.cpp.
+83305 warnings generated.
+[2/2] Processing file D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp.
+154507 warnings generated.
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:37:7: warning: class 'DoorController' defines a copy assignment operator but does not define a destructor, a copy constructor, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   37 | class DoorController : public godot::Node3D {
+      |       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:38:2: warning: initializing non-owner argument of type 'godot::List<godot::PropertyInfo> *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   38 |         GDCLASS(DoorController, godot::Node3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:315:53: note: expanded from macro 'GDCLASS'
+  315 |                 ::godot::List<::godot::PropertyInfo> *plist_cpp = memnew(::godot::List<::godot::PropertyInfo>);                                                                                \
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+godot-cpp/include/godot_cpp/core/memory.hpp:99:135: note: expanded from macro 'memnew'
+   99 | #define memnew(m_class) (::godot::_pre_initialize<std::remove_pointer_t<decltype(new ("", "") m_class)>>(), ::godot::_post_initialize(new ("", "") m_class))
+      |                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:38:2: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   38 |         GDCLASS(DoorController, godot::Node3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:323:44: note: expanded from macro 'GDCLASS'
+  323 |                         ::godot::internal::free_c_property_list(const_cast<GDExtensionPropertyInfo *>(p_list));                                                                                    \
+      |                                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:38:2: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   38 |         GDCLASS(DoorController, godot::Node3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:20: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:38:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   38 |         GDCLASS(DoorController, godot::Node3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:187:15: note: expanded from macro 'GDCLASS'
+  187 |         virtual bool _is_extension_class() const override {                                                                                                                                \
+      |                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:38:10: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   38 |         GDCLASS(DoorController, godot::Node3D)
+      |                 ^~~~~~~~~~~~~~
+      |                 auto
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:5: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:41:7: warning: enum 'DoorType' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   41 |         enum DoorType { DOOR_LEFT_FRONT, DOOR_RIGHT_FRONT, DOOR_LEFT_REAR, DOOR_RIGHT_REAR, DOOR_HOOD, DOOR_TRUNK, DOOR_CHARGE_PORT, DOOR_COUNT };
+      |              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:42:7: warning: enum 'DoorState' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   42 |         enum DoorState { DOOR_STATE_CLOSED, DOOR_STATE_OPENING, DOOR_STATE_OPEN, DOOR_STATE_CLOSING };
+      |              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:52:16: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   52 |                 float angle{ 60.0f };
+      |                              ^   ~
+      |                                  F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:53:19: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   53 |                 float progress{ 0.0f };
+      |                                 ^  ~
+      |                                    F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:59:20: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   59 |         float m_duration{ 0.5f }, m_ray_len{ 100.0f };
+      |                           ^  ~
+      |                              F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:59:39: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   59 |         float m_duration{ 0.5f }, m_ray_len{ 100.0f };
+      |                                              ^    ~
+      |                                                   F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:62:22: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   62 |         float m_hide_timer{ 0.0f };
+      |                             ^  ~
+      |                                F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:63:37: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   63 |         static constexpr float HIDE_DELAY{ 5.0f };
+      |                                            ^  ~
+      |                                               F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:82:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   82 |         DOOR_PROPS(left_front_door, DOOR_LEFT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:82:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   82 |         DOOR_PROPS(left_front_door, DOOR_LEFT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:82:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   82 |         DOOR_PROPS(left_front_door, DOOR_LEFT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:83:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   83 |         DOOR_PROPS(right_front_door, DOOR_RIGHT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:83:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   83 |         DOOR_PROPS(right_front_door, DOOR_RIGHT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:83:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   83 |         DOOR_PROPS(right_front_door, DOOR_RIGHT_FRONT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:84:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   84 |         DOOR_PROPS(left_rear_door, DOOR_LEFT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:84:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   84 |         DOOR_PROPS(left_rear_door, DOOR_LEFT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:84:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   84 |         DOOR_PROPS(left_rear_door, DOOR_LEFT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:85:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   85 |         DOOR_PROPS(right_rear_door, DOOR_RIGHT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:85:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   85 |         DOOR_PROPS(right_rear_door, DOOR_RIGHT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:85:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   85 |         DOOR_PROPS(right_rear_door, DOOR_RIGHT_REAR)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:86:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   86 |         DOOR_PROPS(hood, DOOR_HOOD)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:86:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   86 |         DOOR_PROPS(hood, DOOR_HOOD)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:86:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   86 |         DOOR_PROPS(hood, DOOR_HOOD)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:87:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   87 |         DOOR_PROPS(trunk, DOOR_TRUNK)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:87:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   87 |         DOOR_PROPS(trunk, DOOR_TRUNK)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:87:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   87 |         DOOR_PROPS(trunk, DOOR_TRUNK)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:88:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   88 |         DOOR_PROPS(charge_port, DOOR_CHARGE_PORT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:74:18: note: expanded from macro 'DOOR_PROPS'
+   74 |         godot::NodePath get_##name##_path() const { return m_##name##_path; } \
+      |                         ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:88:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   88 |         DOOR_PROPS(charge_port, DOOR_CHARGE_PORT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:88:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   88 |         DOOR_PROPS(charge_port, DOOR_CHARGE_PORT)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:73:41: note: expanded from macro 'DOOR_PROPS'
+   73 |         void set_##name##_path(godot::NodePath v) { m_##name##_path = v; m_doors[idx].path = v; } \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:92:14: warning: variable name 'd' is too short, expected at least 3 characters [readability-identifier-length]
+   92 |                 for (auto &d : m_doors) {
+      |                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:93:30: warning: implicit conversion 'godot::Node3D *' -> 'bool' [readability-implicit-bool-conversion]
+   93 |                         if (!d.path.is_empty() && (d.node = get_node<godot::Node3D>(d.path)))
+      |                                                   ^                                         
+      |                                                   (                                          != nullptr)
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:93:38: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+   93 |                         if (!d.path.is_empty() && (d.node = get_node<godot::Node3D>(d.path)))
+      |                                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:93:38: note: if it should be an assignment, move it out of the 'if' condition
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:93:38: note: if it is meant to be an equality check, change '=' to '=='
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:93:73: warning: statement should be inside braces [readability-braces-around-statements]
+   93 |                         if (!d.path.is_empty() && (d.node = get_node<godot::Node3D>(d.path)))
+      |                                                                                              ^
+      |                                                                                               {
+   94 |                                 d.initial_rot = d.node->get_quaternion();
+      |                                                                          
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:97:9: warning: implicit conversion 'godot::Area3D *' -> 'bool' [readability-implicit-bool-conversion]
+   97 |                                 if (d.area) {
+      |                                     ^     
+      |                                            != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:98:15: warning: loop variable name 'c' is too short, expected at least 2 characters [readability-identifier-length]
+   98 |                                         for (int c = 0; c < d.area->get_child_count(); ++c) {
+      |                                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:100:11: warning: implicit conversion 'godot::CollisionShape3D *' -> 'bool' [readability-implicit-bool-conversion]
+  100 |                                                 if (d.shape) break;
+      |                                                     ^      
+      |                                                             != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:100:19: warning: statement should be inside braces [readability-braces-around-statements]
+  100 |                                                 if (d.shape) break;
+      |                                                             ^      
+      |                                                              {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:107:7: warning: method '_apply_rot' can be made static [readability-convert-member-functions-to-static]
+  107 |         void _apply_rot(DoorData &d) {
+      |              ^
+      |         static 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:107:28: warning: parameter name 'd' is too short, expected at least 3 characters [readability-identifier-length]
+  107 |         void _apply_rot(DoorData &d) {
+      |                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:108:8: warning: implicit conversion 'godot::Node3D *' -> 'bool' [readability-implicit-bool-conversion]
+  108 |                 if (!d.node) return;
+      |                     ~^     
+      |                             == nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:108:15: warning: statement should be inside braces [readability-braces-around-statements]
+  108 |                 if (!d.node) return;
+      |                             ^       
+      |                              {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:109:9: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+  109 |                 float t = d.progress * d.progress * (3.0f - 2.0f * d.progress);
+      |                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:109:40: warning: 3.0f is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  109 |                 float t = d.progress * d.progress * (3.0f - 2.0f * d.progress);
+      |                                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:109:40: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  109 |                 float t = d.progress * d.progress * (3.0f - 2.0f * d.progress);
+      |                                                      ^  ~
+      |                                                         F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:109:47: warning: 2.0f is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  109 |                 float t = d.progress * d.progress * (3.0f - 2.0f * d.progress);
+      |                                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:109:47: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  109 |                 float t = d.progress * d.progress * (3.0f - 2.0f * d.progress);
+      |                                                             ^  ~
+      |                                                                F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:113:2: warning: function '_try_hit_door' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  113 |         int _try_hit_door(const godot::Vector2 &pos) const {
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:113:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  113 |         int _try_hit_door(const godot::Vector2 &pos) const {
+      |         ~~~ ^
+      |         auto                                               -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:115:8: warning: implicit conversion 'godot::Camera3D *' -> 'bool' [readability-implicit-bool-conversion]
+  115 |                 if (!cam) return -1;
+      |                     ~^  
+      |                          == nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:115:12: warning: statement should be inside braces [readability-braces-around-statements]
+  115 |                 if (!cam) return -1;
+      |                          ^          
+      |                           {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:116:31: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  116 |                 const float HIT_TOLERANCE = 90.0f;
+      |                                             ^   ~
+      |                                                 F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:120:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  120 |                         if (!m_doors[i].area) continue;
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:120:9: warning: implicit conversion 'godot::Area3D *' -> 'bool' [readability-implicit-bool-conversion]
+  120 |                         if (!m_doors[i].area) continue;
+      |                             ~^              
+      |                                              == nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:120:25: warning: statement should be inside braces [readability-braces-around-statements]
+  120 |                         if (!m_doors[i].area) continue;
+      |                                              ^         
+      |                                               {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:121:25: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  121 |                         godot::Vector3 ctr = m_doors[i].shape
+      |                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:121:25: warning: implicit conversion 'godot::CollisionShape3D *' -> 'bool' [readability-implicit-bool-conversion]
+  121 |                         godot::Vector3 ctr = m_doors[i].shape
+      |                                              ^               
+      |                                              (                != nullptr)
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:122:8: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  122 |                                         ? m_doors[i].shape->get_global_position()
+      |                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:123:8: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  123 |                                         : m_doors[i].area->get_global_position();
+      |                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:124:19: warning: variable name 'sp' is too short, expected at least 3 characters [readability-identifier-length]
+  124 |                         godot::Vector2 sp = cam->unproject_position(ctr);
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:125:10: warning: variable name 'd' is too short, expected at least 3 characters [readability-identifier-length]
+  125 |                         float d = sp.distance_to(pos);
+      |                               ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:139:31: warning: parameter name 'dt' is too short, expected at least 3 characters [readability-identifier-length]
+  139 |         void _physics_process(double dt) override {
+      |                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:140:3: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  140 |                 float delta = static_cast<float>(dt);
+      |                 ^~~~~
+      |                 auto
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:142:14: warning: variable name 'd' is too short, expected at least 3 characters [readability-identifier-length]
+  142 |                         DoorData &d = m_doors[i];
+      |                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:142:18: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  142 |                         DoorData &d = m_doors[i];
+      |                                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:143:4: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  143 |                         bool opening = d.state == DOOR_STATE_OPENING, closing = d.state == DOOR_STATE_CLOSING;
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:145:48: warning: '/' has higher precedence than '+'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  145 |                                 d.progress = godot::Math::min(d.progress + delta / m_duration, 1.0f);
+      |                                                                            ^~~~~~~~~~~~~~~~~~~
+      |                                                                            (                 )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:145:68: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  145 |                                 d.progress = godot::Math::min(d.progress + delta / m_duration, 1.0f);
+      |                                                                                                ^  ~
+      |                                                                                                   F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:146:23: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  146 |                                 if (d.progress >= 1.0f) { d.state = DOOR_STATE_OPEN; emit_signal("door_opened", i); }
+      |                                                   ^  ~
+      |                                                      F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:148:48: warning: '/' has higher precedence than '-'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  148 |                                 d.progress = godot::Math::max(d.progress - delta / m_duration, 0.0f);
+      |                                                                            ^~~~~~~~~~~~~~~~~~~
+      |                                                                            (                 )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:148:68: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  148 |                                 d.progress = godot::Math::max(d.progress - delta / m_duration, 0.0f);
+      |                                                                                                ^  ~
+      |                                                                                                   F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:149:23: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  149 |                                 if (d.progress <= 0.0f) { d.state = DOOR_STATE_CLOSED; emit_signal("door_closed", i); }
+      |                                                   ^  ~
+      |                                                      F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:155:24: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+  155 |                         if (m_hide_timer <= 0.0f) set_interaction_enabled(false);
+      |                                             ^  ~
+      |                                                F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:155:29: warning: statement should be inside braces [readability-braces-around-statements]
+  155 |                         if (m_hide_timer <= 0.0f) set_interaction_enabled(false);
+      |                                                  ^                               
+      |                                                   {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:159:7: warning: function '_unhandled_input' has cognitive complexity of 27 (threshold 25) [readability-function-cognitive-complexity]
+  159 |         void _unhandled_input(const godot::Ref<godot::InputEvent> &e) override {
+      |              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:161:3: note: +1, including nesting penalty of 0, nesting level increased to 1
+  161 |                 if (te) {
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:162:4: note: +2, including nesting penalty of 1, nesting level increased to 2
+  162 |                         if (te->is_pressed()) {
+      |                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:164:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  164 |                                 if (m_touch_count == 1) m_touch_dragged = false;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:167:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  167 |                                 if (hit < 0) set_interaction_enabled(false);
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:168:6: note: +1, nesting level increased to 2
+  168 |                         } else {
+      |                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:169:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  169 |                                 if (m_touch_count > 0) --m_touch_count;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:170:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  170 |                                 if (m_touch_count > 0) return;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:172:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  172 |                                 if (m_touch_dragged) return;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:174:5: note: +3, including nesting penalty of 2, nesting level increased to 3
+  174 |                                 if (hit >= 0) toggle_door(hit);
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:179:3: note: +1, including nesting penalty of 0, nesting level increased to 1
+  179 |                 if (de) { m_touch_dragged = true; set_interaction_enabled(false); m_hide_timer = HIDE_DELAY; return; }
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:181:3: note: +1, including nesting penalty of 0, nesting level increased to 1
+  181 |                 if (!me || !me->is_pressed() || me->get_button_index() != godot::MOUSE_BUTTON_LEFT) return;
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:181:32: note: +1
+  181 |                 if (!me || !me->is_pressed() || me->get_button_index() != godot::MOUSE_BUTTON_LEFT) return;
+      |                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:182:3: note: +1, including nesting penalty of 0, nesting level increased to 1
+  182 |                 if (godot::DisplayServer::get_singleton()->is_touchscreen_available()) return;
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:185:3: note: +1, including nesting penalty of 0, nesting level increased to 1
+  185 |                 if (hit >= 0) toggle_door(hit);
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:159:61: warning: parameter name 'e' is too short, expected at least 3 characters [readability-identifier-length]
+  159 |         void _unhandled_input(const godot::Ref<godot::InputEvent> &e) override {
+      |                                                                    ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:160:3: warning: use auto when initializing with a template cast to avoid duplicating the type name [modernize-use-auto]
+  160 |                 godot::InputEventScreenTouch *te = godot::Object::cast_to<godot::InputEventScreenTouch>(e.ptr());
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 auto
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:160:33: warning: variable name 'te' is too short, expected at least 3 characters [readability-identifier-length]
+  160 |                 godot::InputEventScreenTouch *te = godot::Object::cast_to<godot::InputEventScreenTouch>(e.ptr());
+      |                                               ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:161:7: warning: implicit conversion 'godot::InputEventScreenTouch *' -> 'bool' [readability-implicit-bool-conversion]
+  161 |                 if (te) {
+      |                     ^ 
+      |                        != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:164:28: warning: statement should be inside braces [readability-braces-around-statements]
+  164 |                                 if (m_touch_count == 1) m_touch_dragged = false;
+      |                                                        ^                        
+      |                                                         {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:167:17: warning: statement should be inside braces [readability-braces-around-statements]
+  167 |                                 if (hit < 0) set_interaction_enabled(false);
+      |                                             ^                               
+      |                                              {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:169:27: warning: statement should be inside braces [readability-braces-around-statements]
+  169 |                                 if (m_touch_count > 0) --m_touch_count;
+      |                                                       ^                
+      |                                                        {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:170:27: warning: statement should be inside braces [readability-braces-around-statements]
+  170 |                                 if (m_touch_count > 0) return;
+      |                                                       ^       
+      |                                                        {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:172:25: warning: statement should be inside braces [readability-braces-around-statements]
+  172 |                                 if (m_touch_dragged) return;
+      |                                                     ^       
+      |                                                      {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:174:18: warning: statement should be inside braces [readability-braces-around-statements]
+  174 |                                 if (hit >= 0) toggle_door(hit);
+      |                                              ^                 
+      |                                               {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:178:3: warning: use auto when initializing with a template cast to avoid duplicating the type name [modernize-use-auto]
+  178 |                 godot::InputEventScreenDrag *de = godot::Object::cast_to<godot::InputEventScreenDrag>(e.ptr());
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 auto
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:178:32: warning: variable name 'de' is too short, expected at least 3 characters [readability-identifier-length]
+  178 |                 godot::InputEventScreenDrag *de = godot::Object::cast_to<godot::InputEventScreenDrag>(e.ptr());
+      |                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:179:7: warning: implicit conversion 'godot::InputEventScreenDrag *' -> 'bool' [readability-implicit-bool-conversion]
+  179 |                 if (de) { m_touch_dragged = true; set_interaction_enabled(false); m_hide_timer = HIDE_DELAY; return; }
+      |                     ^ 
+      |                        != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:180:3: warning: use auto when initializing with a template cast to avoid duplicating the type name [modernize-use-auto]
+  180 |                 godot::InputEventMouseButton *me = godot::Object::cast_to<godot::InputEventMouseButton>(e.ptr());
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 auto
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:180:33: warning: variable name 'me' is too short, expected at least 3 characters [readability-identifier-length]
+  180 |                 godot::InputEventMouseButton *me = godot::Object::cast_to<godot::InputEventMouseButton>(e.ptr());
+      |                                               ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:181:8: warning: implicit conversion 'godot::InputEventMouseButton *' -> 'bool' [readability-implicit-bool-conversion]
+  181 |                 if (!me || !me->is_pressed() || me->get_button_index() != godot::MOUSE_BUTTON_LEFT) return;
+      |                     ~^
+      |                     (   == nullptr)
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:181:86: warning: statement should be inside braces [readability-braces-around-statements]
+  181 |                 if (!me || !me->is_pressed() || me->get_button_index() != godot::MOUSE_BUTTON_LEFT) return;
+      |                                                                                                    ^       
+      |                                                                                                     {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:182:73: warning: statement should be inside braces [readability-braces-around-statements]
+  182 |                 if (godot::DisplayServer::get_singleton()->is_touchscreen_available()) return;
+      |                                                                                       ^       
+      |                                                                                        {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:185:16: warning: statement should be inside braces [readability-braces-around-statements]
+  185 |                 if (hit >= 0) toggle_door(hit);
+      |                              ^                 
+      |                               {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:188:63: warning: statement should be inside braces [readability-braces-around-statements]
+  188 |         void toggle_door(int idx) { if (idx >= 0 && idx < DOOR_COUNT) m_doors[idx].state >= DOOR_STATE_OPEN ? close_door(idx) : open_door(idx); }
+      |                                                                      ^
+      |                                                                       {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:188:64: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  188 |         void toggle_door(int idx) { if (idx >= 0 && idx < DOOR_COUNT) m_doors[idx].state >= DOOR_STATE_OPEN ? close_door(idx) : open_door(idx); }
+      |                                                                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:190:39: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  190 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state < DOOR_STATE_OPEN)
+      |                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:190:39: warning: implicit conversion 'godot::Node3D *' -> 'bool' [readability-implicit-bool-conversion]
+  190 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state < DOOR_STATE_OPEN)
+      |                                                     ^
+      |                                                     (                 != nullptr)
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:190:60: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  190 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state < DOOR_STATE_OPEN)
+      |                                                                          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:191:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  191 |                 { m_doors[idx].state = DOOR_STATE_OPENING; emit_signal("door_state_changed", idx, m_doors[idx].state); }
+      |                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:191:85: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  191 |                 { m_doors[idx].state = DOOR_STATE_OPENING; emit_signal("door_state_changed", idx, m_doors[idx].state); }
+      |                                                                                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:194:39: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  194 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state >= DOOR_STATE_OPEN)
+      |                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:194:39: warning: implicit conversion 'godot::Node3D *' -> 'bool' [readability-implicit-bool-conversion]
+  194 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state >= DOOR_STATE_OPEN)
+      |                                                     ^
+      |                                                     (                 != nullptr)
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:194:60: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  194 |                 if (idx >= 0 && idx < DOOR_COUNT && m_doors[idx].node && m_doors[idx].state >= DOOR_STATE_OPEN)
+      |                                                                          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:195:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  195 |                 { m_doors[idx].state = DOOR_STATE_CLOSING; emit_signal("door_state_changed", idx, m_doors[idx].state); }
+      |                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:195:85: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  195 |                 { m_doors[idx].state = DOOR_STATE_CLOSING; emit_signal("door_state_changed", idx, m_doors[idx].state); }
+      |                                                                                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:197:2: warning: function 'is_door_open' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  197 |         bool is_door_open(int idx) const { return idx >= 0 && idx < DOOR_COUNT && m_doors[idx].state == DOOR_STATE_OPEN; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:197:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  197 |         bool is_door_open(int idx) const { return idx >= 0 && idx < DOOR_COUNT && m_doors[idx].state == DOOR_STATE_OPEN; }
+      |         ~~~~ ^
+      |         auto                             -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:197:76: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  197 |         bool is_door_open(int idx) const { return idx >= 0 && idx < DOOR_COUNT && m_doors[idx].state == DOOR_STATE_OPEN; }
+      |                                                                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:198:2: warning: function 'get_door_state' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  198 |         int get_door_state(int idx) const { return (idx >= 0 && idx < DOOR_COUNT) ? m_doors[idx].state : DOOR_STATE_CLOSED; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:198:6: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  198 |         int get_door_state(int idx) const { return (idx >= 0 && idx < DOOR_COUNT) ? m_doors[idx].state : DOOR_STATE_CLOSED; }
+      |         ~~~ ^
+      |         auto                              -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:198:78: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  198 |         int get_door_state(int idx) const { return (idx >= 0 && idx < DOOR_COUNT) ? m_doors[idx].state : DOOR_STATE_CLOSED; }
+      |                                                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:199:62: warning: statement should be inside braces [readability-braces-around-statements]
+  199 |         void open_all_doors() { for (int i = 0; i < DOOR_COUNT; ++i) open_door(i); }
+      |                                                                     ^
+      |                                                                      {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:200:63: warning: statement should be inside braces [readability-braces-around-statements]
+  200 |         void close_all_doors() { for (int i = 0; i < DOOR_COUNT; ++i) close_door(i); }
+      |                                                                      ^
+      |                                                                       {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:202:36: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+  202 |         void set_interaction_enabled(bool v) {
+      |                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:203:32: warning: statement should be inside braces [readability-braces-around-statements]
+  203 |                 if (!m_interaction_permitted) v = false;
+      |                                              ^          
+      |                                               {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:204:34: warning: statement should be inside braces [readability-braces-around-statements]
+  204 |                 if (m_interaction_enabled == v) return;
+      |                                                ^       
+      |                                                 {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:206:9: warning: statement should be inside braces [readability-braces-around-statements]
+  206 |                 if (v) m_hide_timer = HIDE_DELAY;
+      |                       ^                          
+      |                        {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:207:14: warning: variable name 'd' is too short, expected at least 3 characters [readability-identifier-length]
+  207 |                 for (auto &d : m_doors) {
+      |                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:208:8: warning: implicit conversion 'godot::Area3D *' -> 'bool' [readability-implicit-bool-conversion]
+  208 |                         if (d.area) {
+      |                             ^     
+      |                                    != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:210:9: warning: implicit conversion 'godot::CollisionShape3D *' -> 'bool' [readability-implicit-bool-conversion]
+  210 |                                 if (d.shape) d.shape->set_disabled(!v);
+      |                                     ^      
+      |                                             != nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:210:17: warning: statement should be inside braces [readability-braces-around-statements]
+  210 |                                 if (d.shape) d.shape->set_disabled(!v);
+      |                                             ^                          
+      |                                              {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:216:2: warning: function 'is_interaction_enabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  216 |         bool is_interaction_enabled() const { return m_interaction_enabled; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:216:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  216 |         bool is_interaction_enabled() const { return m_interaction_enabled; }
+      |         ~~~~ ^
+      |         auto                                -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:218:38: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+  218 |         void set_interaction_permitted(bool v) {
+      |                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:220:10: warning: statement should be inside braces [readability-braces-around-statements]
+  220 |                 if (!v) set_interaction_enabled(false);
+      |                        ^                               
+      |                         {
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:222:2: warning: function 'is_interaction_permitted' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  222 |         bool is_interaction_permitted() const { return m_interaction_permitted; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:222:7: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  222 |         bool is_interaction_permitted() const { return m_interaction_permitted; }
+      |         ~~~~ ^
+      |         auto                                  -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:225:36: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+  225 |         void set_animation_duration(float v) { m_duration = v; }
+      |                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:226:2: warning: function 'get_animation_duration' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  226 |         float get_animation_duration() const { return m_duration; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:226:8: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  226 |         float get_animation_duration() const { return m_duration; }
+      |         ~~~~~ ^
+      |         auto                                 -> float
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:227:28: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+  227 |         void set_ray_length(float v) { m_ray_len = v; }
+      |                                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:228:2: warning: function 'get_ray_length' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  228 |         float get_ray_length() const { return m_ray_len; }
+      |         ^
+      |         [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:228:8: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  228 |         float get_ray_length() const { return m_ray_len; }
+      |         ~~~~~ ^
+      |         auto                         -> float
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:285:1: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  285 | VARIANT_ENUM_CAST(DoorController::DoorType);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:55:19: note: expanded from macro 'VARIANT_ENUM_CAST'
+   55 |                         return m_enum(*reinterpret_cast<const int64_t *>(p_ptr));          \
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:285:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  285 | VARIANT_ENUM_CAST(DoorController::DoorType);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:45:2: note: expanded from macro 'VARIANT_ENUM_CAST'
+   45 |         MAKE_ENUM_TYPE_INFO(m_enum)                                                \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:249:2: note: expanded from macro 'MAKE_ENUM_TYPE_INFO'
+  249 |         TEMPL_MAKE_ENUM_TYPE_INFO(m_enum, m_enum)       \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:242:30: note: expanded from macro 'TEMPL_MAKE_ENUM_TYPE_INFO'
+  242 |                 static inline PropertyInfo get_class_info() {                                                                                        \
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:286:1: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  286 | VARIANT_ENUM_CAST(DoorController::DoorState);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:55:19: note: expanded from macro 'VARIANT_ENUM_CAST'
+   55 |                         return m_enum(*reinterpret_cast<const int64_t *>(p_ptr));          \
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/DoorController.h:286:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  286 | VARIANT_ENUM_CAST(DoorController::DoorState);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:45:2: note: expanded from macro 'VARIANT_ENUM_CAST'
+   45 |         MAKE_ENUM_TYPE_INFO(m_enum)                                                \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:249:2: note: expanded from macro 'MAKE_ENUM_TYPE_INFO'
+  249 |         TEMPL_MAKE_ENUM_TYPE_INFO(m_enum, m_enum)       \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:242:30: note: expanded from macro 'TEMPL_MAKE_ENUM_TYPE_INFO'
+  242 |                 static inline PropertyInfo get_class_info() {                                                                                        \
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:25:7: warning: class 'LampController' defines a copy assignment operator but does not define a destructor, a copy constructor, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   25 | class LampController : public godot::Node {
+      |       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:26:2: warning: initializing non-owner argument of type 'godot::List<godot::PropertyInfo> *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   26 |         GDCLASS(LampController, godot::Node)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:315:53: note: expanded from macro 'GDCLASS'
+  315 |                 ::godot::List<::godot::PropertyInfo> *plist_cpp = memnew(::godot::List<::godot::PropertyInfo>);                                                                                \
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+godot-cpp/include/godot_cpp/core/memory.hpp:99:135: note: expanded from macro 'memnew'
+   99 | #define memnew(m_class) (::godot::_pre_initialize<std::remove_pointer_t<decltype(new ("", "") m_class)>>(), ::godot::_post_initialize(new ("", "") m_class))
+      |                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:26:2: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   26 |         GDCLASS(LampController, godot::Node)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:323:44: note: expanded from macro 'GDCLASS'
+  323 |                         ::godot::internal::free_c_property_list(const_cast<GDExtensionPropertyInfo *>(p_list));                                                                                    \
+      |                                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:26:2: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   26 |         GDCLASS(LampController, godot::Node)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:20: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:26:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   26 |         GDCLASS(LampController, godot::Node)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:187:15: note: expanded from macro 'GDCLASS'
+  187 |         virtual bool _is_extension_class() const override {                                                                                                                                \
+      |                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:26:10: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   26 |         GDCLASS(LampController, godot::Node)
+      |                 ^~~~~~~~~~~~~~
+      |                 auto
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:5: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:50:7: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+   50 |                 if (material_member.is_valid()) \
+      |                     ^              
+      |                     (              )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:51:4: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+   51 |                         material_member->set_shader_parameter(uniform, on); \
+      |                         ^              
+      |                         (              )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:54:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   54 |         LAMP_SETTER(drl, m_drl_material, "drl")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:55:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   55 |         LAMP_SETTER(low_beam, m_headlight_material, "low_beam")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:56:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   56 |         LAMP_SETTER(high_beam, m_headlight_material, "high_beam")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:57:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   57 |         LAMP_SETTER(brake, m_brake_material, "brake_light")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:58:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   58 |         LAMP_SETTER(left_turn, m_turn_left_material, "hazardlight")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:59:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   59 |         LAMP_SETTER(right_turn, m_turn_right_material, "hazardlight")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:60:2: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   60 |         LAMP_SETTER(fog, m_fog_light_material, "rear_fog_light")
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:48:23: note: expanded from macro 'LAMP_SETTER'
+   48 |         void set_##name(bool on) { \
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:64:23: warning: parameter name 'on' is too short, expected at least 3 characters [readability-identifier-length]
+   64 |         void set_hazard(bool on) {
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:67:39: warning: statement should be inside braces [readability-braces-around-statements]
+   67 |                 if (m_turn_left_material.is_valid())
+      |                                                     ^
+      |                                                      {
+   68 |                         m_turn_left_material->set_shader_parameter("hazardlight", on);
+      |                                                                                       
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:69:40: warning: statement should be inside braces [readability-braces-around-statements]
+   69 |                 if (m_turn_right_material.is_valid())
+      |                                                      ^
+      |                                                       {
+   70 |                         m_turn_right_material->set_shader_parameter("hazardlight", on);
+      |                                                                                        
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:57: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                                ^
+      |                                                                (     )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:78:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   78 |         MAT_PROPS(drl_material, m_drl_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:78:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   78 |         MAT_PROPS(drl_material, m_drl_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:78:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   78 |         MAT_PROPS(drl_material, m_drl_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:79:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   79 |         MAT_PROPS(headlight_material, m_headlight_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:79:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   79 |         MAT_PROPS(headlight_material, m_headlight_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:79:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   79 |         MAT_PROPS(headlight_material, m_headlight_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:80:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   80 |         MAT_PROPS(fog_light_material, m_fog_light_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:80:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   80 |         MAT_PROPS(fog_light_material, m_fog_light_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:80:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   80 |         MAT_PROPS(fog_light_material, m_fog_light_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:81:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   81 |         MAT_PROPS(brake_material, m_brake_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:81:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   81 |         MAT_PROPS(brake_material, m_brake_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:81:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   81 |         MAT_PROPS(brake_material, m_brake_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:82:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   82 |         MAT_PROPS(turn_left_material, m_turn_left_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:82:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   82 |         MAT_PROPS(turn_left_material, m_turn_left_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:82:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   82 |         MAT_PROPS(turn_left_material, m_turn_left_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:83:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   83 |         MAT_PROPS(turn_right_material, m_turn_right_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:76:36: note: expanded from macro 'MAT_PROPS'
+   76 |         godot::Ref<godot::ShaderMaterial> get_##name() const { return member; }
+      |                                           ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:83:2: warning: the parameter 'v' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   83 |         MAT_PROPS(turn_right_material, m_turn_right_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:83:2: warning: parameter name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   83 |         MAT_PROPS(turn_right_material, m_turn_right_material)
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/SelfVehicle/LampController.h:75:52: note: expanded from macro 'MAT_PROPS'
+   75 |         void set_##name(godot::Ref<godot::ShaderMaterial> v) { member = v; } \
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:31:7: warning: class 'CurveMover3D' defines a copy assignment operator but does not define a destructor, a copy constructor, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   31 | class CurveMover3D : public godot::Path3D {
+      |       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:2: warning: operator=() does not handle self-assignment properly [bugprone-unhandled-self-assignment]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:182:7: note: expanded from macro 'GDCLASS'
+  182 |         void operator=(const m_class & /*p_rval*/) {}                                                                                                                                      \
+      |              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:2: warning: initializing non-owner argument of type 'godot::List<godot::PropertyInfo> *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:315:53: note: expanded from macro 'GDCLASS'
+  315 |                 ::godot::List<::godot::PropertyInfo> *plist_cpp = memnew(::godot::List<::godot::PropertyInfo>);                                                                                \
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+godot-cpp/include/godot_cpp/core/memory.hpp:99:135: note: expanded from macro 'memnew'
+   99 | #define memnew(m_class) (::godot::_pre_initialize<std::remove_pointer_t<decltype(new ("", "") m_class)>>(), ::godot::_post_initialize(new ("", "") m_class))
+      |                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:2: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:323:44: note: expanded from macro 'GDCLASS'
+  323 |                         ::godot::internal::free_c_property_list(const_cast<GDExtensionPropertyInfo *>(p_list));                                                                                    \
+      |                                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:2: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:20: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:2: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |         ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:187:15: note: expanded from macro 'GDCLASS'
+  187 |         virtual bool _is_extension_class() const override {                                                                                                                                \
+      |                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:32:10: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   32 |         GDCLASS(CurveMover3D, godot::Path3D)
+      |                 ^~~~~~~~~~~~
+      |                 auto
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:5: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:34:27: warning: initializer for member 'm_stops' is redundant [readability-redundant-member-init]
+   34 |         godot::Dictionary m_stops{};
+      |                                  ^~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:35:2: warning: parameter 'p_stops' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   35 |         REGISTER(stops)
+      |         ^
+MESample/Common/CommonLib.h:44:14: note: expanded from macro 'REGISTER'
+   44 |                 m_##name = p_##name;                                                                           \
+      |                            ^
+note: expanded from here
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:35:2: warning: variable name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   35 |         REGISTER(stops)
+      |         ^
+MESample/Common/CommonLib.h:53:20: note: expanded from macro 'REGISTER'
+   53 |                 ::godot::Variant v{ instance };                                                                \
+      |                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:40:24: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   40 |         float m_driving_speed{0.f};
+      |                               ^ ~
+      |                                 F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:41:2: warning: variable name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   41 |         REGISTER(driving_speed);
+      |         ^
+MESample/Common/CommonLib.h:53:20: note: expanded from macro 'REGISTER'
+   53 |                 ::godot::Variant v{ instance };                                                                \
+      |                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:43:22: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   43 |         float m_accelerate{ 0.f };
+      |                             ^ ~
+      |                               F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:44:2: warning: variable name 'v' is too short, expected at least 3 characters [readability-identifier-length]
+   44 |         REGISTER(accelerate);
+      |         ^
+MESample/Common/CommonLib.h:53:20: note: expanded from macro 'REGISTER'
+   53 |                 ::godot::Variant v{ instance };                                                                \
+      |                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:53:39: warning: initializer for member 'm_index2progress' is redundant [readability-redundant-member-init]
+   53 |         std::map<int, float> m_index2progress{};
+      |                                              ^~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:65:15: warning: 'virtual' is redundant since the function is already declared 'override' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+   65 |         virtual void _ready() override {
+      |         ~~~~~~~      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:67:14: warning: initializing non-owner argument of type 'godot::Curve3D *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   67 |                         set_curve(memnew(godot::Curve3D));
+      |                                   ^
+godot-cpp/include/godot_cpp/core/memory.hpp:99:135: note: expanded from macro 'memnew'
+   99 | #define memnew(m_class) (::godot::_pre_initialize<std::remove_pointer_t<decltype(new ("", "") m_class)>>(), ::godot::_post_initialize(new ("", "") m_class))
+      |                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:71:35: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   71 |                         get_curve()->set_point_tilt(i, 0.f);
+      |                                                        ^ ~
+      |                                                          F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:73:27: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   73 |                 m_index2progress[-1] = -1.f;
+      |                                         ^ ~
+      |                                           F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:79:15: warning: 'virtual' is redundant since the function is already declared 'override' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+   79 |         virtual void _physics_process(double p_delta) override {
+      |         ~~~~~~~      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:81:20: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   81 |                         m_dwell_left -= p_delta;
+      |                                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:82:24: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   82 |                         if (m_dwell_left <= 0.f) {
+      |                                             ^ ~
+      |                                               F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:88:8: warning: implicit conversion 'godot::PathFollow3D *' -> 'bool' [readability-implicit-bool-conversion]
+   88 |                 if (!m_path_follow) {
+      |                     ~^            
+      |                                    == nullptr
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:93:40: warning: floating point literal has suffix 'f', which is not uppercase [readability-uppercase-literal-suffix]
+   93 |                 auto current_speed = m_is_dwelling ? 0.f : m_driving_speed;
+      |                                                      ^ ~
+      |                                                        F
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:94:55: warning: '*' has higher precedence than '+'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+   94 |                 auto new_progress = m_path_follow->get_progress() + current_speed * p_delta;
+      |                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                     (                      )
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:99:29: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+   99 |                 new_progress = std::fmodf(new_progress, length);
+      |                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/CurveMover3D.h:100:31: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  100 |                 m_path_follow->set_progress(new_progress);
+      |                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:25:24: warning: variable name 'rd' is too short, expected at least 3 characters [readability-identifier-length]
+   25 |     std::random_device rd;
+      |                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:28:5: warning: 'current_speed' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                            : current_speed(0.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+      |     ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:29:5: warning: 'target_speed' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , target_speed(60.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+      |     ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:29:20: warning: 60.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   29 |     target_speed = 60.0;
+      |                    ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:30:5: warning: 'acceleration' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , acceleration(0.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+      |     ^~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:32:5: warning: 'noa_status' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , noa_status(NOA_ACTIVE)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:33:5: warning: 'noa_warning' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , noa_warning("")
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+      |     ^~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:34:5: warning: 'noa_remaining_distance' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , noa_remaining_distance(15000.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+   34 |     noa_remaining_distance = 15000.0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:34:30: warning: 15000.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   34 |     noa_remaining_distance = 15000.0;
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:35:5: warning: 'noa_lane_change_pending' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , noa_lane_change_pending(false)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+   34 |     noa_remaining_distance = 15000.0;
+   35 |     noa_lane_change_pending = false;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:37:5: warning: 'traffic_light_timer' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , traffic_light_timer(0.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+   34 |     noa_remaining_distance = 15000.0;
+   35 |     noa_lane_change_pending = false;
+   36 | 
+   37 |     traffic_light_timer = 0.0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:38:5: warning: 'speed_change_timer' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , speed_change_timer(0.0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+   34 |     noa_remaining_distance = 15000.0;
+   35 |     noa_lane_change_pending = false;
+   36 | 
+   37 |     traffic_light_timer = 0.0;
+   38 |     speed_change_timer = 0.0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:39:5: warning: 'current_nav_index' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 | VehicleData::VehicleData() {
+      |                           , current_nav_index(0)
+   25 |     std::random_device rd;
+   26 |     rng = std::mt19937(rd());
+   27 | 
+   28 |     current_speed = 0.0;
+   29 |     target_speed = 60.0;
+   30 |     acceleration = 0.0;
+   31 | 
+   32 |     noa_status = NOA_ACTIVE;
+   33 |     noa_warning = "";
+   34 |     noa_remaining_distance = 15000.0;
+   35 |     noa_lane_change_pending = false;
+   36 | 
+   37 |     traffic_light_timer = 0.0;
+   38 |     speed_change_timer = 0.0;
+   39 |     current_nav_index = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:40:5: warning: 'is_paused' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     is_paused = false;
+      |     ^~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:41:5: warning: 'use_external_target_speed' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     use_external_target_speed = false;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:46:34: warning: 30.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   46 |     traffic_light["countdown"] = 30.0;
+      |                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:47:33: warning: 150.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   47 |     traffic_light["distance"] = 150.0;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:53:5: warning: 'use_trajectory_mode' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     use_trajectory_mode = false;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:54:5: warning: 'current_speed_limit' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     current_speed_limit = 30;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:54:27: warning: 30 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   54 |     current_speed_limit = 30;
+      |                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:55:5: warning: 'current_min_speed' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     current_min_speed = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:56:5: warning: 'tbt_distance_meters' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     tbt_distance_meters = 500;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:56:27: warning: 500 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   56 |     tbt_distance_meters = 500;
+      |                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:57:5: warning: 'tbt_direction' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     tbt_direction = ROAD_ARROW_STRAIGHT;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:60:5: warning: 'nav_remaining_minutes' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     nav_remaining_minutes = 5;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:60:29: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   60 |     nav_remaining_minutes = 5;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:61:5: warning: 'nav_remaining_seconds' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     nav_remaining_seconds = 30;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:61:29: warning: 30 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   61 |     nav_remaining_seconds = 30;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:62:5: warning: 'nav_arrive_hour' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     nav_arrive_hour = 11;
+      |     ^~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:62:23: warning: 11 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   62 |     nav_arrive_hour = 11;
+      |                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:63:5: warning: 'nav_arrive_minute' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     nav_arrive_minute = 30;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:63:25: warning: 30 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   63 |     nav_arrive_minute = 30;
+      |                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:72:5: warning: 'tbt_distance_accumulator' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+   24 |     tbt_distance_accumulator = 0.0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:75:14: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   75 | VehicleData::~VehicleData() {
+      |              ^              ~
+      |                             = default;
+   76 | }
+      | ~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:235:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  235 | double VehicleData::get_current_speed() const {
+      | ~~~~~~              ^
+      | auto                                          -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:240:46: warning: 200.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  240 |     current_speed = std::clamp(p_speed, 0.0, 200.0);
+      |                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:243:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  243 | double VehicleData::get_target_speed() const {
+      | ~~~~~~              ^
+      | auto                                         -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:248:45: warning: 200.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  248 |     target_speed = std::clamp(p_speed, 0.0, 200.0);
+      |                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:254:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  254 | double VehicleData::get_random_speed_min() const {
+      | ~~~~~~              ^
+      | auto                                             -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:259:49: warning: 200.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  259 |     random_speed_min = std::clamp(p_value, 0.0, 200.0);
+      |                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:262:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  262 | double VehicleData::get_random_speed_max() const {
+      | ~~~~~~              ^
+      | auto                                             -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:267:49: warning: 200.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  267 |     random_speed_max = std::clamp(p_value, 0.0, 200.0);
+      |                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:270:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  270 | double VehicleData::get_accel_rate() const {
+      | ~~~~~~              ^
+      | auto                                       -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:275:27: warning: 0.1 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  275 |     accel_rate = std::max(0.1, p_value);
+      |                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:278:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  278 | double VehicleData::get_decel_rate() const {
+      | ~~~~~~              ^
+      | auto                                       -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:283:27: warning: 0.1 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  283 |     decel_rate = std::max(0.1, p_value);
+      |                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:286:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  286 | double VehicleData::get_speed_change_interval() const {
+      | ~~~~~~              ^
+      | auto                                                  -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:291:38: warning: 0.5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  291 |     speed_change_interval = std::max(0.5, p_value);
+      |                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:295:38: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  295 | VehicleData::ENOAStatus VehicleData::get_noa_status() const {
+      | ~~~~~~~~~~~~~~~~~~~~~~~              ^
+      | auto                                                        -> VehicleData::ENOAStatus
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:306:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  306 | String VehicleData::get_noa_warning() const {
+      | ~~~~~~              ^
+      | auto                                        -> String
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:314:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  314 | double VehicleData::get_noa_remaining_distance() const {
+      | ~~~~~~              ^
+      | auto                                                   -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:322:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  322 | bool VehicleData::is_noa_lane_change_pending() const {
+      | ~~~~              ^
+      | auto                                                 -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:331:25: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  331 | Dictionary VehicleData::get_traffic_light() const {
+      | ~~~~~~~~~~              ^
+      | auto                                              -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:339:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  339 | int VehicleData::get_traffic_light_id() const {
+      | ~~~              ^
+      | auto                                          -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:343:46: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  343 | VehicleData::ETrafficLightColor VehicleData::get_traffic_light_color() const {
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              ^
+      | auto                                                                         -> VehicleData::ETrafficLightColor
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:347:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  347 | double VehicleData::get_traffic_light_countdown() const {
+      | ~~~~~~              ^
+      | auto                                                    -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:351:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  351 | double VehicleData::get_traffic_light_distance() const {
+      | ~~~~~~              ^
+      | auto                                                   -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:356:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  356 | Array VehicleData::get_navigation_instructions() const {
+      | ~~~~~              ^
+      | auto                                                   -> Array
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:364:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  364 | int VehicleData::get_current_nav_index() const {
+      | ~~~              ^
+      | auto                                           -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:372:25: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  372 | Dictionary VehicleData::get_current_navigation() const {
+      | ~~~~~~~~~~              ^
+      | auto                                                   -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:376:12: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+  376 |     return Dictionary();
+      |            ^~~~~~~~~~~~
+      |            {}
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:415:32: warning: 0.5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  415 |     if (std::abs(speed_diff) > 0.5) {
+      |                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:418:56: warning: 200.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  418 |         current_speed = std::clamp(current_speed, 0.0, 200.0);
+      |                                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:420:56: warning: 0.5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  420 |     } else if (target_speed <= 0.0 && current_speed <= 0.5) {
+      |                                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:431:44: warning: 3.6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  431 |         double speed_mps = current_speed / 3.6; // km/h -> m/s
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:439:45: warning: 1000 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  439 |         } else if (noa_remaining_distance < 1000 && !noa_warning.contains("approaching")) {
+      |                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:446:53: warning: 0.001 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  446 |         if (!noa_lane_change_pending && dist(rng) < 0.001) { // 0.1%概率每帧
+      |                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:450:59: warning: 0.02 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  450 |         } else if (noa_lane_change_pending && dist(rng) < 0.02) { // 2%概率完成变道
+      |                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:471:29: warning: 25.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  471 |                 countdown = 25.0 + std::uniform_real_distribution<double>(0, 10)(rng);
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:471:78: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  471 |                 countdown = 25.0 + std::uniform_real_distribution<double>(0, 10)(rng);
+      |                                                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:475:29: warning: 3.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  475 |                 countdown = 3.0;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:479:29: warning: 20.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  479 |                 countdown = 20.0 + std::uniform_real_distribution<double>(0, 15)(rng);
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:479:78: warning: 15 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  479 |                 countdown = 20.0 + std::uniform_real_distribution<double>(0, 15)(rng);
+      |                                                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:485:40: warning: 3.6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  485 |     double speed_mps = current_speed / 3.6;
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:489:21: warning: 10.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  489 |     if (distance <= 10.0) {
+      |                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:490:55: warning: 100 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  490 |         std::uniform_int_distribution<int> id_dist(1, 100);
+      |                                                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:491:69: warning: 500.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  491 |         std::uniform_real_distribution<double> distance_dist(100.0, 500.0);
+      |                                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:500:29: warning: 20.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  500 |                 countdown = 20.0 + std::uniform_real_distribution<double>(0, 15)(rng);
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:500:78: warning: 15 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  500 |                 countdown = 20.0 + std::uniform_real_distribution<double>(0, 15)(rng);
+      |                                                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:503:29: warning: 25.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  503 |                 countdown = 25.0 + std::uniform_real_distribution<double>(0, 10)(rng);
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:503:78: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  503 |                 countdown = 25.0 + std::uniform_real_distribution<double>(0, 10)(rng);
+      |                                                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:506:29: warning: 3.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  506 |                 countdown = 3.0;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:530:40: warning: 3.6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  530 |     double speed_mps = current_speed / 3.6;
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:565:54: warning: 6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  565 |     std::uniform_int_distribution<int> count_dist(3, 6);
+      |                                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:568:58: warning: 500.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  568 |     std::uniform_real_distribution<double> distance_dist(500.0, 5000.0);
+      |                                                          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:568:65: warning: 5000.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  568 |     std::uniform_real_distribution<double> distance_dist(500.0, 5000.0);
+      |                                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:573:57: warning: narrowing conversion from 'int64_t' (aka 'long') to signed type 'result_type' (aka 'int') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  573 |         std::uniform_int_distribution<int> instr_idx(0, instructions_list.size() - 1);
+      |                                                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:589:56: warning: narrowing conversion from 'int64_t' (aka 'long') to signed type 'result_type' (aka 'int') is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  589 |         std::uniform_int_distribution<int> road_idx(0, road_names.size() - 1);
+      |                                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:618:20: warning: 60.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  618 |     target_speed = 60.0;
+      |                    ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:623:30: warning: 15000.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  623 |     noa_remaining_distance = 15000.0;
+      |                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:634:34: warning: 30.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  634 |     traffic_light["countdown"] = 30.0;
+      |                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:635:33: warning: 150.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  635 |     traffic_light["distance"] = 150.0;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:655:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  655 | bool VehicleData::get_is_paused() const {
+      | ~~~~              ^
+      | auto                                    -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:673:25: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  673 | Dictionary VehicleData::get_trajectory_events() const {
+      | ~~~~~~~~~~              ^
+      | auto                                                  -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:681:19: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  681 | bool VehicleData::get_use_trajectory_mode() const {
+      | ~~~~              ^
+      | auto                                              -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:685:19: warning: function 'on_trajectory_point_passed' has cognitive complexity of 51 (threshold 25) [readability-function-cognitive-complexity]
+  685 | void VehicleData::on_trajectory_point_passed(int point_index) {
+      |                   ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:687:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  687 |     if (!trajectory_events.has(point_index)) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:694:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  694 |     if (event.has("noa_status")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:697:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  697 |     if (event.has("noa_warning")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:700:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  700 |     if (event.has("noa_remaining_distance")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:705:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  705 |     if (event.has("traffic_light")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:707:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  707 |         if (tl_event.has("color")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:710:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  710 |         if (tl_event.has("countdown")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:713:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  713 |         if (tl_event.has("distance")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:716:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  716 |         if (tl_event.has("id")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:726:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  726 |     if (event.has("speed_limit")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:729:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  729 |     if (event.has("min_speed")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:734:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  734 |     if (new_min_limit > new_max_limit) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:736:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  736 |         if (new_min_limit < 0) new_min_limit = 0;
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:744:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  744 |     if (event.has("road_arrows")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:750:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  750 |         if (arrows.size() >= 1) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:752:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  752 |             if (a == ROAD_ARROW_LEFT || a == ROAD_ARROW_STRAIGHT) {
+      |             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:752:38: note: +1
+  752 |             if (a == ROAD_ARROW_LEFT || a == ROAD_ARROW_STRAIGHT) {
+      |                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:763:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  763 |         if (arrows.size() >= 3) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:765:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  765 |             if (a == ROAD_ARROW_RIGHT || a == ROAD_ARROW_STRAIGHT) {
+      |             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:765:39: note: +1
+  765 |             if (a == ROAD_ARROW_RIGHT || a == ROAD_ARROW_STRAIGHT) {
+      |                                       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:775:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  775 |     if (event.has("tbt")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:777:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  777 |         if (tbt_event.has("road_name")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:780:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  780 |         if (tbt_event.has("distance")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:783:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  783 |         if (tbt_event.has("direction")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:786:13: note: +3, including nesting penalty of 2, nesting level increased to 3
+  786 |             if (dir != ROAD_ARROW_LEFT && dir != ROAD_ARROW_STRAIGHT) {
+      |             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:786:40: note: +1
+  786 |             if (dir != ROAD_ARROW_LEFT && dir != ROAD_ARROW_STRAIGHT) {
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:795:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  795 |     if (event.has("nav_time")) {
+      |     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:797:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  797 |         if (nav_event.has("minutes")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:800:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  800 |         if (nav_event.has("seconds")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:803:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  803 |         if (nav_event.has("arrive_hour")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:806:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  806 |         if (nav_event.has("arrive_minute")) {
+      |         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:735:41: warning: 20 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  735 |         new_min_limit = new_max_limit - 20; // 最低比最高少20
+      |                                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:736:9: warning: use `std::max` instead of `<` [readability-use-std-min-max]
+   20 |         if (new_min_limit < 0) new_min_limit = 0;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         new_min_limit = std::max(new_min_limit, 0);
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:736:31: warning: statement should be inside braces [readability-braces-around-statements]
+  736 |         if (new_min_limit < 0) new_min_limit = 0;
+      |                               ^
+note: this fix will not be applied because it overlaps with another fix
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:751:17: warning: variable name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+  751 |             int a = (int)arrows[0];
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:764:17: warning: variable name 'a' is too short, expected at least 3 characters [readability-identifier-length]
+  764 |             int a = (int)arrows[2];
+      |                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:814:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  814 | int VehicleData::get_current_speed_limit() const {
+      | ~~~              ^
+      | auto                                             -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:819:50: warning: 200 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  819 |     current_speed_limit = std::clamp(p_limit, 0, 200);
+      |                                                  ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:823:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  823 | int VehicleData::get_current_min_speed() const {
+      | ~~~              ^
+      | auto                                           -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:828:46: warning: 200 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  828 |     current_min_speed = std::clamp(p_min, 0, 200);
+      |                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:832:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  832 | Array VehicleData::get_road_arrows() const {
+      | ~~~~~              ^
+      | auto                                       -> Array
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:842:21: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  842 | String VehicleData::get_tbt_road_name() const {
+      | ~~~~~~              ^
+      | auto                                          -> String
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:850:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  850 | int VehicleData::get_tbt_distance() const {
+      | ~~~              ^
+      | auto                                      -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:858:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  858 | int VehicleData::get_tbt_direction() const {
+      | ~~~              ^
+      | auto                                       -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:867:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  867 | int VehicleData::get_nav_remaining_minutes() const {
+      | ~~~              ^
+      | auto                                               -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:875:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  875 | int VehicleData::get_nav_remaining_seconds() const {
+      | ~~~              ^
+      | auto                                               -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:880:54: warning: 59 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  880 |     nav_remaining_seconds = std::clamp(p_seconds, 0, 59);
+      |                                                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:883:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  883 | int VehicleData::get_nav_arrive_hour() const {
+      | ~~~              ^
+      | auto                                         -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:888:45: warning: 23 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  888 |     nav_arrive_hour = std::clamp(p_hour, 0, 23);
+      |                                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:891:18: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  891 | int VehicleData::get_nav_arrive_minute() const {
+      | ~~~              ^
+      | auto                                           -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:896:49: warning: 59 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  896 |     nav_arrive_minute = std::clamp(p_minute, 0, 59);
+      |                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:903:33: warning: 59 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  903 |         nav_remaining_seconds = 59;
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:908:60: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  908 |             std::uniform_int_distribution<int> min_dist(3, 10);
+      |                                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:909:60: warning: 59 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  909 |             std::uniform_int_distribution<int> sec_dist(0, 59);
+      |                                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:933:29: warning: 25.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  933 |                 countdown = 25.0;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:937:29: warning: 3.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  937 |                 countdown = 3.0;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:941:29: warning: 20.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  941 |                 countdown = 20.0;
+      |                             ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:951:25: warning: 0.5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  951 |     if (current_speed > 0.5) {
+      |                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:952:44: warning: 3.6 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  952 |         double speed_mps = current_speed / 3.6; // km/h -> m/s
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:959:41: warning: 10.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  959 |         if (tbt_distance_accumulator >= 10.0) {
+      |                                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:960:69: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  960 |             int meters_to_reduce = ((int)tbt_distance_accumulator / 10) * 10;
+      |                                                                     ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:960:75: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  960 |             int meters_to_reduce = ((int)tbt_distance_accumulator / 10) * 10;
+      |                                                                           ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:966:57: warning: 300 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  966 |                 std::uniform_int_distribution<int> dist(300, 800);
+      |                                                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.cpp:966:62: warning: 800 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+  966 |                 std::uniform_int_distribution<int> dist(300, 800);
+      |                                                              ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:29:7: warning: class 'VehicleData' defines a destructor and a copy assignment operator but does not define a copy constructor, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   29 | class VehicleData : public RefCounted {
+      |       ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:29:7: warning: class 'VehicleData' defines a non-default destructor and a copy assignment operator but does not define a copy constructor, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:30:5: warning: initializing non-owner argument of type 'godot::List<godot::PropertyInfo> *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   30 |     GDCLASS(VehicleData, RefCounted)
+      |     ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:315:53: note: expanded from macro 'GDCLASS'
+  315 |                 ::godot::List<::godot::PropertyInfo> *plist_cpp = memnew(::godot::List<::godot::PropertyInfo>);                                                                                \
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+godot-cpp/include/godot_cpp/core/memory.hpp:99:135: note: expanded from macro 'memnew'
+   99 | #define memnew(m_class) (::godot::_pre_initialize<std::remove_pointer_t<decltype(new ("", "") m_class)>>(), ::godot::_post_initialize(new ("", "") m_class))
+      |                                                                                                                                       ^~~~~~~~~~~~~~~~~~~~
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:30:5: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   30 |     GDCLASS(VehicleData, RefCounted)
+      |     ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:323:44: note: expanded from macro 'GDCLASS'
+  323 |                         ::godot::internal::free_c_property_list(const_cast<GDExtensionPropertyInfo *>(p_list));                                                                                    \
+      |                                                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:30:5: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   30 |     GDCLASS(VehicleData, RefCounted)
+      |     ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:20: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                                ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:30:5: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   30 |     GDCLASS(VehicleData, RefCounted)
+      |     ^
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:187:15: note: expanded from macro 'GDCLASS'
+  187 |         virtual bool _is_extension_class() const override {                                                                                                                                \
+      |                      ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:30:13: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   30 |     GDCLASS(VehicleData, RefCounted)
+      |             ^~~~~~~~~~~
+      |             auto
+godot-cpp/include/godot_cpp/classes/wrapped.hpp:269:5: note: expanded from macro 'GDCLASS'
+  269 |                                 m_class *cls = reinterpret_cast<m_class *>(p_instance);                                                                                                                \
+      |                                 ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:33:10: warning: enum 'ENOAStatus' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   33 |     enum ENOAStatus {
+      |          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:39:10: warning: enum 'ETrafficLightColor' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   39 |     enum ETrafficLightColor {
+      |          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:46:10: warning: enum 'ERoadArrowDirection' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+   46 |     enum ERoadArrowDirection {
+      |          ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:61:31: warning: 30.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   61 |     double random_speed_max = 30.0;     // 随机目标车速最大值 (km/h)
+      |                               ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:62:25: warning: 3.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   62 |     double accel_rate = 3.0;            // 加速度 (km/h/s)
+      |                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:63:25: warning: 5.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   63 |     double decel_rate = 5.0;            // 减速度 (km/h/s)
+      |                         ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:64:36: warning: 5.0 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+   64 |     double speed_change_interval = 5.0;  // 速度变化间隔 (秒)
+      |                                    ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:127:5: warning: annotate this function with 'override' or (rarely) 'final' [cppcoreguidelines-explicit-virtual-functions,modernize-use-override]
+  127 |     ~VehicleData();
+      |     ^             
+      |                    override
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:130:5: warning: function 'get_current_speed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  130 |     double get_current_speed() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:130:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  130 |     double get_current_speed() const;
+      |     ~~~~~~ ^                        
+      |     auto                             -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:132:5: warning: function 'get_target_speed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  132 |     double get_target_speed() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:132:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  132 |     double get_target_speed() const;
+      |     ~~~~~~ ^                       
+      |     auto                            -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:136:5: warning: function 'get_random_speed_min' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  136 |     double get_random_speed_min() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:136:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  136 |     double get_random_speed_min() const;
+      |     ~~~~~~ ^                           
+      |     auto                                -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:138:5: warning: function 'get_random_speed_max' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  138 |     double get_random_speed_max() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:138:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  138 |     double get_random_speed_max() const;
+      |     ~~~~~~ ^                           
+      |     auto                                -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:140:5: warning: function 'get_accel_rate' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  140 |     double get_accel_rate() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:140:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  140 |     double get_accel_rate() const;
+      |     ~~~~~~ ^                     
+      |     auto                          -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:142:5: warning: function 'get_decel_rate' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  142 |     double get_decel_rate() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:142:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  142 |     double get_decel_rate() const;
+      |     ~~~~~~ ^                     
+      |     auto                          -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:144:5: warning: function 'get_speed_change_interval' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  144 |     double get_speed_change_interval() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:144:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  144 |     double get_speed_change_interval() const;
+      |     ~~~~~~ ^                                
+      |     auto                                     -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:148:5: warning: function 'get_noa_status' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  148 |     ENOAStatus get_noa_status() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:148:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  148 |     ENOAStatus get_noa_status() const;
+      |     ~~~~~~~~~~ ^                     
+      |     auto                              -> ENOAStatus
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:150:5: warning: function 'get_noa_warning' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  150 |     String get_noa_warning() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:150:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  150 |     String get_noa_warning() const;
+      |     ~~~~~~ ^                      
+      |     auto                           -> String
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:152:5: warning: function 'get_noa_remaining_distance' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  152 |     double get_noa_remaining_distance() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:152:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  152 |     double get_noa_remaining_distance() const;
+      |     ~~~~~~ ^                                 
+      |     auto                                      -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:154:5: warning: function 'is_noa_lane_change_pending' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  154 |     bool is_noa_lane_change_pending() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:154:10: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  154 |     bool is_noa_lane_change_pending() const;
+      |     ~~~~ ^                                 
+      |     auto                                    -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:158:5: warning: function 'get_traffic_light' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  158 |     Dictionary get_traffic_light() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:158:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  158 |     Dictionary get_traffic_light() const;
+      |     ~~~~~~~~~~ ^                        
+      |     auto                                 -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:160:5: warning: function 'get_traffic_light_id' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  160 |     int get_traffic_light_id() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:160:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  160 |     int get_traffic_light_id() const;
+      |     ~~~ ^                           
+      |     auto                             -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:161:5: warning: function 'get_traffic_light_color' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  161 |     ETrafficLightColor get_traffic_light_color() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:161:24: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  161 |     ETrafficLightColor get_traffic_light_color() const;
+      |     ~~~~~~~~~~~~~~~~~~ ^                              
+      |     auto                                               -> ETrafficLightColor
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:162:5: warning: function 'get_traffic_light_countdown' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  162 |     double get_traffic_light_countdown() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:162:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  162 |     double get_traffic_light_countdown() const;
+      |     ~~~~~~ ^                                  
+      |     auto                                       -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:163:5: warning: function 'get_traffic_light_distance' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  163 |     double get_traffic_light_distance() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:163:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  163 |     double get_traffic_light_distance() const;
+      |     ~~~~~~ ^                                 
+      |     auto                                      -> double
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:166:5: warning: function 'get_navigation_instructions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  166 |     Array get_navigation_instructions() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:166:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  166 |     Array get_navigation_instructions() const;
+      |     ~~~~~ ^                                  
+      |     auto                                      -> Array
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:168:5: warning: function 'get_current_nav_index' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  168 |     int get_current_nav_index() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:168:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  168 |     int get_current_nav_index() const;
+      |     ~~~ ^                            
+      |     auto                              -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:170:5: warning: function 'get_current_navigation' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  170 |     Dictionary get_current_navigation() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:170:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  170 |     Dictionary get_current_navigation() const;
+      |     ~~~~~~~~~~ ^                             
+      |     auto                                      -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:179:5: warning: function 'get_is_paused' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  179 |     bool get_is_paused() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:179:10: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  179 |     bool get_is_paused() const;
+      |     ~~~~ ^                    
+      |     auto                       -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:186:5: warning: function 'get_trajectory_events' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  186 |     Dictionary get_trajectory_events() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:186:16: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  186 |     Dictionary get_trajectory_events() const;
+      |     ~~~~~~~~~~ ^                            
+      |     auto                                     -> Dictionary
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:190:5: warning: function 'get_use_trajectory_mode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  190 |     bool get_use_trajectory_mode() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:190:10: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  190 |     bool get_use_trajectory_mode() const;
+      |     ~~~~ ^                              
+      |     auto                                 -> bool
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:196:5: warning: function 'get_current_speed_limit' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  196 |     int get_current_speed_limit() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:196:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  196 |     int get_current_speed_limit() const;
+      |     ~~~ ^                              
+      |     auto                                -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:198:5: warning: function 'get_current_min_speed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  198 |     int get_current_min_speed() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:198:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  198 |     int get_current_min_speed() const;
+      |     ~~~ ^                            
+      |     auto                              -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:202:5: warning: function 'get_road_arrows' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  202 |     Array get_road_arrows() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:202:11: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  202 |     Array get_road_arrows() const;
+      |     ~~~~~ ^                      
+      |     auto                          -> Array
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:206:5: warning: function 'get_tbt_road_name' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  206 |     String get_tbt_road_name() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:206:12: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  206 |     String get_tbt_road_name() const;
+      |     ~~~~~~ ^                        
+      |     auto                             -> String
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:208:5: warning: function 'get_tbt_distance' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  208 |     int get_tbt_distance() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:208:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  208 |     int get_tbt_distance() const;
+      |     ~~~ ^                       
+      |     auto                         -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:210:5: warning: function 'get_tbt_direction' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  210 |     int get_tbt_direction() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:210:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  210 |     int get_tbt_direction() const;
+      |     ~~~ ^                        
+      |     auto                          -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:214:5: warning: function 'get_nav_remaining_minutes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  214 |     int get_nav_remaining_minutes() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:214:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  214 |     int get_nav_remaining_minutes() const;
+      |     ~~~ ^                                
+      |     auto                                  -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:216:5: warning: function 'get_nav_remaining_seconds' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  216 |     int get_nav_remaining_seconds() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:216:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  216 |     int get_nav_remaining_seconds() const;
+      |     ~~~ ^                                
+      |     auto                                  -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:218:5: warning: function 'get_nav_arrive_hour' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  218 |     int get_nav_arrive_hour() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:218:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  218 |     int get_nav_arrive_hour() const;
+      |     ~~~ ^                          
+      |     auto                            -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:220:5: warning: function 'get_nav_arrive_minute' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  220 |     int get_nav_arrive_minute() const;
+      |     ^
+      |     [[nodiscard]] 
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:220:9: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  220 |     int get_nav_arrive_minute() const;
+      |     ~~~ ^                            
+      |     auto                              -> int
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:249:1: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  249 | VARIANT_ENUM_CAST(VehicleData::ENOAStatus);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:55:19: note: expanded from macro 'VARIANT_ENUM_CAST'
+   55 |                         return m_enum(*reinterpret_cast<const int64_t *>(p_ptr));          \
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:249:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  249 | VARIANT_ENUM_CAST(VehicleData::ENOAStatus);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:45:2: note: expanded from macro 'VARIANT_ENUM_CAST'
+   45 |         MAKE_ENUM_TYPE_INFO(m_enum)                                                \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:249:2: note: expanded from macro 'MAKE_ENUM_TYPE_INFO'
+  249 |         TEMPL_MAKE_ENUM_TYPE_INFO(m_enum, m_enum)       \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:242:30: note: expanded from macro 'TEMPL_MAKE_ENUM_TYPE_INFO'
+  242 |                 static inline PropertyInfo get_class_info() {                                                                                        \
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:250:1: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  250 | VARIANT_ENUM_CAST(VehicleData::ETrafficLightColor);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:55:19: note: expanded from macro 'VARIANT_ENUM_CAST'
+   55 |                         return m_enum(*reinterpret_cast<const int64_t *>(p_ptr));          \
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:250:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  250 | VARIANT_ENUM_CAST(VehicleData::ETrafficLightColor);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:45:2: note: expanded from macro 'VARIANT_ENUM_CAST'
+   45 |         MAKE_ENUM_TYPE_INFO(m_enum)                                                \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:249:2: note: expanded from macro 'MAKE_ENUM_TYPE_INFO'
+  249 |         TEMPL_MAKE_ENUM_TYPE_INFO(m_enum, m_enum)       \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:242:30: note: expanded from macro 'TEMPL_MAKE_ENUM_TYPE_INFO'
+  242 |                 static inline PropertyInfo get_class_info() {                                                                                        \
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:251:1: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  251 | VARIANT_ENUM_CAST(VehicleData::ERoadArrowDirection);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:55:19: note: expanded from macro 'VARIANT_ENUM_CAST'
+   55 |                         return m_enum(*reinterpret_cast<const int64_t *>(p_ptr));          \
+      |                                        ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/Simulation/VehicleData.h:251:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+  251 | VARIANT_ENUM_CAST(VehicleData::ERoadArrowDirection);
+      | ^
+godot-cpp/include/godot_cpp/core/binder_common.hpp:45:2: note: expanded from macro 'VARIANT_ENUM_CAST'
+   45 |         MAKE_ENUM_TYPE_INFO(m_enum)                                                \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:249:2: note: expanded from macro 'MAKE_ENUM_TYPE_INFO'
+  249 |         TEMPL_MAKE_ENUM_TYPE_INFO(m_enum, m_enum)       \
+      |         ^
+godot-cpp/include/godot_cpp/core/type_info.hpp:242:30: note: expanded from macro 'TEMPL_MAKE_ENUM_TYPE_INFO'
+  242 |                 static inline PropertyInfo get_class_info() {                                                                                        \
+      |                                            ^
+D:/Matrix_Engine/project/MESample/MESample/Source/MESample/register_types.cpp:41:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   40 | GDExtensionBool GDE_EXPORT
+      | ~~~~~~~~~~~~~~~
+      | auto
+   41 | MESample_library_init(GDExtensionInterfaceGetProcAddress p_get_proc_address,GDExtensionClassLibraryPtr p_library,       GDExtensionInitialization *r_initialization) {
+      | ^
+      |                                                                                                                                                                      -> GDExtensionBool
+MESample/Common/CommonLib.h:28:9: warning: variadic macro 'LOG' used; consider using a 'constexpr' variadic template function [cppcoreguidelines-macro-usage]
+   28 | #define LOG(level, ...) CommonLib::LogImplement<level>(__FILE__, ":", __LINE__, "   ", __VA_ARGS__);
+      |         ^
+MESample/Common/CommonLib.h:30:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   30 | #define LOGTEMP 1
+      | ^~~~~~~          
+      |                 =,
+   31 | #define LOGWARNING 2
+      | ~~~~~~~             
+      |                    =,
+   32 | #define LOGERROR 3
+      | ~~~~~~~
+      |                  =
+   33 | 
+MESample/Common/CommonLib.h:30:9: warning: macro 'LOGTEMP' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   30 | #define LOGTEMP 1
+      |         ^
+MESample/Common/CommonLib.h:30:9: warning: macro 'LOGTEMP' used to declare a constant; consider using a 'constexpr' constant [cppcoreguidelines-macro-usage]
+MESample/Common/CommonLib.h:31:9: warning: macro 'LOGWARNING' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   31 | #define LOGWARNING 2
+      |         ^
+MESample/Common/CommonLib.h:31:9: warning: macro 'LOGWARNING' used to declare a constant; consider using a 'constexpr' constant [cppcoreguidelines-macro-usage]
+MESample/Common/CommonLib.h:32:9: warning: macro 'LOGERROR' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum,modernize-macro-to-enum]
+   32 | #define LOGERROR 3
+      |         ^
+MESample/Common/CommonLib.h:32:9: warning: macro 'LOGERROR' used to declare a constant; consider using a 'constexpr' constant [cppcoreguidelines-macro-usage]
+MESample/Common/CommonLib.h:36:3: warning: macro argument should be enclosed in parentheses [bugprone-macro-parentheses]
+   36 |                 NAME = p##NAME;                      \
+      |                 ^
+      |                 (   )
+MESample/Common/CommonLib.h:74:20: warning: variable name 'ss' is too short, expected at least 3 characters [readability-identifier-length]
+   74 |         std::stringstream ss;
+      |                           ^
+MESample/Common/Funclib.h:37:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   37 |         __android_log_print(ANDROID_LOG_INFO, p_tag.data(), "%s", p_str.c_str());
+      |         ^
+MESample/Common/Funclib.h:46:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   46 |         __android_log_print(ANDROID_LOG_ERROR, p_tag.data(), "%s", p_str.c_str());
+      |         ^
+MESample/Common/Funclib.h:53:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   53 | inline std::string to_string(const std::string &p_arg) {
+      |        ~~~~~~~~~~~ ^
+      |        auto                                            -> std::string
+MESample/Common/Funclib.h:57:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   57 | inline std::string to_string(const char *p_arg) {
+      |        ~~~~~~~~~~~ ^
+      |        auto                                     -> std::string
+MESample/Common/Funclib.h:62:8: warning: use C++20 requires constraints instead of enable_if [modernize-use-constraints]
+   62 | inline typename std::enable_if<std::is_enum<E>::value, std::string>::type
+      |        ^
+note: this fix will not be applied because it overlaps with another fix
+MESample/Common/Funclib.h:62:17: warning: use c++14 style type templates [modernize-type-traits]
+   62 | inline typename std::enable_if<std::is_enum<E>::value, std::string>::type
+      |                 ^
+note: this fix will not be applied because it overlaps with another fix
+MESample/Common/Funclib.h:62:32: warning: use c++17 style variable templates [modernize-type-traits]
+   62 | inline typename std::enable_if<std::is_enum<E>::value, std::string>::type
+      |                                ^
+note: this fix will not be applied because it overlaps with another fix
+MESample/Common/Funclib.h:63:1: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   63 | to_string(E e) {
+      | ^
+note: this fix will not be applied because it overlaps with another fix
+MESample/Common/Funclib.h:63:13: warning: parameter name 'e' is too short, expected at least 3 characters [readability-identifier-length]
+   63 | to_string(E e) {
+      |             ^
+MESample/Common/Funclib.h:64:30: warning: use c++14 style type templates [modernize-type-traits]
+   64 |         using Underlying = typename std::underlying_type<E>::type;
+      |                            ~~~~~~~~ ^                      ~~~~~~
+      |                                                         _t
+MESample/Common/Funclib.h:68:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   68 | inline std::string to_string(int p_arg) {
+      |        ~~~~~~~~~~~ ^
+      |        auto                             -> std::string
+MESample/Common/Funclib.h:72:20: warning: use a trailing return type for this function [modernize-use-trailing-return-type]
+   72 | inline std::string to_string(float p_arg) {
+      |        ~~~~~~~~~~~ ^
+      |        auto                               -> std::string
+MESample/Common/Funclib.h:79:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+   79 |         std::string result{};
+      |                     ^
+MESample/Common/Funclib.h:89:93: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   89 |         std::array<std::string, sizeof...(Args)> variant_args{ std::forward<std::string>(to_string(args))... };
+      |                                                                                                    ^
+MESample/Common/Funclib.h:90:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+   90 |         std::string result{};
+      |                     ^
+MESample/Common/Funclib.h:101:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+  101 |         std::string result{};
+      |                     ^
+MESample/Common/Funclib.h:112:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+  112 |         std::string result{};
+      |                     ^
+MESample/Common/Funclib.h:122:93: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  122 |         std::array<std::string, sizeof...(Args)> variant_args{ std::forward<std::string>(to_string(args))... };
+      |                                                                                                    ^
+MESample/Common/Funclib.h:123:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+  123 |         std::string result{};
+      |                     ^
+MESample/Common/Funclib.h:134:14: warning: unused local variable 'result' of type 'std::string' (aka 'basic_string<char>') [bugprone-unused-local-non-trivial-variable]
+  134 |         std::string result{};
+      |                     ^
+Suppressed 153536 warnings (153528 in non-user code, 8 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

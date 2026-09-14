@@ -25,7 +25,8 @@ REM ---------- Path Configuration ----------
 set REPO_ROOT=%~dp0
 if "%REPO_ROOT:~-1%"=="\" set REPO_ROOT=%REPO_ROOT:~0,-1%
 
-for /f "delims=" %%E in ('dir /b /s "%REPO_ROOT%\MatrixEngine\*.exe" 2^>nul') do if not defined MATRIX_EDITOR set "MATRIX_EDITOR=%%E"
+REM Pick the editor exe, skipping the Godot console wrapper (*.console.exe).
+for /f "delims=" %%E in ('dir /b /s "%REPO_ROOT%\MatrixEngine\*.exe" 2^>nul ^| findstr /v /i /c:".console.exe"') do if not defined MATRIX_EDITOR set "MATRIX_EDITOR=%%E"
 set MATRIX_PROJECT_DIR=%REPO_ROOT%\MESample
 set MATRIX_SOURCE_DIR=%MATRIX_PROJECT_DIR%\Source
 set MATRIX_BUILD_DIR=%MATRIX_PROJECT_DIR%\bin
@@ -401,6 +402,8 @@ if "%BUILD_APK_LIB%"=="1" (
 if "%BUILD_PCK%"=="1" (
     if not exist "%MATRIX_EDITOR%" (
         call :log_error "Matrix Editor not found: %MATRIX_EDITOR%"
+        call :log_error "Expected an editor executable in: %REPO_ROOT%\MatrixEngine"
+        call :log_error "Run setup.bat to download it."
         exit /b 1
     )
     call :log_ok "Matrix Editor found"

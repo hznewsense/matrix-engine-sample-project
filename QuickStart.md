@@ -9,7 +9,7 @@
 
 - Matrix 工程：`MESample/`
 - Android 工程：`MESampleJava`
-- Matrix 编辑器：`MatrixEngine/Matrix1.3.0.exe`
+- Matrix 编辑器：`MatrixEngine/Matrix1.3.0.exe`（**不在仓库中**，由 `setup.bat` 下载，见 1.1）
 
 ## 0. 最简流程
 在仓库根目录执行：
@@ -38,7 +38,7 @@ Apks\MatrixUsedAsLib.apk
 
 需要准备：
 
-- Matrix Engine Editor `1.3.0`
+- Matrix Engine Editor `1.3.0`（不在仓库中，`setup.bat` 自动下载）
 - Python 3
 - SCons
 - Android SDK
@@ -58,6 +58,12 @@ Apks\MatrixUsedAsLib.apk
 - 当你在 `setup.bat` 里手动输入 Android SDK 路径时，脚本会把该路径写入 `.setup-user-env.cmd`，供后续 `setup.bat` 和 `build.bat` 复用。
 - `build.bat` 也会读取 `.setup-user-env.cmd`，并在执行 Gradle 前自动同步 Android 工程的 `local.properties`。
 
+### 1.1 Matrix 编辑器
+
+`MatrixEngine/Matrix1.3.0.exe`（约 160 MB）不在仓库中，由 `setup.bat` 自动下载到该路径。下载后会校验大小与 SHA256，文件缺失或校验不通过时重新下载。
+
+发布页：`https://github.com/hznewsense/matrix-engine-sample-project/releases/tag/v1.3.0`，资产名 `Matrix1.3.0.exe`。
+
 ## 2. 配置环境
 
 在仓库根目录执行：
@@ -71,6 +77,7 @@ setup.bat
 ```bat
 [ OK ] Python command: ...
 [ OK ] SCons command: ...
+[ OK ] Matrix Engine editor ready: ...\MatrixEngine\Matrix1.3.0.exe
 [ OK ] Android NDK: ...
 [ OK ] JAVA_HOME: ...
 [ OK ] Environment setup complete.
@@ -99,8 +106,6 @@ setup.bat --help
 - 即使不使用 `--persist-env`，用户输入的 Android SDK 路径也会被写入 `.setup-user-env.cmd`。
 - 安装 Android SDK / NDK 时，`sdkmanager` 输出会实时打印到终端；长时间下载时不再静默等待。
 - 如果执行失败，可以查看相关的错误日志，然后手动安装依赖才能执行后面的步骤。
-
-
 
 ## 3. 完整生成 APK
 
@@ -381,3 +386,16 @@ build.bat --help
 - `JAVA_HOME` 是否有效
 - `build.bat` 开始输出里的 `Android SDK` 是否为正确目录
 - `MESampleJava\MatrixRenderAsService\local.properties` 与 `MESampleJava\MatrixRenderAsAAR\local.properties` 是否已被同步为正确的 `sdk.dir`
+
+### 9.5 Matrix 编辑器相关
+
+`setup.bat` 未能自动获取编辑器，或 `build.bat --pck` 报找不到 `MatrixEngine\Matrix1.3.0.exe` 时：
+
+- 确认 `MatrixEngine\Matrix1.3.0.exe` 存在且约 160 MB。体积明显偏小说明下载不完整，删掉后重跑 `setup.bat`。
+- 下载慢多半是没走代理。`setup.bat` 会自动读取 git 配置中的代理，用下面这条确认是否已配置：
+
+  ```bat
+  git config --get-urlmatch http.proxy "https://github.com/"
+  ```
+
+  没有输出说明 git 未配代理。也可以按 1.1 从发布页手动下载。

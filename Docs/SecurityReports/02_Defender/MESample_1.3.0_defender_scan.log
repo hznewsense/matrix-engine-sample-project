@@ -1,0 +1,30 @@
+MESample v1.3.0 - Windows Defender Malware Scan Log
+Date: 2026-09-09
+Tool: Microsoft Defender Antimalware (MpCmdRun.exe)
+Scope: 4 delivered APK artifacts, 149.94 MB total
+
+--- MESample_HMI_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1200_30fps.apk ---
+Scan starting...
+Scan finished.
+Scanning d:\Matrix_Engine\project\MESample\Apks\MESample_HMI_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1200_30fps.apk found no threats.
+[exit code: 0]
+
+--- MESample_SR_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1080_30fps.apk ---
+Scan starting...
+Scan finished.
+Scanning d:\Matrix_Engine\project\MESample\Apks\MESample_SR_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1080_30fps.apk found no threats.
+[exit code: 0]
+
+--- MESample_RenderService_1.3.0_2d608ac_2609081701_Matrix1.3.0_release.apk ---
+Scan starting...
+Scan finished.
+Scanning d:\Matrix_Engine\project\MESample\Apks\MESample_RenderService_1.3.0_2d608ac_2609081701_Matrix1.3.0_release.apk found no threats.
+[exit code: 0]
+
+--- MESample_UsedAsLib_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1200_30fps.apk ---
+Scan starting...
+Scan finished.
+Scanning d:\Matrix_Engine\project\MESample\Apks\MESample_UsedAsLib_1.3.0_2d608ac_2609081701_Matrix1.3.0_release_1920X1200_30fps.apk found no threats.
+[exit code: 0]
+
+Result: 4/4 APK CLEAN (no threats found).

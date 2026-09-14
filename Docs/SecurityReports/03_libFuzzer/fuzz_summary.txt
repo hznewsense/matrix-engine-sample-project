@@ -1,0 +1,14 @@
+#2	INITED cov: 2 ft: 2 corp: 1/1b exec/s: 0 rss: 34Mb
+#427	NEW    cov: 7 ft: 7 corp: 2/9b lim: 8 exec/s: 0 rss: 35Mb L: 8/8 MS: 5 InsertByte-ChangeBit-InsertRepeatedBytes-ChangeBinInt-CopyPart-
+#549	NEW    cov: 8 ft: 8 corp: 3/17b lim: 8 exec/s: 0 rss: 35Mb L: 8/8 MS: 2 ChangeByte-ChangeBinInt-
+#597	NEW    cov: 9 ft: 9 corp: 4/25b lim: 8 exec/s: 0 rss: 35Mb L: 8/8 MS: 3 ChangeByte-ChangeBit-InsertRepeatedBytes-
+#1514	NEW    cov: 11 ft: 11 corp: 5/42b lim: 17 exec/s: 0 rss: 35Mb L: 17/17 MS: 2 InsertByte-InsertRepeatedBytes-
+#1859	REDUCE cov: 11 ft: 11 corp: 5/41b lim: 17 exec/s: 0 rss: 35Mb L: 16/16 MS: 5 EraseBytes-InsertByte-CopyPart-CopyPart-InsertRepeatedBytes-
+#2694	NEW    cov: 13 ft: 13 corp: 6/65b lim: 25 exec/s: 0 rss: 35Mb L: 24/24 MS: 5 InsertByte-ChangeByte-CopyPart-ChangeBit-CopyPart-
+#2725	NEW    cov: 14 ft: 14 corp: 7/89b lim: 25 exec/s: 0 rss: 35Mb L: 24/24 MS: 1 ChangeByte-
+#3588	NEW    cov: 17 ft: 17 corp: 8/121b lim: 33 exec/s: 0 rss: 35Mb L: 32/32 MS: 3 ChangeBit-InsertRepeatedBytes-CMP- DE: "\000\000\000\010"-
+#3597	NEW    cov: 18 ft: 18 corp: 9/153b lim: 33 exec/s: 0 rss: 35Mb L: 32/32 MS: 4 ChangeByte-PersAutoDict-ChangeByte-InsertRepeatedBytes- DE: "\000\000\000\010"-
+#3887	NEW    cov: 19 ft: 19 corp: 10/186b lim: 33 exec/s: 0 rss: 35Mb L: 33/33 MS: 5 EraseBytes-EraseBytes-InsertByte-PersAutoDict-InsertRepeatedBytes- DE: "\000\000\000\010"-
+#5762	REDUCE cov: 19 ft: 19 corp: 10/185b lim: 48 exec/s: 0 rss: 35Mb L: 32/32 MS: 5 ChangeByte-CopyPart-ChangeBit-EraseBytes-InsertByte-
+#1000000	DONE   cov: 19 ft: 19 corp: 10/185b lim: 64 exec/s: 500000 rss: 106Mb
+Done 1000000 runs in 2 second(s)

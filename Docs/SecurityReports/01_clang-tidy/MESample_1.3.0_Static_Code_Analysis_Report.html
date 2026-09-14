@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MESample 1.3.0 Static Code Analysis Report</title>
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif; color: #1a1a1a; font-size: 11pt; line-height: 1.55; }
+  h1 { font-size: 20pt; color: #0f3d63; margin-bottom: 2mm; }
+  h2 { font-size: 14pt; color: #0f3d63; border-bottom: 2px solid #0f3d63; padding-bottom: 1.5mm; margin-top: 8mm; }
+  table { border-collapse: collapse; width: 100%; margin: 4mm 0; font-size: 10pt; }
+  th { background: #0f3d63; color: #fff; padding: 2.2mm 3mm; text-align: left; }
+  td { border: 1px solid #ccd; padding: 2mm 3mm; }
+  tr:nth-child(even) td { background: #f4f7fa; }
+  .pass { color: #1e7d32; font-weight: 700; }
+  .warn { color: #b26a00; font-weight: 700; }
+  .meta td { border: none; padding: 1.5mm 2mm; }
+  .meta td:first-child { width: 35%; font-weight: 600; color: #0f3d63; }
+  code { background: #eef1f5; padding: 0.5mm 1.5mm; border-radius: 1mm; font-family: Consolas, monospace; font-size: 9pt; }
+  .footer { margin-top: 12mm; font-size: 9pt; color: #888; border-top: 1px solid #ddd; padding-top: 2mm; }
+</style>
+</head>
+<body>
+
+<h1>Static Code Analysis Report</h1>
+<p style="color:#555">MESample v1.3.0 &mdash; clang-tidy</p>
+
+<table class="meta">
+  <tr><td>Software</td><td>MESample 1.3.0</td></tr>
+  <tr><td>Tool</td><td>clang-tidy (LLVM)</td></tr>
+  <tr><td>Tool Version</td><td>21.0.0 (Android NDK 29.0.14206865 toolchain)</td></tr>
+  <tr><td>Analysis Mode</td><td>Compilation-database based (aarch64-linux-android24, C++20)</td></tr>
+  <tr><td>Check Sets</td><td>clang-analyzer-*, bugprone-*, performance-*, portability-*, readability-*, modernize-*, cppcoreguidelines-*</td></tr>
+  <tr><td>Scope</td><td>Self-developed C++ source (9 files: register_types.cpp, VehicleData.cpp + headers)</td></tr>
+  <tr><td>Date</td><td>2026-09-09</td></tr>
+</table>
+
+<h2>1. Results Overview</h2>
+<table>
+  <tr><th>Category</th><th>Count</th><th>Severity</th></tr>
+  <tr><td>Security defects (clang-analyzer)</td><td><b>0</b></td><td class="pass">Pass</td></tr>
+  <tr><td>Potential bug patterns (bugprone)</td><td>17</td><td class="warn">Low</td></tr>
+  <tr><td>Performance suggestions</td><td>19</td><td>Info</td></tr>
+  <tr><td>Best-practice / style (modernize, readability, cppcoreguidelines)</td><td>416</td><td>Info</td></tr>
+  <tr><td><b>Total diagnostics</b></td><td><b>452</b></td><td>&mdash;</td></tr>
+</table>
+
+<h2>2. Notable Findings (bugprone, non-security)</h2>
+<table>
+  <tr><th>File</th><th>Issue</th><th>Category</th></tr>
+  <tr><td>DoorController.h</td><td>Assignment within an <code>if</code> condition</td><td>bugprone-assignment-in-if-condition</td></tr>
+  <tr><td>LampController.h</td><td>Macro arguments not enclosed in parentheses (3)</td><td>bugprone-macro-parentheses</td></tr>
+  <tr><td>CurveMover3D.h</td><td><code>operator=</code> does not handle self-assignment</td><td>bugprone-unhandled-self-assignment</td></tr>
+  <tr><td>CurveMover3D.h, VehicleData.cpp</td><td>Narrowing conversions (double&rarr;float, int64&rarr;int)</td><td>bugprone-narrowing-conversions</td></tr>
+  <tr><td>Funclib.h</td><td>Unused local non-trivial variables (6)</td><td>bugprone-unused-local-non-trivial-variable</td></tr>
+</table>
+
+<h2>3. Conclusion</h2>
+<table>
+  <tr><th style="width:40%">Item</th><th>Status</th></tr>
+  <tr><td>Security vulnerabilities</td><td class="pass">PASS &mdash; 0 security defects</td></tr>
+</table>
+<p>All findings are code-quality issues common in demo/sample code; none constitute a security vulnerability. The project is compiled with <code>-Wall -Wextra -Werror</code>, guaranteeing zero compiler warnings.</p>
+
+<div class="footer">
+  Report generated: 2026-09-09 &nbsp;|&nbsp; Tool: clang-tidy 21.0.0 &nbsp;|&nbsp; MESample v1.3.0
+</div>
+</body>
+</html>

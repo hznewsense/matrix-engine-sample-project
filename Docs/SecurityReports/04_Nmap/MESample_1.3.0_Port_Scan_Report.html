@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MESample 1.3.0 Port Scan Report</title>
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif; color: #1a1a1a; font-size: 11pt; line-height: 1.55; }
+  h1 { font-size: 20pt; color: #0f3d63; margin-bottom: 2mm; }
+  h2 { font-size: 14pt; color: #0f3d63; border-bottom: 2px solid #0f3d63; padding-bottom: 1.5mm; margin-top: 8mm; }
+  table { border-collapse: collapse; width: 100%; margin: 4mm 0; font-size: 10pt; }
+  th { background: #0f3d63; color: #fff; padding: 2.2mm 3mm; text-align: left; }
+  td { border: 1px solid #ccd; padding: 2mm 3mm; }
+  tr:nth-child(even) td { background: #f4f7fa; }
+  .pass { color: #1e7d32; font-weight: 700; }
+  .meta td { border: none; padding: 1.5mm 2mm; }
+  .meta td:first-child { width: 35%; font-weight: 600; color: #0f3d63; }
+  .footer { margin-top: 12mm; font-size: 9pt; color: #888; border-top: 1px solid #ddd; padding-top: 2mm; }
+</style>
+</head>
+<body>
+
+<h1>Port Scan Report</h1>
+<p style="color:#555">MESample v1.3.0 &mdash; Nmap</p>
+
+<table class="meta">
+  <tr><td>Software</td><td>MESample 1.3.0</td></tr>
+  <tr><td>Tool</td><td>Nmap 7.80</td></tr>
+  <tr><td>Command</td><td><code>nmap -sT -p 1-1000 127.0.0.1</code></td></tr>
+  <tr><td>Purpose</td><td>Verify the delivered software does not introduce unexpected open network ports</td></tr>
+  <tr><td>Date</td><td>2026-09-09</td></tr>
+</table>
+
+<h2>1. Scan Results</h2>
+<table>
+  <tr><th>PORT</th><th>STATE</th><th>SERVICE</th><th>Note</th></tr>
+  <tr><td>135/tcp</td><td>open</td><td>msrpc</td><td>Windows system default (RPC), unrelated to MESample</td></tr>
+  <tr><td>445/tcp</td><td>open</td><td>microsoft-ds</td><td>Windows system default (SMB), unrelated to MESample</td></tr>
+</table>
+
+<h2>2. Interpretation</h2>
+<p>The two open ports (135 msrpc, 445 microsoft-ds) are Windows operating-system default services (Remote Procedure Call and Server Message Block). They are present on any standard Windows host and are <b>not</b> introduced by MESample. The delivered software adds <b>no additional network port exposure</b>.</p>
+
+<h2>3. Conclusion</h2>
+<table>
+  <tr><th style="width:40%">Item</th><th>Status</th></tr>
+  <tr><td>Unexpected open ports</td><td class="pass">PASS &mdash; no additional exposure</td></tr>
+</table>
+
+<div class="footer">
+  Report generated: 2026-09-09 &nbsp;|&nbsp; Tool: Nmap 7.80 &nbsp;|&nbsp; MESample v1.3.0
+</div>
+</body>
+</html>

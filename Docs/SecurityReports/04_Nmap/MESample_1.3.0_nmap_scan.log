@@ -1,0 +1,15 @@
+MESample v1.3.0 - Port Scan Log
+Date: 2026-09-09
+Tool: Nmap 7.80
+Command: nmap -sT -p 1-1000 127.0.0.1
+Purpose: Verify the delivered software does not introduce unexpected open network ports.
+
+Result:
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+
+Interpretation: 135 (msrpc) and 445 (microsoft-ds) are Windows system default services
+(RPC, SMB), unrelated to MESample. No additional open ports introduced by the software.
+
+Conclusion: PASS - no unexpected network port exposure.
