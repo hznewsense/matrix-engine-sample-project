@@ -2,7 +2,7 @@
 
 [ext_resource type="CompressedCubemap" uid="uid://bwwqfm3anvir0" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CHDR_Final_Irradiance.hdr" id="2_8kevd"]
 [ext_resource type="Texture2D" uid="uid://yvrc7xir06ml" path="res://Content/Art/MatrixAutomotiveMaterials/Textures/T_Noise_01_N.png" id="3_vompp"]
-[ext_resource type="Texture2D" uid="uid://d0sxwfmb0jg55" path="res://Content/Art/MatrixMainCar/Texture/T_Panamera_Int_Plastic_Body_AO.png" id="4_6rbs8"]
+[ext_resource type="Texture2D" uid="uid://d0sxwfmb0jg55" path="res://Content/Art/MatrixMainCar/Texture/T_MainCar_Int_Plastic_Body_AO.png" id="4_6rbs8"]
 [ext_resource type="CompressedCubemap" uid="uid://bcu5feulm0tap" path="res://Content/Art/Environment/Master/Texs/Cubemaps/CT_MESample_ll_Mip_4.hdr" id="5_vtykp"]
 
 [resource]
